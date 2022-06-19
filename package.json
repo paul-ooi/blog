@@ -4,11 +4,15 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "blog": "echo \"Building Blog files with Eleventy\" && npx @11ty/eleventy"
+    "blog": "echo \"Building Blog files with Eleventy\" && DEBUG=Eleventy* & npx @11ty/eleventy",
+    "build": "npx webpack --dryrun --config webpack.config.js"
   },
   "author": "Paul O",
   "license": "ISC",
   "devDependencies": {
-    "@11ty/eleventy": "^1.0.1"
+    "@11ty/eleventy": "^1.0.1",
+    "@11ty/eleventy-plugin-vue": "^0.7.3",
+    "webpack": "^5.73.0",
+    "webpack-cli": "^4.10.0"
   }
 }
