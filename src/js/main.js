@@ -1,2 +1,1 @@
-import './../scss/main.scss'
-console.log('from test ignore')
+import './../scss/main.scss';

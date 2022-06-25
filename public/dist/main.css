@@ -1,4 +1,4 @@
 /*!***************************************************************************************************************************************************************************************************************!*\
   !*** css ./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[0].use[2]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[0].use[3]!./src/scss/main.scss ***!
   \***************************************************************************************************************************************************************************************************************/
-body{font-family:Verdana,Geneva,Tahoma,sans-serif;background:red}
+:root{--bodyFont: "Verdana, Geneva, Tahoma, sans-serif";--headingFont: var(--bodyFont);--primary: #000;--secondary: #000;--shadowColor: #000;--box-shadow: 0.25rem 0.3rem 0.5rem var(--shadowColor);--border-raidus: 0.5rem;--outline: 1px solid red}body{font-family:var(--bodyFont)}h1{font-family:var(--headingFont)}
