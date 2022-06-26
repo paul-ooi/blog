@@ -14,6 +14,8 @@
   "devDependencies": {
     "@11ty/eleventy": "^1.0.1",
     "@11ty/eleventy-plugin-vue": "^0.7.3",
+    "@primer/css": "^20.2.3",
+    "@primer/octicons": "^17.3.0",
     "css-loader": "^6.7.1",
     "mini-css-extract-plugin": "^2.6.1",
     "postcss-loader": "^7.0.0",
