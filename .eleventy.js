@@ -1,9 +1,13 @@
 module.exports = function(eleventyConfig) {
     eleventyConfig.setWatchThrottleWaitTime(800);
     eleventyConfig.setTemplateFormats("md,njk,html,js,css");
-    eleventyConfig.addPassthroughCopy({"./dist/*.js" : "./dist/js"});
-    // eleventyConfig.addPassthroughCopy("css/fonts");
-    // eleventyConfig.addPassthroughCopy("**/*.jpg");
+    eleventyConfig.addPassthroughCopy("src/assets/images");
+    eleventyConfig.addShortcode("octicon", function(svg) {
+        console.log('testing')
+        console.log(svg)
+
+        return svg;
+     });
     return {
         dir: {
             input: 'src',

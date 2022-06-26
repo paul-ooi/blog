@@ -2,11 +2,12 @@
 <html lang="en">
   <head>
     {% include 'layouts/head.html' %}
+    {% block head %}{% endblock %}
   </head>
   <body>
       {% include 'layouts/header.html' %}
       {% include 'layouts/hero.html' %}
-      <!-- {{ content | safe }} -->
+      {{ content | safe }}
       {% include 'layouts/footer.html' %}
       <script src="/dist/main.js" async defer></script>
   </body>

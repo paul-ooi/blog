@@ -1,8 +1,13 @@
-<header>
-  <nav>
-    <ul>
+
+<header class="header">
+  <img class="header__wordmark" src="/assets/images/paulooidev-wordmark.svg" alt="Paul Ooi Development" width="200" height="30" />
+  <nav class="header__menu header__menu--main" aria-label="main navigation">
+    <button aria-label="site menu" expanded="false">
+      {% octicon "menu" %}
+    </button>
+    <ul class="header__menu-list">
       {% for name, url in nav %}
-        <li><a href="{{ url }}">{{ name }}</a></li>
+        <li class="header__menu-item"><a class="header__menu-link" href="{{ url }}">{{ name }}</a></li>
       {% endfor %}
     </ul>
   </nav>

@@ -5,6 +5,8 @@
   --secondary: #000;
   --shadowColor: #000;
   --box-shadow: 0.25rem 0.3rem 0.5rem var(--shadowColor);
-  --border-raidus: 0.5rem;
+  --border-radius: 0.5rem;
+  --gutter: minmax(2rem, 5%);
+  --container-width: 80vw;
   --outline: 1px solid red;
 }

@@ -6,15 +6,21 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link rel="stylesheet" href="/dist/main.css">
 <title>My Blog</title>
+    
   </head>
   <body>
-      <header>
-  <nav>
-    <ul>
       
-        <li><a href="/">home</a></li>
+<header class="header">
+  <img class="header__wordmark" src="/assets/images/paulooidev-wordmark.svg" alt="Paul Ooi Development" width="200" height="30" />
+  <nav class="header__menu header__menu--main" aria-label="main navigation">
+    <button aria-label="site menu" expanded="false">
+      menu
+    </button>
+    <ul class="header__menu-list">
       
-        <li><a href="/contact">contact</a></li>
+        <li class="header__menu-item"><a class="header__menu-link" href="/">home</a></li>
+      
+        <li class="header__menu-item"><a class="header__menu-link" href="/contact">contact</a></li>
       
     </ul>
   </nav>
@@ -22,7 +28,7 @@
       <section class="hero">
   <h1 class="hero__heading">My Blog</h1>
 </section>
-      <!--  -->
+      
       <footer>&copy; Paul Ooi Web Development</footer>
       <script src="/dist/main.js" async defer></script>
   </body>
