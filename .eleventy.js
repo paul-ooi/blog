@@ -1,13 +1,13 @@
+const { octiconClose, octiconMenu } = require ('./src/js/_octicons')
+
 module.exports = function(eleventyConfig) {
-    eleventyConfig.setWatchThrottleWaitTime(800);
+    eleventyConfig.setWatchThrottleWaitTime(1000);
     eleventyConfig.setTemplateFormats("md,njk,html,js,css");
     eleventyConfig.addPassthroughCopy("src/assets/images");
-    eleventyConfig.addShortcode("octicon", function(svg) {
-        console.log('testing')
-        console.log(svg)
 
-        return svg;
-     });
+    octiconMenu(eleventyConfig)
+    octiconClose(eleventyConfig)
+
     return {
         dir: {
             input: 'src',
