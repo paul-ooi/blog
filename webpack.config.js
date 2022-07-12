@@ -4,21 +4,32 @@ const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 
 module.exports = {
   mode: 'development',
-  entry: './src/js/main.js',
+  context: path.resolve(__dirname, 'src'),
+  entry: './js/main.js',
   output: {
     filename: 'main.js',
     path: path.resolve(__dirname, './src/dist'),
   },
+  devtool: 'source-map',
   module: {
     rules: [
       {
-        test: /\.s[ac]ss$/i,
+        test: /\.m?js$/,
+        exclude: /(node_modules|bower_components)/,
+        use: {
+          loader: 'babel-loader',
+          options: {
+            presets: ['@babel/preset-env']
+          }
+        }
+      },
+      {
+        test: /\.scss$/i,
         use: [
+          { loader: "style-loader"},
           MiniCssExtractPlugin.loader,
-          // "style-loader",
-          "css-loader",
-          {
-            loader: "sass-loader",
+          { loader: "css-loader"},
+          { loader: "sass-loader",
             options: {
               // Prefer `dart-sass`
               implementation: require("sass"),
@@ -29,20 +40,9 @@ module.exports = {
               sourceMap: true,
             },
           },
-          {
-            loader: "postcss-loader",
-						options: {
-							postcssOptions: {
-								plugins: [
-									[
-										"postcss-logical",
-									],
-								],
-							},
-						},
-          }
         ],
       },
+     
     ],
   },
   plugins: [
@@ -52,6 +52,6 @@ module.exports = {
       filename: "[name].css",
       chunkFilename: "[id].css",
     }),
-    postcssLogical
+    // postcssLogical
   ],
 };

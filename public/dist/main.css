@@ -1,6 +1,6 @@
-/*!*************************************************************************************************!*\
-  !*** css ./node_modules/css-loader/dist/cjs.js!./node_modules/@primer/octicons/build/build.css ***!
-  \*************************************************************************************************/
+/*!***************************************************************************************************!*\
+  !*** css ../node_modules/css-loader/dist/cjs.js!../node_modules/@primer/octicons/build/build.css ***!
+  \***************************************************************************************************/
 .octicon {
   display: inline-block;
   vertical-align: text-top;
@@ -8,68 +8,9 @@
   overflow: visible;
 }
 
-/*!*****************************************************************************************************************************************!*\
-  !*** css ./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[0].use[2]!./src/scss/main.scss ***!
-  \*****************************************************************************************************************************************/
-:root {
-  --bodyFont: "Verdana, Geneva, Tahoma, sans-serif";
-  --headingFont: var(--bodyFont);
-  --primary: #000;
-  --secondary: #000;
-  --shadowColor: #000;
-  --box-shadow: 0.25rem 0.3rem 0.5rem var(--shadowColor);
-  --border-radius: 0.5rem;
-  --gutter: minmax(2rem, 5%);
-  --container-width: 80vw;
-  --outline: 1px solid red;
-}
+/*!***************************************************************************************************************************************!*\
+  !*** css ../node_modules/css-loader/dist/cjs.js!../node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[1].use[3]!./scss/main.scss ***!
+  \***************************************************************************************************************************************/
+:root{--bodyFont: "Verdana, Geneva, Tahoma, sans-serif";--headingFont: var(--bodyFont);--primary: #000;--secondary: #000;--shadowColor: #000;--box-shadow: 0.25rem 0.3rem 0.5rem var(--shadowColor);--border-radius: 0.5rem;--gutter: minmax(2rem, 5%);--container-width: 80vw;--outline: 1px solid red}body{font-family:var(--bodyFont)}h1{font-family:var(--headingFont)}.header{display:grid;grid-template-columns:var(--gutter) calc(var(--container-width)*.75) calc(var(--container-width)*.25) var(--gutter);grid-template-areas:". wordmark menu ." ". nav nav ."}.header__menu-button{grid-area:menu}.header__menu{grid-area:nav}.header__wordmark{grid-area:wordmark}.header__menu-list{list-style:none;padding:0;margin:0;text-align:center}.header__menu-item{padding:0 1rem}.header__menu-button{cursor:pointer;background-color:rgba(0,0,0,0);border:0}.header__menu-button[aria-expanded=true] .octicon-three-bars{display:none}.header__menu-button[aria-expanded=false] .octicon-x{display:none}.header__menu-button[aria-expanded=false]+.header__menu .header__menu-list{display:none}
 
-body {
-  font-family: var(--bodyFont);
-}
-
-h1 {
-  font-family: var(--headingFont);
-}
-
-.header {
-  display: grid;
-  grid-template-columns: var(--gutter) calc(var(--container-width) * 0.75) calc(var(--container-width) * 0.25) var(--gutter);
-  grid-template-areas: ". wordmark menu ." ". nav nav .";
-}
-
-.header__menu-button {
-  grid-area: menu;
-}
-
-.header__menu {
-  grid-area: nav;
-}
-
-.header__wordmark {
-  grid-area: wordmark;
-}
-
-.header__menu-list {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-  text-align: center;
-}
-.header__menu-item {
-  padding: 0 1rem;
-}
-.header__menu-button {
-  cursor: pointer;
-  background-color: transparent;
-  border: 0;
-}
-.header__menu-button[aria-expanded=true] .octicon-three-bars {
-  display: none;
-}
-.header__menu-button[aria-expanded=false] .octicon-x {
-  display: none;
-}
-.header__menu-button[aria-expanded=false] + .header__menu .header__menu-list {
-  display: none;
-}
+/*# sourceMappingURL=main.css.map*/

@@ -2,7 +2,7 @@ const { octiconClose, octiconMenu } = require ('./src/js/_octicons')
 
 module.exports = function(eleventyConfig) {
     eleventyConfig.setWatchThrottleWaitTime(1000);
-    eleventyConfig.setTemplateFormats("md,njk,html,js,css");
+    eleventyConfig.setTemplateFormats("md,njk,html,js,css,map");
     eleventyConfig.addPassthroughCopy("src/assets/images");
 
     octiconMenu(eleventyConfig)
