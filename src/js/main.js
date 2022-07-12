@@ -1,3 +1,6 @@
-import './../scss/main.scss';
-import octicons from "@primer/octicons";
-const menuIcon = octicons['three-bars'].toSVG();
+// import './../scss/main.scss';
+import { navToggle } from "./_menu.js";
+
+document.addEventListener('DOMContentLoaded', () => {
+  navToggle()
+})
