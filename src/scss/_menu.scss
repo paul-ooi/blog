@@ -4,10 +4,34 @@
     &-list {
       list-style: none;
       padding: 0;
+      margin:0;
+      text-align: center;
     }
   
     &-item {
       padding: 0 1rem;
+    }
+
+    &-button {
+      cursor: pointer;
+      background-color: transparent;
+      border: 0;
+    }
+
+    &-button[aria-expanded='true'] {
+      .octicon-three-bars {
+        display:none;
+      }
+    }
+
+    &-button[aria-expanded='false'] {
+      .octicon-x {
+        display:none;
+      }
+
+      & + .header__menu .header__menu-list {
+        display: none;
+      }
     }
   }
 }

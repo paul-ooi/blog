@@ -1,11 +1,16 @@
 .header {
   display: grid;
   grid-template-columns: var(--gutter) calc(var(--container-width) * 0.75) calc(var(--container-width) * 0.25) var(--gutter);
-  grid-template-areas: ". wordmark menu .";
+  grid-template-areas: ". wordmark menu ."
+  ". nav nav .";
+}
+
+.header__menu-button{
+  grid-area: menu;
 }
 
 .header__menu {
-  grid-area: menu;
+  grid-area: nav;
 }
 
 .header__wordmark {
