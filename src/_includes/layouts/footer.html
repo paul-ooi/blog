@@ -1,1 +1,12 @@
-<footer>&copy; Paul Ooi Web Development</footer>
+<footer class="footer">
+  <nav class="footer__menu" aria-label="footer navigation">
+    <ul class="footer__menu-list">
+      {% for name, url in nav %}
+        <li class="footer__menu-item">
+          <a class="footer__menu-link" href="{{ url }}">{{ name }}</a>
+        </li>
+      {% endfor %}
+    </ul>
+  </nav>
+  <small class="footer__copyright">&copy; Paul Ooi Web Development</small>
+</footer>
