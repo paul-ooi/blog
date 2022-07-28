@@ -1,0 +1,21 @@
+<section class="section section__projects">
+  <h2 class="section__heading">My Projects</h2>
+  <ul class="projects__list">
+    {% for project in projects %}
+        <li class="project__item">
+          <h3 class="project__item-name">{{project.name}}</h3>
+          <ul class="project__item-technologies">
+            {% for tech in project.technology %}
+              <li class="project__item-tech">
+                <abr>{{tech}}</abr>
+                <span class="tech-icon"></span>
+              </li>
+            {% endfor %}
+          </ul>
+          <div class="project__item-description"></div>
+          <a class="project__item-link project__item-link--code" href="{{ url }}">{{ name }}</a>
+          <a class="project__item-link project__item-link--view" href="{{ url }}">{{ name }}</a>
+        </li>
+    {% endfor %}
+  </ul>
+</section>
