@@ -1,14 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    {% include 'layouts/head.html' %}
+    {% include 'layouts/head.njk' %}
     {% block head %}{% endblock %}
   </head>
   <body>
-      {% include 'layouts/header.html' %}
-      {% include 'layouts/hero.html' %}
+      {% include 'layouts/header.njk' %}
       {{ content | safe }}
-      {% include 'layouts/footer.html' %}
+      {% include 'layouts/footer.njk' %}
       <script src="/dist/main.js" ></script>
   </body>
 </html>
