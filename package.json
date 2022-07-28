@@ -4,12 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "blog": "echo \"Building Blog files with Eleventy\" & npx @11ty/eleventy",
+    "blog": "DEBUG=Eleventy* npx @11ty/eleventy",
     "build": "npx webpack --config webpack.config.js",
-    "start": "DEBUG=Eleventy* npx webpack --watch --config webpack.config.js & npx @11ty/eleventy --serve",
-    "serve": "DEBUG=Eleventy* npx @11ty/eleventy --serve --watch",
-    "dev-w": "DEBUG=Eleventy* npx @11ty/eleventy --dryrun --watch",
-    "dev": "DEBUG=Eleventy* npx @11ty/eleventy --dryrun"
+    "start": "DEBUG=Eleventy* npx webpack --watch --config webpack.config.js & npx @11ty/eleventy --serve"
   },
   "author": "Paul O",
   "license": "ISC",
