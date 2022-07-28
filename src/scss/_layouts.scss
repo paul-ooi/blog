@@ -16,3 +16,8 @@
 .header__wordmark {
   grid-area: wordmark;
 }
+
+.footer {
+  display: grid;
+  grid-template-columns: 1fr;
+}
