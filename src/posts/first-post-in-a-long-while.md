@@ -1,3 +1,10 @@
+---
+layout: posts.njk
+title: First post in a long while
+metaDescription: Welcome to my blog, where you can expect to read about building accessible websites, SEO analytics and reporting, web development frameworks and more.
+tag: ["career"]
+permalink: "blog/{{ title | slugify}}/index.html"
+---
 ## I'm going to start up blogging again
 
 So I began my journey into Web Development just over a year ago, but I've taken a hiatus from writing posts for my personal site once I was starting out in the industry. Then I became a father so there were a lot of changes and it was a challenging to finally get settled in the job and gain the confidence working in the industry and not in a classroom.
