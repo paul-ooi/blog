@@ -1,14 +1,14 @@
 <header class="header">
   <img class="header__wordmark" src="/assets/images/paulooidev-wordmark.svg" alt="Paul Ooi Development" width="200" height="30" />
   <button class="header__menu-button" aria-label="site menu" aria-expanded="false" aria-controls="nav--main">
-    {% octimenu %}
-    {% octiclose %}
+    {%- octimenu -%}
+    {%- octiclose -%}
   </button>
   <nav class="header__menu header__menu--main" aria-label="main navigation">
     <ul class="header__menu-list" id="nav--main">
-      {% for name, url in nav %}
-        <li class="header__menu-item"><a class="header__menu-link" href="{{ url }}">{{ name }}</a></li>
-      {% endfor %}
+      {%- for name, url in nav -%}
+      <li class="header__menu-item"><a class="header__menu-link" href="{{ url }}">{{ name }}</a></li>
+      {%- endfor -%}
     </ul>
   </nav>
 </header>
