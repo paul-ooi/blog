@@ -4,6 +4,7 @@ title: First post in a long while
 metaDescription: Welcome to my blog, where you can expect to read about building accessible websites, SEO analytics and reporting, web development frameworks and more.
 tag: ["career"]
 permalink: "blog/{{ title | slugify}}/index.html"
+publishedDate: 2019-11-08
 ---
 ## I'm going to start up blogging again
 
