@@ -1,4 +1,6 @@
 [
   ["home","/"],
-  ["contact","/contact"]
+  ["contact","/contact"],
+  ["work","/work"],
+  ["blog","/blog"]
 ]
