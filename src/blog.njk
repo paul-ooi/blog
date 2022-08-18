@@ -1,0 +1,12 @@
+---
+layout : base.njk
+title : Career Changelog
+---
+{% include 'layouts/hero.njk' %}
+<ul>
+{%- for post in collections.all -%}
+  {%- if '/blog/' in post.url and '/blog/' !== post.url -%}
+  <li><a href="{{ post.url }}">{{ post.data.title }}</a></li>
+  {%- endif -%}
+{%- endfor -%}
+</ul>
