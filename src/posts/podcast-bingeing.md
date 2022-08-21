@@ -1,15 +1,14 @@
 ---
 layout: posts.njk
 title: Podcast bingeing
-metaDescription: There are websites out there that have the data you want, but not in the format you need. Try using Postman to cherry pick the data you want to save, and leave the rest.
+metaDescription:
 tag: ["career", "website-developer", "web-design"]
 permalink: "blog/{{ title | slugify}}/index.html"
 publishedDate:
 ---
+On my commute to and from work, I listen to number of podcasts spanning from web development, design, accessibility, and SEO best practices. Even with the COVID-19 pandemic ongoing around the world, that hasn't stopped them from outputting quality content. 
 
-<p>On my commute to and from work, I listen to number of podcasts spanning from web development, design, accessibility, and SEO best practices. Even with the COVID-19 pandemic ongoing around the world, that hasn't stopped them from outputting quality content. </p>
-
-<p>I thought I'd share a list of what I've been listening to, and in no particular order:</p>
+I thought I'd share a list of what I've been listening to, and in no particular order:
 
 - <a rel="noreferrer noopener" href="https://syntax.fm/" target="_blank">Syntax FM</a> (web development)
 
@@ -43,4 +42,4 @@ publishedDate:
 
 - <a rel="noreferrer noopener" href="https://thefutur.com/podcast" target="_blank">The Futur</a> (design, freelancing)
 
-<p>Will update as my list grows...</p>
+Will update as my list grows...
