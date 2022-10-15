@@ -6,3 +6,40 @@ body {
 h1 {
   font-family: var(--headingFont);
 }
+
+.sr-only {
+  clip: rect(1px, 1px, 1px, 1px);
+  clip-path: inset(50%);
+  block-size: 1px;
+  inline-size: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+
+  &:focus, &:focus-within {
+    clip: initial;
+    clip-path: initial;
+    block-size: initial;
+    inline-size: initial;
+    margin: initial;
+    overflow: initial;
+    padding: initial;
+    position: initial;
+  }
+}
+
+.skip-to-main {
+  @extend .sr-only;
+  background: rgba(0,0,0,0.95);
+  color: var(--white);
+  z-index: 20;
+  display: block;
+
+  &:focus, &:focus-within {
+    inline-size: 100%;
+    padding-block: 1rem;
+    text-align: center;
+    position: absolute;
+  }
+}

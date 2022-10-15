@@ -5,8 +5,9 @@
     {%- block head -%}{%- endblock -%}
   </head>
   <body>
+      <a href="#main" class="skip-to-main">Skip To Main Content</a>
       {% include 'layouts/header.njk' %}
-      <main class="main">
+      <main class="main" id="main">
         {{ content | safe }}
       </main>
       {% include 'layouts/footer.njk' %}
