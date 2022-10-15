@@ -24,10 +24,13 @@ module.exports = {
         }
       },
       {
-        test: /\.scss$/i,
+        test: /\.s[ac]ss$/i,
         use: [
           { loader: "style-loader"},
-          MiniCssExtractPlugin.loader,
+          { loader: MiniCssExtractPlugin.loader,
+            options: {
+              esModule: false
+            } },
           { loader: "css-loader"},
           { loader: "sass-loader",
             options: {
