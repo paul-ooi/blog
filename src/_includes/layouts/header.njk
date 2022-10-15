@@ -4,7 +4,7 @@
     {%- octimenu -%}
     {%- octiclose -%}
   </button>
-  <nav class="header__menu header__menu--main" aria-label="main navigation">
+  <nav class="header__menu header__menu--main header__menu--hidden" aria-label="main navigation">
     <ul class="header__menu-list" id="nav--main">
       {%- for name, url in nav -%}
       <li class="header__menu-item"><a class="header__menu-link" href="{{ url }}">{{ name }}</a></li>

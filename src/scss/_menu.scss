@@ -1,6 +1,19 @@
 .header {
 
   &__menu {
+    background: var(--background);
+    inline-size: 100%;
+    position:absolute;
+    margin-block-start: 30px;
+    margin-inline-start: initial;
+    transition: 0.3s;
+    z-index: 20;
+
+    &--hidden {
+      margin-inline-start: -100%;
+      visibility: hidden;
+    }
+
     &-list {
       list-style: none;
       padding: 0;
@@ -31,10 +44,6 @@
     &-button[aria-expanded='false'] {
       .octicon-x {
         display:none;
-      }
-
-      & + .header__menu .header__menu-list {
-        display: none;
       }
     }
   }
