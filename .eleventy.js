@@ -1,9 +1,11 @@
-const { octiconClose, octiconMenu } = require ('./src/js/_octicons')
+const { octiconClose, octiconMenu } = require ('./src/js/_octicons');
+const syntaxHighlight = require("@11ty/eleventy-plugin-syntaxhighlight");
 
 module.exports = function(eleventyConfig) {
     eleventyConfig.setWatchThrottleWaitTime(1000);
     eleventyConfig.setTemplateFormats("md,njk,html,js,css,map");
     eleventyConfig.addPassthroughCopy("src/assets/images");
+    eleventyConfig.addPlugin(syntaxHighlight);
 
     octiconMenu(eleventyConfig)
     octiconClose(eleventyConfig)

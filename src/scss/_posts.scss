@@ -1,0 +1,12 @@
+pre[class*='language-'] {
+  @include code-block;
+  margin: 1em;
+  padding: 1em;
+}
+
+p > code {
+  background: rgb(243, 243, 243);
+  border-radius: 0.2em;
+  padding: 0.1em 1ch;
+  font-style: italic;
+}
