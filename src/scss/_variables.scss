@@ -1,6 +1,6 @@
 :root {
-  --bodyFont: 'Verdana, Geneva, Tahoma, sans-serif';
-  --headingFont: var(--bodyFont);
+  --bodyFont: helvetica, tahoma, ui-sans-serif, sans-serif;
+  --headingFont: 'Arial Black', var(--bodyFont);
   --white: #fff;
   --background: var(--white);
   --primary: #000;

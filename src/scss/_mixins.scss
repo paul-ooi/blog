@@ -5,3 +5,9 @@
     text-decoration: underline;
   }
 }
+
+@mixin code-block {
+  font-family: monaco, ui-monospace, monospace;
+  line-height: 1.25;
+  background: rgba(0,0,0,0.7);
+}
