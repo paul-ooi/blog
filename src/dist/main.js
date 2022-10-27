@@ -19,6 +19,7 @@ var navToggle = function navToggle() {
       var newState = state === 'true' ? 'false' : 'true';
       btn.setAttribute('aria-expanded', newState);
       menu.classList.toggle('header__menu--hidden');
+      document.body.classList.toggle('show-overlay');
     });
   }
 };

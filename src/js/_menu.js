@@ -8,7 +8,8 @@ const navToggle = () => {
       let state = btn.getAttribute('aria-expanded');
       let newState = (state === 'true') ? 'false' : 'true';
       btn.setAttribute('aria-expanded', newState);
-      menu.classList.toggle('header__menu--hidden')
+      menu.classList.toggle('header__menu--hidden');
+      document.body.classList.toggle('show-overlay')
     })
   }
 }

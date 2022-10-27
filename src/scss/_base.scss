@@ -1,6 +1,23 @@
 body {
   font-family: var(--bodyFont);
   margin: 0;
+
+  &.show-overlay {
+    position: fixed;
+    inline-size: 100%;
+
+    & > *:not(.header) {
+      &::before {
+        content: '';
+        display: block;
+        block-size: 100%;
+        inline-size: 100%;
+        position: absolute;
+        z-index: 5;
+        background: rgba(75,75,75,0.8);
+      }
+    }
+  }
 }
 
 h1, h2, h3, h4, h5, h6 {

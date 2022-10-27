@@ -1,6 +1,6 @@
 .header {
   display: grid;
-  grid-template-columns: var(--gutter) calc(var(--container-width) * 0.75) calc(var(--container-width) * 0.25) var(--gutter);
+  grid-template-columns: var(--gutter) calc(var(--container-width) * 0.85) calc(var(--container-width) * 0.15) var(--gutter);
   grid-template-areas: ". wordmark menu ."
   "nav nav nav nav";
 

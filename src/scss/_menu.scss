@@ -1,5 +1,11 @@
 .header {
 
+  &__menu--main {
+    padding-block: 1em;
+    line-height: 1.5;
+    font-size: 1.15em;
+  }
+
   &__menu {
     background: var(--background);
     inline-size: 100%;
