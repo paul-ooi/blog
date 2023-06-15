@@ -1,4 +1,4 @@
-# Personal Site
+# Personal Blog Site
 This is a rebuild of my site and blog posts to be managed through code, be statically genereated and versioned.
 
 ## Technology Used
@@ -6,7 +6,14 @@ This is a rebuild of my site and blog posts to be managed through code, be stati
 - Webpack
 - SCSS
 
-## To DO
-[] design inspiration
-[] convert blog content from old site to json/md
-[] create resume
+## For local Development
+run `npm run start`
+
+## To Do List
+- [ ] design inspiration
+- [ ] convert blog content from old site to json/md
+- [ ] refactor resume content
+- [ ] style resume
+- [ ] style TLDR
+- [ ] refactor page metadata (different page title than h1)
+- [ ] add hero images to blog posts
