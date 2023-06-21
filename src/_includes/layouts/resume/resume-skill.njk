@@ -1,0 +1,10 @@
+{% block body %}
+    {% for skillType, skillSet in resume.skills %}
+      <h2>{{skillType | safe}}</h2>
+      <ul>
+        {% for skill in skillSet %}
+        <li>{{skill | safe}}</li>
+        {% endfor %}
+      </ul>
+    {% endfor %}
+{% endblock %}

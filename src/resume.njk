@@ -1,0 +1,22 @@
+---
+layout : base.njk
+title: About me
+metaDescription: About Paul's work history and experience as a designer and web developer
+tag: ["career"]
+---
+<div class="content">
+<section class="location" aria-label="Find me in real life">
+  <h2>Toronto, Ontario</h2>
+</section>
+<section class="contact" aria-label="Find me on the Internet">
+{% include 'layouts/resume/resume-platform.njk' %}
+</section>
+
+<section class="skills" aria-label="My various skills">
+{% include 'layouts/resume/resume-skill.njk' %}
+</section>
+
+<section class="jobs" aria-label="Job experience history">
+{% include 'layouts/resume/resume-job.njk' %}
+</section>
+</div>

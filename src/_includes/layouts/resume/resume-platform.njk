@@ -1,0 +1,5 @@
+{% block body %}
+  {% for platform in resume.platform %}
+    <a href={{platform.url | safe}} class="platform">{{platform.text | safe}}</a>
+  {% endfor %}
+{% endblock %}
