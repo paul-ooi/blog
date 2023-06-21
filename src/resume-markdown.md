@@ -1,40 +1,9 @@
-[Connect with me on LinkedIn](https://linkedin.com/in/paulooi)
-[Fork me on Github](https://github.com/paul-ooi)
-[Follow me on Behance](https://www.behance.net/paulooidesign)
-Toronto, Ontario
-
-## Software
-- Visual Studio Code IDE
-- Git & Github
-- SQL Developer
-- Visual Studio
-- Adobe Photoshop
-- Adobe Illustrator
-- Adobe InDesign
-- Google Sketchup
-
-## Skills
-- HTML5
-- CSS/LESS
-- Bootstrap 4
-- JavaScript/jQuery
-- PHP
-- XML
-- MySQL/Oracle SQL
-- C#
-- 3D Modeling
-- Web Development
-- Graphic Design
-- Interior Design
-- Industrial Design
-
-## Soft Skills
-- Responsible
-- Adaptable
-- Self-Motivated
-- Professional
-- Team Player
-- Patient Communicator
+---
+layout: base.njk
+title: About me
+metaDescription: About Paul's work history and experience as a designer and web developer
+tag: ["career"]
+---
 
 ## Languages
 - English
