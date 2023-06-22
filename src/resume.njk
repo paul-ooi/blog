@@ -16,7 +16,13 @@ tag: ["career"]
 {% include 'layouts/resume/resume-skill.njk' %}
 </section>
 
+<section class="projects" aria-label="Projects">
+  {% set list = resume.projects %}
+    {% include 'layouts/resume/resume-detailed-section.njk' %}
+</section>
+
 <section class="jobs" aria-label="Job experience history">
-{% include 'layouts/resume/resume-job.njk' %}
+  {% set list = resume.jobs %}
+    {% include 'layouts/resume/resume-detailed-section.njk' %}
 </section>
 </div>

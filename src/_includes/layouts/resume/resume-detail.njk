@@ -1,0 +1,13 @@
+{% block body %}
+<details class="resume-detail" open >
+  <summary class="resume-detail__title">
+    <h3>{{ item.name }}</h3>
+  </summary>
+  <small class="date">{{ item.date }} | {{ item.organization }}</small>
+  <ul>
+    {% for detail in item.details %}
+    <li>{{detail | safe }}</li>
+    {% endfor %}
+  </ul>
+</details>
+{% endblock %}

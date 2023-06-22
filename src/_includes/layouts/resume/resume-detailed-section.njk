@@ -1,0 +1,9 @@
+{% block body %}
+<ul class="resume-list">
+  {% for item in list %}
+  <li class="resume-list__item">
+    {% include 'layouts/resume/resume-detail.njk' %}
+  </li>
+  {% endfor %}
+</ul>
+{% endblock %}
