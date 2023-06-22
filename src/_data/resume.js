@@ -49,7 +49,50 @@ const platform = [
   },
 ]
 
+const projects = [
+  {
+    name: 'Happy Trails',
+    date: '2018',
+    organization: 'Humber College, (Toronto, Ontario)',
+    details: [
+      'test',
+      'test'
+    ]
+  },
+  {
+    name: 'Seasoning Shack',
+    date: '2018',
+    organization: 'Humber College, (Toronto, Ontario)',
+    details: [
+      'test',
+      'test'
+    ]
+  }
+]
+const jobs = [
+  {
+    name: 'Graphic Designer',
+    date: '2012-2017',
+    organization: 'Korhani Home, (Concord, Ontario)',
+    details: [
+      'test',
+      'test'
+    ]
+  },
+  {
+    name: 'Graphic Designer',
+    date: '2012-2017',
+    organization: 'Korhani Home, (Concord, Ontario)',
+    details: [
+      'test',
+      'test'
+    ]
+  },
+]
+
 module.exports = {
   skills,
-  platform
+  platform,
+  projects,
+  jobs
 }
