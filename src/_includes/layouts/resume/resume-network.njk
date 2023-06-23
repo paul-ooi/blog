@@ -1,0 +1,5 @@
+{% block body %}
+  {% for network in resume.network %}
+    <a href={{network.url | safe}} class="network">{{network.text | safe}}</a>
+  {% endfor %}
+{% endblock %}

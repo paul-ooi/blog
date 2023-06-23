@@ -3,11 +3,13 @@
   <summary class="resume-detail__title">
     <h3>{{ item.name }}</h3>
   </summary>
-  <small class="date">{{ item.date }} | {{ item.organization }}</small>
+  <small><span class="resume-detail__date">{{ item.date }}</span>{% if item.organization %}<span class="resume-detail__organization">{{ item.organization }}</span> {% endif %}</small>
+  {% if item.details %}
   <ul>
     {% for detail in item.details %}
     <li>{{detail | safe }}</li>
     {% endfor %}
   </ul>
+  {% endif %}
 </details>
 {% endblock %}
