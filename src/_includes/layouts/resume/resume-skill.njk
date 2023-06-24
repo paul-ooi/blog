@@ -1,10 +1,12 @@
 {% block body %}
     {% for skillType, skillSet in resume.skills %}
-      <h3>{{skillType | safe}}</h3>
-      <ul>
-        {% for skill in skillSet %}
-        <li>{{skill | safe}}</li>
-        {% endfor %}
-      </ul>
+      <section class="skillset" aria-describedby={{'skillset-heading--' + skillType}}>
+        <h3 class="skillset-heading" id={{'skillset-heading--' + skillType}}>{{skillType | safe}}</h3>
+        <ul>
+          {% for skill in skillSet %}
+          <li>{{skill | safe}}</li>
+          {% endfor %}
+        </ul>
+      </section>
     {% endfor %}
 {% endblock %}

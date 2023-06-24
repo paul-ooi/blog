@@ -16,16 +16,18 @@ tag: ["career", "3D Modeling", "Web Development", "Graphic Design", "Interior De
 
 <section class="resume-section resume-section__skills" aria-describedby="skills">
   <h2 id="skills" class="resume-section-heading">Skills</h2>
-{% include 'layouts/resume/resume-skill.njk' %}
+    <div class="skillsets">
+      {% include 'layouts/resume/resume-skill.njk' %}
+    </div>
 </section>
 
-<section class="resume-section resume-section__education" aria-describedby="Projects">
+<section class="resume-section resume-section__education" aria-describedby="education">
   <h2 id="education" class="resume-section-heading">Education</h2>
   {% set list = resume.education %}
     {% include 'layouts/resume/resume-detailed-section.njk' %}
 </section>
 
-<section class="resume-section resume-section__projects" aria-describedby="Projects">
+<section class="resume-section resume-section__projects" aria-describedby="projects">
   <h2 id="projects" class="resume-section-heading">Projects</h2>
   {% set list = resume.projects %}
     {% include 'layouts/resume/resume-detailed-section.njk' %}
