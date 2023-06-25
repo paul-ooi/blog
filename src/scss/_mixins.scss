@@ -1,5 +1,10 @@
 @mixin link-text {
   text-decoration: none;
+  color: var(--accent-1);
+
+  &:visited {
+    color: var(--accent-1);
+  }
 
   &:hover, &:focus {
     text-decoration: underline;
