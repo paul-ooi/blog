@@ -11,9 +11,9 @@ run `npm run start`
 
 ## To Do List
 - [ ] design inspiration
-- [ ] convert blog content from old site to json/md
-- [ ] refactor resume content
+- [x] convert blog content from old site to json/md
+- [x] refactor resume content
 - [ ] style resume
 - [ ] style TLDR
-- [ ] refactor page metadata (different page title than h1)
+- [x] refactor page metadata (different page title than h1)
 - [ ] add hero images to blog posts
