@@ -1,14 +1,18 @@
 :root {
   --bodyFont: helvetica, tahoma, ui-sans-serif, sans-serif;
   --headingFont: 'Arial Black', var(--bodyFont);
-  --white: #fff;
+  --black: #212529;
+  --white: #F5F7FA;
   --background: var(--white);
-  --primary: #000;
-  --secondary: #000;
-  --shadowColor: #000;
+  --accent-1: #ae2142;
+  --accent-2: #40787D; // #56A3A6
+  --accent-3: #ffbc42;
+  --shadowColor: var(--balck);
   --box-shadow: 0.25rem 0.3rem 0.5rem var(--shadowColor);
   --border-radius: 0.5rem;
   --gutter: minmax(2vw, auto);
   --container-width: 80vw;
   --outline: 1px solid red;
 }
+
+// https://coolors.co/f5f7fa-212529-ae2142-ffbc42-56a3a6
