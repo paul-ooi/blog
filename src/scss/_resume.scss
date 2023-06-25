@@ -17,13 +17,6 @@
       display: flex;
       align-items: start;
     }
-
-    // &__title::before {
-    //   content: "+";
-    //   display: inline-block;
-    //   margin-inline-end: 1ch;
-    //   font-weight: 600;;
-    // }
     
     &__title::marker,
     &__title::-webkit-details-marker { 
@@ -32,6 +25,10 @@
     }
   }
 
+  &-detail li {
+    list-style: initial;
+  }
+  
   &-section {
     margin-block-end: 2rem;
   }
@@ -47,6 +44,7 @@
   }
 
   &-detail__date {
+    color: var(--accent-1);
     font-weight: 600;
   }
 
