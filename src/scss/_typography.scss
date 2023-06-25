@@ -1,10 +1,17 @@
 body,
 .content {
   font-family: var(--bodyFont);
+
+  a {
+    @include link-text;
+    color: var(--accent-2);
+    &:visited {
+      color: var(--accent-2);
+    }
+  }
 }
 
 h1, h2, h3, h4, h5, h6 {
   font-family: var(--headingFont);
   margin: 0;
-  text-transform: capitalize;
 }
