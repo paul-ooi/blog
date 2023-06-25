@@ -1,6 +1,18 @@
 <header class="section section__hero">
   <h1 class="hero__heading">{{ title }}</h1>
   {% if publishedDate -%}
-  <time class="published-date" datetime="{{publishedDate}}">{{publishedDate | safe}}</time>
+  <div class="pub-date">
+    Published Date: <time class="published-date" datetime="{{publishedDate}}">{{ publishedDate | myDate }}</time>
+  </div>
+  {%- endif %}
+  {% if modifiedDate -%}
+  <div class="pub-date--modified">
+    Updated Date: <time class="published-date published-date--modified" datetime="{{modifiedDate}}">{{ modifiedDate | myDate }}</time>
+  </div>
+  {%- endif %}
+
+
+  {% if subHeading -%}
+  <p class="hero__sub-heading" >{{subHeading | safe}}</p>
   {%- endif %}
 </header>
