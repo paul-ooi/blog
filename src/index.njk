@@ -1,5 +1,26 @@
 ---
 layout : base.njk
-title : My Blog
+title : Welcome to my blog and portfolio.
+subHeading : I'm a Full-Stack Developer with a keen interest in Web accessibility (a11y). 
+metaTitle: Paul Ooi Web Development blog & portfolio
+metaDescription: Paul's developer blog and collection of coded projects
 ---
-{% extends 'layouts/hero.njk' %}
+
+<div class="content">
+  {% include 'layouts/hero.njk' %}
+
+  <section class="latest-posts">
+    <h2 class="latest-posts__heading">Latest Posts</h2>
+    <ul class="latest-posts__list">
+      {%- for post in collections.posts -%}
+        {% if loop.index <= 3 %}
+        <li class="latest-posts__item">
+          {% include 'layouts/card.njk' %}
+        </li>
+        {% endif %}
+      {%- endfor -%}
+    </ul>
+    <a href="/blog" class="older-posts">See all posts >>></a>
+  </section>
+</div>
+
