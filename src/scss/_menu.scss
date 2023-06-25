@@ -15,7 +15,7 @@
     transition: 0.3s;
     z-index: 20;
 
-    &--hidden {
+    .header__menu-button[aria-expanded='false'] + & {
       margin-inline-start: -100%;
       visibility: hidden;
     }
@@ -33,6 +33,10 @@
 
     &-link {
       @include link-text;
+
+      &:focus-visible {
+        font-weight: 700;
+      }
     }
 
     &-button {
