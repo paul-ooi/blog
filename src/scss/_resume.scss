@@ -59,4 +59,11 @@
       margin-inline: 1ch;
     }
   }
+
+  &-section__skills {
+    .skillsets {
+      display: flex;
+      justify-content: space-evenly;
+    }
+  }
 }
