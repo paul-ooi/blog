@@ -6,7 +6,9 @@ const navToggle = () => {
       let state = btn.getAttribute('aria-expanded');
       let newState = !(state === 'true');
       btn.setAttribute('aria-expanded', newState);
-      document.body.classList.toggle('show-overlay')
+      document.body.classList.toggle('show-overlay');
+      document.querySelector('.footer').toggleAttribute('inert');
+      document.getElementById('main').toggleAttribute('inert');
     })
   }
 }

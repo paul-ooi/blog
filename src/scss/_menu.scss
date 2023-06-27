@@ -44,6 +44,8 @@
       cursor: pointer;
       background-color: transparent;
       border: 0;
+      padding: 1rem 0;
+      text-align: right;
     }
 
     &-button[aria-expanded='true'] {

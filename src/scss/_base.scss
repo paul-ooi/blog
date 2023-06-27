@@ -5,6 +5,8 @@ body {
   &.show-overlay {
     position: fixed;
     inline-size: 100%;
+    overflow-y: hidden;
+    
 
     & > *:not(.header) {
       &::before {
