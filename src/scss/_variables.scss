@@ -1,3 +1,8 @@
+// Breakpoints
+$sm: 37.5rem;
+$md: 52.5rem;
+$lg: 67.5rem;
+
 :root {
   --bodyFont: helvetica, tahoma, ui-sans-serif, sans-serif;
   --headingFont: 'Arial Black', var(--bodyFont);
@@ -11,13 +16,21 @@
   --box-shadow: 0.25rem 0.3rem 0.5rem var(--shadowColor);
   --border-radius: 0.5rem;
   --gutter: minmax(2vw, auto);
-  --container-width: 80vw;
+  --container-width: 90vw;
   --outline: 1px solid red; 
 }
 
 // https://coolors.co/f5f7fa-212529-ae2142-ffbc42-56a3a6
 
-// Breakpoints
-$sm: 37.5rem;
-$md: 52.5rem;
-$lg: 67.5rem;
+
+@media (min-width: $sm) {
+  :root {
+    --container-width: 80vw;
+  }
+}
+
+@media (min-width: $lg) {
+  :root {
+    --container-width: 52.5rem;
+  }
+}
