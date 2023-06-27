@@ -9,3 +9,64 @@ p > code {
   padding: 0.1em 1ch;
   font-style: italic;
 }
+
+.latest-posts {
+  display: grid;
+  grid-template-areas: 'latest-title'
+  'posts'
+  'see-all';
+  align-items: baseline;
+  
+  &__heading {
+    grid-area: latest-title;
+    margin-block-end: 1rem;
+  }
+
+  .older-posts {
+    grid-area: see-all;
+    text-align: end;
+  }
+
+  &__list {
+    display: grid;
+    grid-area: posts;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  &__item {
+    
+    &:not(:last-of-type)::after {
+      content: '';
+      display: block;
+      block-size: 1px;
+      background-color: var(--accent-2);
+      margin-block: 1rem;
+      opacity: 0.5;
+    }
+
+    &:last-of-type {
+      margin-block-end: 2rem;
+    }
+  }
+
+  @media (min-width: $md) {
+    grid-template-areas: 'latest-title . see-all'
+    'posts posts posts';
+
+    &__list {
+      grid-template-columns: repeat(2, 1fr);
+      column-gap: 3rem;
+    }
+
+    &__item {
+      padding: 1rem;
+
+      &:not(:last-of-type)::after {
+        display: none;
+      }
+    }
+  }
+
+}

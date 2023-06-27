@@ -12,7 +12,12 @@
   --border-radius: 0.5rem;
   --gutter: minmax(2vw, auto);
   --container-width: 80vw;
-  --outline: 1px solid red;
+  --outline: 1px solid red; 
 }
 
 // https://coolors.co/f5f7fa-212529-ae2142-ffbc42-56a3a6
+
+// Breakpoints
+$sm: 37.5rem;
+$md: 52.5rem;
+$lg: 67.5rem;

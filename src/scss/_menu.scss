@@ -10,7 +10,8 @@
     background: var(--background);
     inline-size: 100%;
     position:absolute;
-    margin-block-start: 30px;
+    inset-inline-start: 0;
+    margin-block-start: 3.75rem;
     margin-inline-start: initial;
     transition: 0.3s;
     z-index: 20;
@@ -65,6 +66,7 @@
     display: flex;
     list-style: none;
     padding: 0;
+    flex-wrap: wrap;
   }
 
   &__menu-item {
