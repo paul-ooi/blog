@@ -34,6 +34,8 @@
   }
 
   &-section-heading {
+    color: var(--accent-2);
+    
     &::after {
       content: '';
       display: block;
