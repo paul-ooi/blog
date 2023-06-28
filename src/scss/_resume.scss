@@ -15,12 +15,35 @@
   
     &__title {
       display: flex;
-      align-items: start;
+      cursor: pointer;
+      grid-template-columns: 1fr;
+      align-items: baseline;
+      justify-content: space-between;
+      position: relative;
+
+      h3 {
+        display: inline-block;
+      }
+
+      &::after {
+        $chevronSize: 0.5rem;  
+        content: '';
+        display: inline-block;
+        border-bottom: $chevronSize solid var(--black);
+        border-left: ($chevronSize / 2) solid transparent;
+        border-right: ($chevronSize / 2) solid transparent;
+        transform: rotate(-180deg);
+        transition: transform 0.3s ease-in-out;
+      }
+    }
+
+    &[open] .resume-detail__title::after {
+      transform: rotate(0deg);
     }
     
     &__title::marker,
     &__title::-webkit-details-marker { 
-      content:'';
+      content: '';
       display: none;
     }
   }

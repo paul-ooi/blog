@@ -1,18 +1,22 @@
 const skills = {
   "Languages & Frameworks": [
     "HTML5",
-    "CSS/LESS",
-    "Bootstrap toolkit",
-    "JavaScript/jQuery",
+    "CSS/Sass",
+    "Kubernetes",
+    "Amazon Web Services",
+    "JavaScript(ES6)",
     "PHP",
+    "Cypress",
+    "Webpack",
     "XML",
     "MySQL/Oracle SQL",
+    "Bootstrap toolkit",
     "C#",
     "English",
     "French" 
   ],
   Software : [
-    "Visual Studio Code IDE",
+    "Visual Studio Code",
     "Git & Github",
     "Oracle SQL Developer",
     "Visual Studio",
@@ -119,6 +123,47 @@ const projects = [
 ];
 
 const jobs = [
+  {
+    name: 'Software Engineer',
+    date: '2021-Present',
+    organization: 'System1 Canada ULC, (Guelph, Ontario)',
+    details: [
+      'Advocate and lead Web Accessibility improvements across all digital properties',
+      'Build modern accessible web components for internal and external users',
+      'Setup automated testing suite',
+    ]
+  },
+  {
+    name: 'HTML & CSS Instructor',
+    date: '2020',
+    organization: 'Humber College, (Toronto, Ontario)',
+    details: [
+      'Prepare and present <a href="https://paul-ooi.github.io/dgas-webdesign/">Web Development and Design concepts</a> (HTML and CSS, server Hosting, Web Accessibility)',
+      'Engage students with various learning styles',
+      'Demonstrate industry best practices in web development building multi-page websites',
+    ]
+  },
+  {
+    name: 'Full Stack Web Developer',
+    date: '2018-2020',
+    organization: 'Simplistics Web Design Inc., (Toronto, Ontario)',
+    details: [
+      'Web Accessibility advocate; auditing\testing and fixing sites',
+      'Build highly customized WordPress themes and plugins with PHP, HTML, SCSS, JS, Gulp, Node JS, Yii framework',
+      'Search engine optimization site assessment and remediation',
+      'Setup, analyze and report with Google analytics, Search Console, Google Data Studio',
+    ]
+  },
+  {
+    name: 'Web Development Peer Tutor',
+    date: '2017-2018',
+    organization: 'Humber College, (Toronto, Ontario)',
+    details: [
+      'Presented web concepts in simple, easy to understand ways to a variety of student learners',
+      'Critiqued and gave feedback on front-end (HTML, CSS, JavaScript) and database (Oracle SQL) code',
+      'Tailored instructional strategies according to the learning styles of student learners using front-end code and Adobe CC products',
+    ]
+  },
   {
     name: 'Graphic Designer',
     date: '2012-2017',
