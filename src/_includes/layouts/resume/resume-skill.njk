@@ -2,9 +2,9 @@
     {% for skillType, skillSet in resume.skills %}
       <section class="skillset" aria-describedby={{'skillset-heading--' + skillType}}>
         <h3 class="skillset-heading" id={{'skillset-heading--' + skillType}}>{{skillType | safe}}</h3>
-        <ul>
+        <ul class="skillset__list">
           {% for skill in skillSet %}
-          <li>{{skill | safe}}</li>
+          <li class="skillset__item">{{skill | safe}}</li>
           {% endfor %}
         </ul>
       </section>

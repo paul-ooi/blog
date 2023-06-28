@@ -62,8 +62,21 @@
 
   &-section__skills {
     .skillsets {
-      display: flex;
-      justify-content: space-evenly;
+      display: grid;
+      grid-template-columns: 1fr;
+      row-gap: 2rem;
+    }
+
+    .skillset__list {
+      padding: 0;
+      margin: 0;
+      list-style-position: inside;
+    }
+
+    @media (min-width: 31.25rem) {
+      .skillset__list {
+        columns: 2;
+      }
     }
   }
 }
