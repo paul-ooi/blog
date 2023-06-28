@@ -1,15 +1,5 @@
 const skills = {
-  software : [
-    "Visual Studio Code IDE",
-    "Git & Github",
-    "Oracle SQL Developer",
-    "Visual Studio",
-    "Adobe Photoshop",
-    "Adobe Illustrator",
-    "Adobe InDesign",
-    "Google Sketchup",
-  ],
-  "languages": [
+  "Languages & Frameworks": [
     "HTML5",
     "CSS/LESS",
     "Bootstrap toolkit",
@@ -21,7 +11,17 @@ const skills = {
     "English",
     "French" 
   ],
-  "soft skills": [
+  Software : [
+    "Visual Studio Code IDE",
+    "Git & Github",
+    "Oracle SQL Developer",
+    "Visual Studio",
+    "Adobe Photoshop",
+    "Adobe Illustrator",
+    "Adobe InDesign",
+    "Google Sketchup",
+  ],
+  "Soft skills": [
     "Responsible",
     "Adaptable",
     "Self-Motivated",
