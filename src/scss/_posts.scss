@@ -10,6 +10,13 @@ p > code {
   font-style: italic;
 }
 
+.content {
+  a {
+    text-decoration: underline;
+  }
+}
+
+/* LATEST POSTS */
 .latest-posts {
   display: grid;
   grid-template-areas: 'latest-title'
@@ -69,4 +76,42 @@ p > code {
     }
   }
 
+}
+
+/* TLDR */
+.tldr {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  align-items: center;
+  margin-block-end: 3rem;
+  border: 2px solid var(--accent-2);
+  position: relative;
+
+  &__background {
+    background-color: var(--accent-2);
+    display: block;
+    grid-column: 1 / 2;
+    grid-row: 1/-1;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: -1;
+  }
+  
+  &__heading {
+    color: var(--white);
+    grid-column: 1 / 2;
+    grid-row: 1 / 2;
+    padding-inline: 1rem;
+    margin: 0;
+  }
+  
+  p {
+    grid-column: 2 / 3;
+    grid-row: 1 / 2;
+    margin: 1rem;
+    padding: 0;
+  }
 }
