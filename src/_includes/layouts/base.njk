@@ -4,7 +4,7 @@
     {%- include 'layouts/head.njk' -%}
     {%- block head -%}{%- endblock -%}
   </head>
-  <body>
+  <body class="{{ layout | replace(".njk", "") }} {{ pageName }}">
       <nav class="skip-links" aria-label="Skip Links">
         <a href="#main" class="skip-to-main">Skip To Main Content</a>
       </nav>
