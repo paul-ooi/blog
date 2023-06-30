@@ -13,7 +13,12 @@ run `npm run start`
 - [ ] design inspiration
 - [x] convert blog content from old site to json/md
 - [x] refactor resume content
-- [ ] style resume
-- [ ] style TLDR
+- [x] style resume
+  - [ ] add collapse/expand all for sections
+- [x] style TLDR
+  - [ ] update posts MDs to use TLDR template
+  - [ ] remove `_blank` targets, fix links
 - [x] refactor page metadata (different page title than h1)
 - [ ] add hero images to blog posts
+- [ ] style Contact page
+- [ ] add new blog content
