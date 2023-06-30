@@ -1,6 +1,7 @@
 body,
 .content {
   font-family: var(--bodyFont);
+  color: var(--darkgrey);
 
   a {
     @include link-text;
@@ -14,4 +15,5 @@ body,
 h1, h2, h3, h4, h5, h6 {
   font-family: var(--headingFont);
   margin: 0;
+  margin-block-start: 2rem;
 }
