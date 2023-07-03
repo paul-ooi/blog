@@ -20,5 +20,6 @@ run `npm run start`
   - [ ] remove `_blank` targets, fix links
 - [x] refactor page metadata (different page title than h1)
 - [ ] add hero images to blog posts
-- [ ] style Contact page
+- [x] style Contact page
+- [ ] style Blog Archive page
 - [ ] add new blog content
