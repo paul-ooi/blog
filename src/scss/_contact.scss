@@ -1,0 +1,27 @@
+.network {
+
+  &__list {
+    display: flex;
+    padding: 0;
+    margin: 0;
+    gap: 1rem
+  }
+
+  &__item {
+    list-style: none;
+  }
+
+  &__icon {
+    max-block-size: 2rem;
+  }
+}
+
+.location {
+  display: grid;
+  gap: 1rem;
+  align-items: center;
+  grid-template-columns: minmax(0, 2rem) auto;
+}
+.location-marker__icon {
+  max-block-size: 2rem;
+}

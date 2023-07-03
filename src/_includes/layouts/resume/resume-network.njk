@@ -1,5 +1,11 @@
 {% block body %}
+  <ul class="network__list">
   {% for network in resume.network %}
-    <a href={{network.url | safe}} class="network">{{network.text | safe}}</a>
+    <li class="network__item">
+      <a href={{network.url | safe}} class="network" title="{{network.text | safe}}">
+        <img class="network__icon" src={{network.icon | safe }} alt="{{network.name | safe }} icon"/>
+      </a>
+    </li>
   {% endfor %}
+  </ul>
 {% endblock %}

@@ -37,16 +37,16 @@ const skills = {
 
 const network = [
   {
-    text: "Fork me on Github",
-    url: "https://github.com/paul-ooi"
+    name: "Github",
+    text: "My code is on Github",
+    url: "https://github.com/paul-ooi",
+    icon: "/assets/images/github-mark.svg"
   },
   {
-    text: "Follow me on Behance",
-    url: "https://www.behance.net/paulooidesign"
-  },
-  {
+    name: "LinkedIn",
     text: "Connect with me on LinkedIn",
-    url: "https://linkedin.com/in/paulooi"
+    url: "https://linkedin.com/in/paulooi",
+    icon: "/assets/images/LinkedIn-Blue-96@2x.png"
   },
 ]
 
