@@ -5,21 +5,37 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link rel="stylesheet" href="/dist/main.css">
 <title>How to improve SEO performance (Easy and Intermediate tips)</title><meta name="description" content="Always set your meta title and meta description for your blog posts and pages. Easy setup of default templates with Yoast SEO plugin settings. WooCommerce products can also get an SEO boost with data structure markup, using the Yoast plugin for Woocommerce or at least setup a template with the product short description with Yoast SEO Free."></head>
-  <body>
-      <a href="#main" class="skip-to-main">Skip To Main Content</a>
+  <body class="posts ">
+      <nav class="skip-links" aria-label="Skip Links">
+        <a href="#main" class="skip-to-main">Skip To Main Content</a>
+      </nav>
       <header class="header">
-  <img class="header__wordmark" src="/assets/images/paulooidev-wordmark.svg" alt="Paul Ooi Development" width="200" height="30" />
+  <a href="/" class="home-logo">
+    <img loading='eager' class="header__wordmark" src="/assets/images/paulooidev-wordmark.svg" alt="Paul Ooi Development" width="200" height="30" />
+  </a>
   <button class="header__menu-button" aria-label="site menu" aria-expanded="false" aria-controls="nav--main"><svg version="1.1" width="16" height="16" viewBox="0 0 16 16" class="octicon octicon-three-bars" aria-hidden="true"><path fill-rule="evenodd" d="M1 2.75A.75.75 0 011.75 2h12.5a.75.75 0 110 1.5H1.75A.75.75 0 011 2.75zm0 5A.75.75 0 011.75 7h12.5a.75.75 0 110 1.5H1.75A.75.75 0 011 7.75zM1.75 12a.75.75 0 100 1.5h12.5a.75.75 0 100-1.5H1.75z"></path></svg><svg version="1.1" width="16" height="16" viewBox="0 0 16 16" class="octicon octicon-x" aria-hidden="true"><path fill-rule="evenodd" d="M3.72 3.72a.75.75 0 011.06 0L8 6.94l3.22-3.22a.75.75 0 111.06 1.06L9.06 8l3.22 3.22a.75.75 0 11-1.06 1.06L8 9.06l-3.22 3.22a.75.75 0 01-1.06-1.06L6.94 8 3.72 4.78a.75.75 0 010-1.06z"></path></svg></button>
   <nav class="header__menu header__menu--main header__menu--hidden" aria-label="main navigation">
-    <ul class="header__menu-list" id="nav--main"><li class="header__menu-item"><a class="header__menu-link" href="/">home</a></li><li class="header__menu-item"><a class="header__menu-link" href="/contact">contact</a></li><li class="header__menu-item"><a class="header__menu-link" href="/work">work</a></li><li class="header__menu-item"><a class="header__menu-link" href="/blog">blog</a></li></ul>
+    <ul class="header__menu-list" id="nav--main"><li class="header__menu-item"><a class="header__menu-link" href="/">home</a></li><li class="header__menu-item"><a class="header__menu-link" href="/contact">contact</a></li><li class="header__menu-item"><a class="header__menu-link" href="/resume">resume</a></li><li class="header__menu-item"><a class="header__menu-link" href="/blog">blog</a></li></ul>
   </nav>
 </header>
       <main class="main" id="main">
         <article class="content">
   <header class="section section__hero">
   <h1 class="hero__heading">How to improve SEO performance (Easy and Intermediate tips)</h1>
-  <time class="published-date" datetime="Sat Feb 15 2020 19:00:00 GMT-0500 (Eastern Standard Time)">Sat Feb 15 2020 19:00:00 GMT-0500 (Eastern Standard Time)</time>
+  <div class="pub-date">
+    Published Date: <time class="published-date" datetime="Sat Feb 15 2020 19:00:00 GMT-0500 (Eastern Standard Time)">Feb 16, 2020</time>
+  </div>
+  
+
+  
 </header>
+  
+  <aside class="tldr" aria-labelledby='tldr'>
+  <div class="tldr__background" role='presentation'></div>
+  <h2 id="tldr" class="tldr__heading"><abbr title="Too long didn't read" class="tldr__abbr">TLDR</abbr></h2>
+  <p>Always set your meta title and meta description for your blog posts and pages. Easy setup of default templates with Yoast SEO plugin settings. WooCommerce products can also get an SEO boost with data structure markup, using the Yoast plugin for Woocommerce or at least setup a template with the product short description with Yoast SEO Free.</p>
+</aside>
+  
   <p>When it comes to getting a better ranking SEO score (appearing higher on search result pages), you may have come across the question of writing content for robot crawlers versus your visitors. Well, you need to make it easier for both, because the robot crawlers need to understand your page and place your content in their database to be available when a user searches for your content. Plus you need to be able to make that content of top quality value to them when they actually come to your page. The more value it has, the longer they will spend consuming your content and this is information that gets relayed back to search engines to tell them that you have verified quality content and deserve a higher position on <abbr title="Search Engine Results Page">SERP</abbr> (Search Engine Results Page) results</p>
 <h2>Use a Meta Title and Meta Description tags</h2>
 <p>The title to your page typically is displayed in the browser tab, but it can and likely shows up as the title on the SERP listing. Your description for your page is also shown on your SERP listing just underneath your title. A very simple concept that has been around for a long while and there's no shortage of resources: Here are some resources to create a <a rel="noreferrer noopener" aria-label="great title tag (opens in a new tab)" href="https://moz.com/learn/seo/title-tag" target="_blank">great title tag</a>, and <a rel="noreferrer noopener" aria-label="meta descriptions (opens in a new tab)" href="https://moz.com/learn/seo/meta-description" target="_blank">meta descriptions</a> by the Moz team who make it their business to improve your SEO.</p>
@@ -34,7 +50,7 @@
 <h2>Still need help improving your SEO?</h2>
 <p>I help clients improve their SEO by identifying key performance areas that need updating and content areas that should be tweaked to better suit your audience. SEO is an ongoing journey and is best observed overtime. So start now!</p>
 </article>
-<aside class="sidebar"></aside>
+
       </main>
       <footer class="footer">
   <nav class="footer__menu" aria-label="footer navigation">
@@ -49,7 +65,7 @@
         </li>
       
         <li class="footer__menu-item">
-          <a class="footer__menu-link" href="/work">work</a>
+          <a class="footer__menu-link" href="/resume">resume</a>
         </li>
       
         <li class="footer__menu-item">

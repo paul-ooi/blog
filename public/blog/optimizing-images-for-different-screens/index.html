@@ -5,22 +5,36 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link rel="stylesheet" href="/dist/main.css">
 <title>Optimizing images for different screens</title><meta name="description" content="Get your site content to visitors quickly and efficiently, by correctly using the srcset and sizes attributes in the image tag. Used incorrectly, can cost your users unnecessarily large data usage and a poor user experience."></head>
-  <body>
-      <a href="#main" class="skip-to-main">Skip To Main Content</a>
+  <body class="posts ">
+      <nav class="skip-links" aria-label="Skip Links">
+        <a href="#main" class="skip-to-main">Skip To Main Content</a>
+      </nav>
       <header class="header">
-  <img class="header__wordmark" src="/assets/images/paulooidev-wordmark.svg" alt="Paul Ooi Development" width="200" height="30" />
+  <a href="/" class="home-logo">
+    <img loading='eager' class="header__wordmark" src="/assets/images/paulooidev-wordmark.svg" alt="Paul Ooi Development" width="200" height="30" />
+  </a>
   <button class="header__menu-button" aria-label="site menu" aria-expanded="false" aria-controls="nav--main"><svg version="1.1" width="16" height="16" viewBox="0 0 16 16" class="octicon octicon-three-bars" aria-hidden="true"><path fill-rule="evenodd" d="M1 2.75A.75.75 0 011.75 2h12.5a.75.75 0 110 1.5H1.75A.75.75 0 011 2.75zm0 5A.75.75 0 011.75 7h12.5a.75.75 0 110 1.5H1.75A.75.75 0 011 7.75zM1.75 12a.75.75 0 100 1.5h12.5a.75.75 0 100-1.5H1.75z"></path></svg><svg version="1.1" width="16" height="16" viewBox="0 0 16 16" class="octicon octicon-x" aria-hidden="true"><path fill-rule="evenodd" d="M3.72 3.72a.75.75 0 011.06 0L8 6.94l3.22-3.22a.75.75 0 111.06 1.06L9.06 8l3.22 3.22a.75.75 0 11-1.06 1.06L8 9.06l-3.22 3.22a.75.75 0 01-1.06-1.06L6.94 8 3.72 4.78a.75.75 0 010-1.06z"></path></svg></button>
   <nav class="header__menu header__menu--main header__menu--hidden" aria-label="main navigation">
-    <ul class="header__menu-list" id="nav--main"><li class="header__menu-item"><a class="header__menu-link" href="/">home</a></li><li class="header__menu-item"><a class="header__menu-link" href="/contact">contact</a></li><li class="header__menu-item"><a class="header__menu-link" href="/work">work</a></li><li class="header__menu-item"><a class="header__menu-link" href="/blog">blog</a></li></ul>
+    <ul class="header__menu-list" id="nav--main"><li class="header__menu-item"><a class="header__menu-link" href="/">home</a></li><li class="header__menu-item"><a class="header__menu-link" href="/contact">contact</a></li><li class="header__menu-item"><a class="header__menu-link" href="/resume">resume</a></li><li class="header__menu-item"><a class="header__menu-link" href="/blog">blog</a></li></ul>
   </nav>
 </header>
       <main class="main" id="main">
         <article class="content">
   <header class="section section__hero">
   <h1 class="hero__heading">Optimizing images for different screens</h1>
-  <time class="published-date" datetime="Sat Dec 28 2019 19:00:00 GMT-0500 (Eastern Standard Time)">Sat Dec 28 2019 19:00:00 GMT-0500 (Eastern Standard Time)</time>
+  <div class="pub-date">
+    Published Date: <time class="published-date" datetime="Thu Dec 19 2019 19:00:00 GMT-0500 (Eastern Standard Time)">Dec 20, 2019</time>
+  </div>
+  
+
+  
 </header>
-  <p>In this blog we're going to look at how you can optimize your images for your visitor's device, primarily with the <code>srcset</code> and <code>sizes</code> attributes in the <code>img</code> tag.</p>
+  
+  
+  
+  <p>TLDR
+Get your site content to visitors quickly and efficiently, by correctly using the srcset and sizes attributes in the image tag. Used incorrectly, can cost your users unnecessarily large data usage and a poor user experience.</p>
+<p>In this blog we're going to look at how you can optimize your images for your visitor's device, primarily with the <code>srcset</code> and <code>sizes</code> attributes in the <code>img</code> tag.</p>
 <p>Why does this matter?</p>
 <p>Although many reading this blog may have unlimited high speed data connections on your mobile device, there are still a number of people around the world that do not. If that's not your audience, don't tune out just yet. Maybe your user is someone living in a city with underground transit without internet service, that only ever surfaces for brief moments to reconnect to their service towers to download content. However, even if your user does have high speed data service underground, wouldn't you want your page to load faster than your competitor's so you have more eyes on your content? This information is for you.</p>
 <p>Initially I came across these attributes when using WordPress' <code>wp_get_attachment_image()</code> <a href="https://developer.wordpress.org/reference/functions/wp_get_attachment_image/" target="_blank" rel="noreferrer noopener" aria-label="function (opens in a new tab)">function</a>. I would set some basic values just to get the image to display:</p>
@@ -40,7 +54,7 @@
 <p>If you're familiar with media queries in CSS, then the sizes attribute will be simple. If you're not, you should <a href="https://css-tricks.com/logic-in-media-queries/#article-header-id-2" target="_blank" rel="noreferrer noopener" aria-label="familiarize yourself with them (opens in a new tab)">familiarize yourself with them</a>, they are an essential concept for modern responsive web development. </p>
 <p>Identify the width of the screen as the media query, followed by the width of the space the image would fill for that media query. I've found it nicely flexible to use View Width units to define the image's width for a given media query condition.</p>
 </article>
-<aside class="sidebar"></aside>
+
       </main>
       <footer class="footer">
   <nav class="footer__menu" aria-label="footer navigation">
@@ -55,7 +69,7 @@
         </li>
       
         <li class="footer__menu-item">
-          <a class="footer__menu-link" href="/work">work</a>
+          <a class="footer__menu-link" href="/resume">resume</a>
         </li>
       
         <li class="footer__menu-item">

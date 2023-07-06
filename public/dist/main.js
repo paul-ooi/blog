@@ -8,18 +8,17 @@
 /***/ ((module) => {
 
 var navToggle = function navToggle() {
-  console.log('menu init');
   var btn = document.querySelector('.header__menu-button');
   var menu = document.querySelector('nav.header__menu');
-  console.log(btn);
 
   if (btn && menu) {
     btn.addEventListener('click', function () {
       var state = btn.getAttribute('aria-expanded');
-      var newState = state === 'true' ? 'false' : 'true';
+      var newState = !(state === 'true');
       btn.setAttribute('aria-expanded', newState);
-      menu.classList.toggle('header__menu--hidden');
       document.body.classList.toggle('show-overlay');
+      document.querySelector('.footer').toggleAttribute('inert');
+      document.getElementById('main').toggleAttribute('inert');
     });
   }
 };

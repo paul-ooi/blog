@@ -16,8 +16,9 @@ var navToggle = function navToggle() {
       var state = btn.getAttribute('aria-expanded');
       var newState = !(state === 'true');
       btn.setAttribute('aria-expanded', newState);
-      menu.classList.toggle('header__menu--hidden');
       document.body.classList.toggle('show-overlay');
+      document.querySelector('.footer').toggleAttribute('inert');
+      document.getElementById('main').toggleAttribute('inert');
     });
   }
 };
