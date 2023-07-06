@@ -11,12 +11,24 @@ p > code {
 }
 
 .posts .content {
+
+  line-height: 1.9;
+
   a {
     text-decoration: underline;
   }
 
   h2,h3,h4,h5,h6 {
-    margin-block-start: 1em;
+    margin-block-start: 0.75em;
+    line-height: 1;
+
+    & + p {
+      margin-block-start: 0.5rem;
+    }
+  }
+
+  p {
+    margin-inline-start: 1rem;
   }
 }
 
@@ -88,7 +100,8 @@ p > code {
   grid-template-columns: 1fr auto;
   align-items: center;
   margin-block-end: 3rem;
-  border: 2px solid var(--accent-2);
+  outline: 4px solid var(--accent-2);
+  outline-offset: -4px;
   position: relative;
 
   &__background {
