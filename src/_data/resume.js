@@ -46,7 +46,7 @@ const network = [
     name: "LinkedIn",
     text: "Connect with me on LinkedIn",
     url: "https://linkedin.com/in/paulooi",
-    icon: "/assets/images/LinkedIn-Blue-96@2x.png"
+    icon: "/assets/images/LinkedIn-Logo-R.png"
   },
 ]
 
@@ -125,7 +125,7 @@ const projects = [
 const jobs = [
   {
     name: 'Software Engineer',
-    date: '2021-Present',
+    date: '2021 - Present',
     organization: 'System1 Canada ULC, (Guelph, Ontario)',
     details: [
       'Advocate and lead Web Accessibility improvements across all digital properties',
@@ -145,7 +145,7 @@ const jobs = [
   },
   {
     name: 'Full Stack Web Developer',
-    date: '2018-2020',
+    date: '2018 - 2020',
     organization: 'Simplistics Web Design Inc., (Toronto, Ontario)',
     details: [
       'Web Accessibility advocate; auditing\testing and fixing sites',
@@ -156,7 +156,7 @@ const jobs = [
   },
   {
     name: 'Web Development Peer Tutor',
-    date: '2017-2018',
+    date: '2017 - 2018',
     organization: 'Humber College, (Toronto, Ontario)',
     details: [
       'Presented web concepts in simple, easy to understand ways to a variety of student learners',
@@ -166,7 +166,7 @@ const jobs = [
   },
   {
     name: 'Graphic Designer',
-    date: '2012-2017',
+    date: '2012 - 2017',
     organization: 'Korhani Home, (Concord, Ontario)',
     details: [
       'Prepared web collateral and managed CMS content',
@@ -178,17 +178,17 @@ const jobs = [
   },
   {
     name: 'Kitchen Designer',
-    date: '2010-2012',
+    date: '2010 - 2012',
     organization: 'Muti Kitchen & Bath (Woodbridge, Ontario)',
   },
   {
     name: 'Design Assistant',
-    date: '2008-2009',
+    date: '2008 - 2009',
     organization: 'Dayspring Landscape Design (Pickering, Ontario)',
   },
   {
     name: 'Graphic Designer',
-    date: '2007-2008',
+    date: '2007 - 2008',
     organization: 'Humber Student Federation (Toronto, Ontario)',
   },
   {
@@ -198,7 +198,7 @@ const jobs = [
   },
   {
     name: 'Front Desk Lead',
-    date: '2005-2007',
+    date: '2005 - 2007',
     organization: 'Humber College Residence (Toronto, Ontario)',
   },
 ]
@@ -206,7 +206,7 @@ const jobs = [
 const volunteer = [
   {
     name: 'Youth Group Facilitator/Trustee',
-    date: '2010-2018',
+    date: '2010 - 2018',
     organization: 'Fusion Toronto Community Services (Rexdale, Ontario)',
     details: [
       'Led games, activities, and music by playing guitar or cajón',
