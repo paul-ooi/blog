@@ -26,6 +26,8 @@ jobs:
     name: Build static Assets, Pages
     runs-on: ubuntu-latest
     steps:
+      - name: Checkout
+        uses: actions/checkout@v4
       - name: build markup & assets
         run: npm run ci
       - name: Copy dist directory contents
