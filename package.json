@@ -4,10 +4,11 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "blog": "DEBUG=Eleventy* npx @11ty/eleventy",
-    "build": "npx webpack --config webpack.config.js",
-    "start": "DEBUG=Eleventy* npx webpack --watch --config webpack.config.js & npx @11ty/eleventy --serve",
-    "ci": "NODE_ENV=production DEBUG=Eleventy* npx webpack --mode=production --stats-error-details --config webpack.config.js & npx @11ty/eleventy"
+    "blog": "NODE_ENV=production npx @11ty/eleventy",
+    "dev": "npx webpack --watch --config webpack.config.js",
+    "start": "DEBUG=Eleventy* npm run dev && npx @11ty/eleventy --serve",
+    "assets": "NODE_ENV=production npx webpack --stats-error-details --config webpack.config.js",
+    "ci": "npm run assets && npm run blog"
   },
   "author": "Paul O",
   "license": "ISC",

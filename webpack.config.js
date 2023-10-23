@@ -3,13 +3,13 @@ const postcssLogical = require('postcss-logical');
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 
 module.exports = {
-  mode: 'development',
+  mode:  process.env.NODE_ENV ?? 'development',
   watch: false,
   context: path.resolve(__dirname, 'src'),
   entry: './js/main.js',
   output: {
     filename: 'main.js',
-    path: path.resolve(__dirname, './src/dist'),
+    path: process.env.NODE_ENV == 'production' ? path.resolve(__dirname, './public/dist') : path.resolve(__dirname, './src/dist'),
   },
   devtool: 'source-map',
   module: {
