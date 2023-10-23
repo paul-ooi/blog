@@ -46,9 +46,14 @@
       border: 0;
       padding: 1rem 0;
       text-align: right;
+
+      span {
+        margin-inline-end: 1ch;
+      }
     }
 
     &-button[aria-expanded='true'] {
+      z-index: 20;
       .octicon-three-bars {
         display:none;
       }
