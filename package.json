@@ -7,7 +7,7 @@
     "blog": "DEBUG=Eleventy* npx @11ty/eleventy",
     "build": "npx webpack --config webpack.config.js",
     "start": "DEBUG=Eleventy* npx webpack --watch --config webpack.config.js & npx @11ty/eleventy --serve",
-    "ci": "DEBUG=Eleventy* npx webpack --mode=production --config webpack.config.js & npx @11ty/eleventy"
+    "ci": "NODE_ENV=production DEBUG=Eleventy* npx webpack --mode=production --stats-error-details --config webpack.config.js & npx @11ty/eleventy"
   },
   "author": "Paul O",
   "license": "ISC",

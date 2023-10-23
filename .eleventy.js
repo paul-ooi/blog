@@ -6,7 +6,7 @@ module.exports = function(eleventyConfig) {
 
     let nunjucksEnvironment = new Nunjucks.Environment(
         new Nunjucks.FileSystemLoader(["src/_includes"], {
-            watch: true,
+            watch: process.env.NODE_ENV !== 'production',
             noCache: true
         })
       );
