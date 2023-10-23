@@ -32,6 +32,11 @@ jobs:
         run: npm install
       - name: build markup & assets
         run: npm run ci
+      - name: Update Public directory
+        uses: actions/upload-pages-artifact@v3
+        with:
+          # Upload entire repository
+          path: './public'
   # Deploy job to be ready on github pages
   deploy:
     needs: build
