@@ -30,8 +30,8 @@
         content: '';
         display: inline-block;
         border-bottom: $chevronSize solid var(--darkgrey);
-        border-left: ($chevronSize / 2) solid transparent;
-        border-right: ($chevronSize / 2) solid transparent;
+        border-left: calc($chevronSize / 2) solid transparent;
+        border-right: calc($chevronSize / 2) solid transparent;
         transform: rotate(-180deg);
         transition: transform 0.3s ease-in-out;
       }
