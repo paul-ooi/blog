@@ -11,7 +11,7 @@ metaDescription: My discoveries and solutions throughout web development
   {% include 'layouts/hero.njk' %}
   <ul>
       {%- for post in collections.posts -%}
-        <li>
+        <li class="post-list">
           {% include 'layouts/card.njk' %}
         </li>
       {%- endfor -%}
