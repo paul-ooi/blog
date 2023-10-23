@@ -36,6 +36,7 @@ jobs:
         run: cp ./src/dist ./public/dist
   # Deploy job to be ready on github pages
   deploy:
+    needs: build
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
