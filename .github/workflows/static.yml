@@ -32,8 +32,6 @@ jobs:
         run: npm install
       - name: build markup & assets
         run: npm run ci
-      - name: Copy dist directory contents
-        run: cp ./src/dist ./public/dist
   # Deploy job to be ready on github pages
   deploy:
     needs: build
