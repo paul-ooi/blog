@@ -33,7 +33,7 @@ jobs:
       - name: build markup & assets
         run: npm run ci
       - name: Update Public directory
-        uses: actions/upload-pages-artifact@v3
+        uses: actions/upload-pages-artifact@v1
         with:
           # Upload entire repository
           path: './public'
