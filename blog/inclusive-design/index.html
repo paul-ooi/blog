@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head><meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="/dist/main.css">
+<title>Inclusive Design</title></head>
+  <body class="posts ">
+      <nav class="skip-links" aria-label="Skip Links">
+        <a href="#main" class="skip-to-main">Skip To Main Content</a>
+      </nav>
+      <header class="header">
+  <a href="/" class="home-logo">
+    <img loading='eager' class="header__wordmark" src="/assets/images/paulooidev-wordmark.svg" alt="Paul Ooi Development" width="200" height="30" />
+  </a>
+  <button class="header__menu-button" aria-label="site menu" aria-expanded="false" aria-controls="nav--main">
+    <span>MENU</span><svg version="1.1" width="16" height="16" viewBox="0 0 16 16" class="octicon octicon-three-bars" aria-hidden="true"><path fill-rule="evenodd" d="M1 2.75A.75.75 0 011.75 2h12.5a.75.75 0 110 1.5H1.75A.75.75 0 011 2.75zm0 5A.75.75 0 011.75 7h12.5a.75.75 0 110 1.5H1.75A.75.75 0 011 7.75zM1.75 12a.75.75 0 100 1.5h12.5a.75.75 0 100-1.5H1.75z"></path></svg><svg version="1.1" width="16" height="16" viewBox="0 0 16 16" class="octicon octicon-x" aria-hidden="true"><path fill-rule="evenodd" d="M3.72 3.72a.75.75 0 011.06 0L8 6.94l3.22-3.22a.75.75 0 111.06 1.06L9.06 8l3.22 3.22a.75.75 0 11-1.06 1.06L8 9.06l-3.22 3.22a.75.75 0 01-1.06-1.06L6.94 8 3.72 4.78a.75.75 0 010-1.06z"></path></svg></button>
+  <nav class="header__menu header__menu--main header__menu--hidden" aria-label="main navigation">
+    <ul class="header__menu-list" id="nav--main"><li class="header__menu-item"><a class="header__menu-link" href="/">home</a></li><li class="header__menu-item"><a class="header__menu-link" href="/contact">contact</a></li><li class="header__menu-item"><a class="header__menu-link" href="/resume">resume</a></li><li class="header__menu-item"><a class="header__menu-link" href="/blog">blog</a></li></ul>
+  </nav>
+</header>
+      <main class="main" id="main">
+        <article class="content">
+  <header class="section section__hero">
+  <h1 class="hero__heading">Inclusive Design</h1>
+  <div class="pub-date">
+    Published Date: <time class="published-date" datetime="Fri Nov 29 2019 00:00:00 GMT+0000 (Coordinated Universal Time)">Nov 29, 2019</time>
+  </div>
+  
+
+  
+</header>
+  
+  
+  
+  <h2>My first accessibility conference</h2>
+<p>I attended the #A11yConfTO conference 2019, and learned that there are so many more developers and managers in the industry from my own town that are passionate about making the internet more inclusive. More than that, I learned that there are more types of disabilities that aren't being accounted for in our industry when we build and test for product usability.</p>
+<h3>Here are some of my takeaways and the people who shared:</h3>
+ <ul>
+  <li><a rel="noreferrer noopener" aria-label="Lainey Feingold (opens in a new tab)" href="https://twitter.com/LFLegal" target="_blank">Lainey Feingold</a> noted that lawsuits against companies for inaccessible sites, are very real ($66 Million website)</li>
+  <li><a rel="noreferrer noopener" aria-label="Marcy Sutton (opens in a new tab)" href="https://twitter.com/marcysutton" target="_blank">Marcy Sutton</a> pointed out some of the real terrible non-accessible components that are out there in the web 
+    <ul>
+      <li>We shouldn't assume people will use a mouse</li>
+      <li>We need to be more aware of focus management when using modals and carousels </li>
+    </ul> 
+  </li>
+  <li><a rel="noreferrer noopener" aria-label="CB Averrit (opens in a new tab)" href="https://twitter.com/dive4cb" target="_blank">CB Averitt</a> engaged the audience with some of the 'gotchas' using css with different assistive technology and browser combos 
+    <ul>
+    <li>We must be aware of when adding css only make a visual impact, to provide the alternative text equivalent </li>
+    </ul> 
+  </li>
+  <li><a rel="noreferrer noopener" aria-label="Derek Featherstone (opens in a new tab)" href="https://twitter.com/feather" target="_blank">Derek Featherstone</a> emphasized the importance of inclusive design beginning earlier in the product life cycle 
+    <ul>
+      <li>Engage and work side-by-side/co-creating with people with disabilities </li>
+    </ul> 
+  </li>
+  <li> Sarah Pulis and Andrew Arch from  <a rel="noreferrer noopener" aria-label="Intopia (opens in a new tab)" href="https://twitter.com/Intopia" target="_blank">Intopia</a> demoed a video showing a real life keyboard-using scenario where it took 81 tab key presses to get to the checkout cart link on a heavily e-commerce site 
+    <ul>
+      <li>Refactor your code to follow the proper progression of content top to bottom in the DOM or make use of <em>jump links</em> </li>
+    </ul> 
+  </li>
+  <li><a rel="noreferrer noopener" aria-label="Scott O'Hara (opens in a new tab)" href="https://twitter.com/scottohara" target="_blank">Scott O'Hara</a> and <a rel="noreferrer noopener" aria-label="Patrick Lauke (opens in a new tab)" href="https://twitter.com/patrick_h_lauke" target="_blank">Patrick Lauke</a> showed examples that HTML is not always accessible by default 
+    <ul>
+      <li>A lot of inaccessible content exists because creators don't know the way the accessibility tree is generated nor how different user agents/browsers choose to use it. </li>
+    </ul> 
+  </li>
+</ul> 
+<h2>I'm hooked</h2>
+<p>I already knew that an accessible site was linked with SEO, but now I want to attend more meetups and conferences about accessibility. I want to learn more, maybe through <a href="https://dequeuniversity.com/curriculum/online-classes/" target="_blank" rel="noreferrer noopener" aria-label="Deque's courses (opens in a new tab)">Deque's courses</a>. There's still lots to learn in the realm of accessible web and I intend to share it here on my blog.</p>
+</article>
+
+      </main>
+      <footer class="footer">
+  <nav class="footer__menu" aria-label="footer navigation">
+    <ul class="footer__menu-list">
+      
+        <li class="footer__menu-item">
+          <a class="footer__menu-link" href="/">home</a>
+        </li>
+      
+        <li class="footer__menu-item">
+          <a class="footer__menu-link" href="/contact">contact</a>
+        </li>
+      
+        <li class="footer__menu-item">
+          <a class="footer__menu-link" href="/resume">resume</a>
+        </li>
+      
+        <li class="footer__menu-item">
+          <a class="footer__menu-link" href="/blog">blog</a>
+        </li>
+      
+    </ul>
+  </nav>
+  <small class="footer__copyright">&copy; Paul Ooi Web Development</small>
+</footer>
+      <script src="/dist/main.js" ></script>
+  </body>
+</html>

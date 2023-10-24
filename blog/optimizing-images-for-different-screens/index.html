@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head><meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="/dist/main.css">
+<title>Optimizing images for different screens</title><meta name="description" content="Get your site content to visitors quickly and efficiently, by correctly using the srcset and sizes attributes in the image tag. Used incorrectly, can cost your users unnecessarily large data usage and a poor user experience."></head>
+  <body class="posts ">
+      <nav class="skip-links" aria-label="Skip Links">
+        <a href="#main" class="skip-to-main">Skip To Main Content</a>
+      </nav>
+      <header class="header">
+  <a href="/" class="home-logo">
+    <img loading='eager' class="header__wordmark" src="/assets/images/paulooidev-wordmark.svg" alt="Paul Ooi Development" width="200" height="30" />
+  </a>
+  <button class="header__menu-button" aria-label="site menu" aria-expanded="false" aria-controls="nav--main">
+    <span>MENU</span><svg version="1.1" width="16" height="16" viewBox="0 0 16 16" class="octicon octicon-three-bars" aria-hidden="true"><path fill-rule="evenodd" d="M1 2.75A.75.75 0 011.75 2h12.5a.75.75 0 110 1.5H1.75A.75.75 0 011 2.75zm0 5A.75.75 0 011.75 7h12.5a.75.75 0 110 1.5H1.75A.75.75 0 011 7.75zM1.75 12a.75.75 0 100 1.5h12.5a.75.75 0 100-1.5H1.75z"></path></svg><svg version="1.1" width="16" height="16" viewBox="0 0 16 16" class="octicon octicon-x" aria-hidden="true"><path fill-rule="evenodd" d="M3.72 3.72a.75.75 0 011.06 0L8 6.94l3.22-3.22a.75.75 0 111.06 1.06L9.06 8l3.22 3.22a.75.75 0 11-1.06 1.06L8 9.06l-3.22 3.22a.75.75 0 01-1.06-1.06L6.94 8 3.72 4.78a.75.75 0 010-1.06z"></path></svg></button>
+  <nav class="header__menu header__menu--main header__menu--hidden" aria-label="main navigation">
+    <ul class="header__menu-list" id="nav--main"><li class="header__menu-item"><a class="header__menu-link" href="/">home</a></li><li class="header__menu-item"><a class="header__menu-link" href="/contact">contact</a></li><li class="header__menu-item"><a class="header__menu-link" href="/resume">resume</a></li><li class="header__menu-item"><a class="header__menu-link" href="/blog">blog</a></li></ul>
+  </nav>
+</header>
+      <main class="main" id="main">
+        <article class="content">
+  <header class="section section__hero">
+  <h1 class="hero__heading">Optimizing images for different screens</h1>
+  <div class="pub-date">
+    Published Date: <time class="published-date" datetime="Fri Dec 20 2019 00:00:00 GMT+0000 (Coordinated Universal Time)">Dec 20, 2019</time>
+  </div>
+  
+
+  
+</header>
+  
+  
+  
+  <p>TLDR
+Get your site content to visitors quickly and efficiently, by correctly using the srcset and sizes attributes in the image tag. Used incorrectly, can cost your users unnecessarily large data usage and a poor user experience.</p>
+<p>In this blog we're going to look at how you can optimize your images for your visitor's device, primarily with the <code>srcset</code> and <code>sizes</code> attributes in the <code>img</code> tag.</p>
+<p>Why does this matter?</p>
+<p>Although many reading this blog may have unlimited high speed data connections on your mobile device, there are still a number of people around the world that do not. If that's not your audience, don't tune out just yet. Maybe your user is someone living in a city with underground transit without internet service, that only ever surfaces for brief moments to reconnect to their service towers to download content. However, even if your user does have high speed data service underground, wouldn't you want your page to load faster than your competitor's so you have more eyes on your content? This information is for you.</p>
+<p>Initially I came across these attributes when using WordPress' <code>wp_get_attachment_image()</code> <a href="https://developer.wordpress.org/reference/functions/wp_get_attachment_image/" target="_blank" rel="noreferrer noopener" aria-label="function (opens in a new tab)">function</a>. I would set some basic values just to get the image to display:</p>
+<pre class="language-php"><code class="language-php"><span class="token keyword">echo</span> <span class="token function">wp_get_attachment_image</span><span class="token punctuation">(</span><span class="token variable">$post_id</span><span class="token punctuation">,</span> <span class="token string double-quoted-string">"square"</span><span class="token punctuation">,</span> <span class="token constant boolean">false</span><span class="token punctuation">,</span> <span class="token keyword">array</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span></code></pre>
+<p>Which would give you an output similar to the below HTML markup. It has 2 values for the srcset attribute, that tells the browser that it can choose to use the most efficient image, in the space it's given, that would fill a 150px wide space, and a 50px wide space.</p>
+<pre class="language-html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>img</span> <span class="token attr-name">width</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>150<span class="token punctuation">"</span></span> <span class="token attr-name">height</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>150<span class="token punctuation">"</span></span> <br><span class="token attr-name">src</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>https://www.YourSite.com/wp-content/uploads/2019/11/FeaturedImage.jpg<span class="token punctuation">"</span></span> <br><span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>attachment-thumbnail size-square<span class="token punctuation">"</span></span> <br><span class="token attr-name">alt</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span><span class="token punctuation">"</span></span> <br><span class="token attr-name">srcset</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>https://www.YourSite.com/wp-content/uploads/2019/11/FeaturedImage.jpg 150w, https://www.YourSite.com/wp-content/uploads/2019/11/FeaturedImage-50x50.jpg 50w<span class="token punctuation">"</span></span> <br><span class="token attr-name">sizes</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>(max-width: 150px) 100vw, 150px<span class="token punctuation">"</span></span> <span class="token punctuation">></span></span></code></pre>
+<h2>What is the srcset attribute</h2>
+<p>Considering that a 150 px square image is likely under 100kb in filesize, it's not that big of a deal. But what about 4 times or 20 times that size (and yes, I've seen clients upload really large images), a high resolution image that you want crisp and clear, not pixelated and distorted? This is where you want to make sure you have multiples of the same image at different sizes handy, and defined in the srcset attribute. Each value is separated by a comma and contains the path to the image and the native width of the image in px units, I like to think of this as the original width of the image without code being applied to modify its size.</p>
+<h2>Customize our PHP code</h2>
+<pre class="language-php"><code class="language-php"><span class="token keyword">echo</span> <span class="token function">wp_get_attachment_image</span><span class="token punctuation">(</span><span class="token variable">$post_id</span><span class="token punctuation">,</span> <span class="token string double-quoted-string">"square"</span><span class="token punctuation">,</span> <span class="token constant boolean">false</span><span class="token punctuation">,</span> <span class="token keyword">array</span><span class="token punctuation">(</span><br><span class="token string single-quoted-string">'class'</span> <span class="token operator">=></span> <span class="token string single-quoted-string">'img-fluid'</span><span class="token punctuation">,</span> <span class="token comment">// Add your own space-separated classes</span><br><span class="token string single-quoted-string">'sizes'</span> <span class="token operator">=></span> <span class="token string single-quoted-string">'(max-width: 400px) 200px, (max-width: 768px) 400px, (max-width: 1024px) 350px, (max-width: 1600px) 700px, 400px'</span> <span class="token comment">// to indicate the size of the image, you can use vw units. pixels is required for screen widths for the media-queries</span><br><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span></code></pre>
+<p>By customizing our PHP in WordPress, we'll get closer to optimizing our image for various screens by adding values to the sizes property. As an added bonus, you can add classes to your image with the class property in your array.</p>
+<p>In this next example, the markup shows 6 different sizes of images that the browser can pick from. So if your visitor's browser width is up to 400px, then the browser will load the most appropriately sized image to fill 200px wide area. If the browser width is between 401px and 768px then it'll serve the image file suitable for a 400px width area, and so on. The final size in the list is provided as a default size if none of the media queries are met. </p>
+<p>This saves on data transfer for them and gets your content loaded faster. If your visitor hits your site in landscape mode or on a wider screen, then shrinks the window, your larger image is already cached in the browser and won't bother downloading the smaller image since it already has an adequate image file to display within the give space. </p>
+<pre class="language-html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>img</span> <span class="token attr-name">width</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>426<span class="token punctuation">"</span></span> <span class="token attr-name">height</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>426<span class="token punctuation">"</span></span> <br><span class="token attr-name">src</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>https://www.YourSite.com/wp-content/uploads/2019/11/FeaturedImage.png<span class="token punctuation">"</span></span><br><span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>img-fluid<span class="token punctuation">"</span></span> <br><span class="token attr-name">alt</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>FeaturedImage<span class="token punctuation">"</span></span> <br><span class="token attr-name">sizes</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>(max-width: 400px) 200px,(max-width: 768px) 400px,(max-width: 1024px) 350px,(max-width: 1600px) 700px, 400px<span class="token punctuation">"</span></span> <br><span class="token attr-name">srcset</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>https://www.YourSite.com/wp-content/uploads/2019/11/FeaturedImage.png 426w, <br>https://www.YourSite.com/wp-content/uploads/2019/11/FeaturedImage-150x150.png 150w, <br>https://www.YourSite.com/wp-content/uploads/2019/11/FeaturedImage-250x250.png 250w, <br>https://www.YourSite.com/wp-content/uploads/2019/11/FeaturedImage-120x120.png 120w, <br>https://www.YourSite.com/wp-content/uploads/2019/11/FeaturedImage-400x400.png 400w, <br>https://www.YourSite.com/wp-content/uploads/2019/11/FeaturedImage-200x200.png 200w<span class="token punctuation">"</span></span> <span class="token punctuation">></span></span></code></pre>
+<p>The trick with this though is that WordPress, or whatever framework you're using won't know how you intend to display the image on various screen sizes, and neither will the browser unless you instruct it. The sizes attribute is how you tell the browser which images would be ideal in a given screen width.</p>
+<h2>Sizes attribute and Media queries</h2>
+<p>If you're familiar with media queries in CSS, then the sizes attribute will be simple. If you're not, you should <a href="https://css-tricks.com/logic-in-media-queries/#article-header-id-2" target="_blank" rel="noreferrer noopener" aria-label="familiarize yourself with them (opens in a new tab)">familiarize yourself with them</a>, they are an essential concept for modern responsive web development. </p>
+<p>Identify the width of the screen as the media query, followed by the width of the space the image would fill for that media query. I've found it nicely flexible to use View Width units to define the image's width for a given media query condition.</p>
+</article>
+
+      </main>
+      <footer class="footer">
+  <nav class="footer__menu" aria-label="footer navigation">
+    <ul class="footer__menu-list">
+      
+        <li class="footer__menu-item">
+          <a class="footer__menu-link" href="/">home</a>
+        </li>
+      
+        <li class="footer__menu-item">
+          <a class="footer__menu-link" href="/contact">contact</a>
+        </li>
+      
+        <li class="footer__menu-item">
+          <a class="footer__menu-link" href="/resume">resume</a>
+        </li>
+      
+        <li class="footer__menu-item">
+          <a class="footer__menu-link" href="/blog">blog</a>
+        </li>
+      
+    </ul>
+  </nav>
+  <small class="footer__copyright">&copy; Paul Ooi Web Development</small>
+</footer>
+      <script src="/dist/main.js" ></script>
+  </body>
+</html>
