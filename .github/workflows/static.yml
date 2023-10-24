@@ -29,31 +29,36 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
       - name: Install NPM Packages
-        run: npm install
+        run: npm ci
       - name: build markup & assets
         run: npm run ci
-      - name: Update Public directory
-        uses: actions/upload-pages-artifact@v1
-        with:
-          # Upload entire repository
-          path: './public'
-  # Deploy job to be ready on github pages
-  deploy:
-    needs: build
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
-    runs-on: ubuntu-latest
-    steps:
-      - name: Checkout
-        uses: actions/checkout@v3
       - name: Setup Pages
         uses: actions/configure-pages@v3
-      - name: Upload artifact
-        uses: actions/upload-pages-artifact@v1
+      - name: Update Public directory
+        uses: actions/upload-pages-artifact@v2
         with:
           # Upload entire repository
           path: './public'
       - name: Deploy Blog
         id: deployment
         uses: actions/deploy-pages@v2
+  # # Deploy job to be ready on github pages
+  # deploy:
+  #   needs: build
+  #   environment:
+  #     name: github-pages
+  #     url: {{ steps.deployment.outputs.page_url }}
+  #   runs-on: ubuntu-latest
+  #   steps:
+  #     - name: Checkout
+  #       uses: actions/checkout@v3
+  #     - name: Setup Pages
+  #       uses: actions/configure-pages@v3
+  #     - name: Upload artifact
+  #       uses: actions/upload-pages-artifact@v1
+  #       with:
+  #         # Upload entire repository
+  #         path: './public'
+  #     - name: Deploy Blog
+  #       id: deployment
+  #       uses: actions/deploy-pages@v2
