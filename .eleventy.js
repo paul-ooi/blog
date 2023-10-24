@@ -33,7 +33,7 @@ module.exports = function(eleventyConfig) {
         });
         return chronologicalPosts;
     });
-    eleventyConfig.pathPrefix = process.env.NODE_ENV !== 'production' ? '/' : '/blog/'
+    eleventyConfig.pathPrefix = '/'
     eleventyConfig.setWatchThrottleWaitTime(1000);
     eleventyConfig.setTemplateFormats("md,njk,html,js,css,map");
     eleventyConfig.addPassthroughCopy("src/assets/images");
