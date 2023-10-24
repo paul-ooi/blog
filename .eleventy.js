@@ -1,6 +1,7 @@
 const { octiconClose, octiconMenu } = require ('./src/js/_octicons');
 const syntaxHighlight = require("@11ty/eleventy-plugin-syntaxhighlight");
 const Nunjucks = require('nunjucks');
+const { EleventyHtmlBasePlugin } = require("@11ty/eleventy");
 
 module.exports = function(eleventyConfig) {
 
@@ -32,11 +33,16 @@ module.exports = function(eleventyConfig) {
         });
         return chronologicalPosts;
     });
-    
+    eleventyConfig.pathPrefix = process.env.NODE_ENV !== 'production' ? '/' : '/blog/'
     eleventyConfig.setWatchThrottleWaitTime(1000);
     eleventyConfig.setTemplateFormats("md,njk,html,js,css,map");
     eleventyConfig.addPassthroughCopy("src/assets/images");
+    eleventyConfig.addPassthroughCopy("src/dist");
     eleventyConfig.addPlugin(syntaxHighlight);
+    eleventyConfig.addPlugin(EleventyHtmlBasePlugin, {
+        baseHref: eleventyConfig.pathPrefix,
+        extensions: "njk,html,css,md",
+    });
 
     octiconMenu(eleventyConfig)
     octiconClose(eleventyConfig)
