@@ -39,10 +39,10 @@ module.exports = function(eleventyConfig) {
     eleventyConfig.addPassthroughCopy("src/assets/images");
     eleventyConfig.addPassthroughCopy("src/dist");
     eleventyConfig.addPlugin(syntaxHighlight);
-    eleventyConfig.addPlugin(EleventyHtmlBasePlugin, {
-        baseHref: process.env.NODE_ENV !== 'production' ? '/' : '/blog/',
-        extensions: "njk,html,css,md",
-    });
+    // eleventyConfig.addPlugin(EleventyHtmlBasePlugin, {
+    //     baseHref: process.env.NODE_ENV !== 'production' ? '/' : '/blog/',
+    //     extensions: "njk,html,css,md",
+    // });
 
     octiconMenu(eleventyConfig)
     octiconClose(eleventyConfig)
@@ -54,6 +54,7 @@ module.exports = function(eleventyConfig) {
             layouts: '_includes/layouts',
             output: 'public'
         },
+        pathPrefix: process.env.NODE_ENV !== 'production' ? '/' : '/blog/',
         markdownTemplateEngine: "njk",
         htmlTemplateEngine: "njk",
         dataTemplateEngine: "njk",
