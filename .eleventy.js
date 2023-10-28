@@ -51,7 +51,7 @@ module.exports = function(eleventyConfig) {
             layouts: '_includes/layouts',
             output: 'public'
         },
-        pathPrefix: process.env.NODE_ENV !== 'production' ? '/' : 'https://paul-ooi.github.io/blog/',
+        pathPrefix: process.env.NODE_ENV !== 'production' ? '/' : '/blog/',
         markdownTemplateEngine: "njk",
         htmlTemplateEngine: "njk",
         dataTemplateEngine: "njk",
