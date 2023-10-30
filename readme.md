@@ -17,7 +17,7 @@ run `npm run start`
   - [ ] add collapse/expand all for sections
 - [x] style TLDR
   - [ ] update posts MDs to use TLDR template
-  - [ ] remove `_blank` targets, fix links
+  - [ ] remove `_blank` targets, fix links (https://thenounproject.com/)
 - [x] refactor page metadata (different page title than h1)
 - [ ] add hero images to blog posts
 - [x] style Contact page
