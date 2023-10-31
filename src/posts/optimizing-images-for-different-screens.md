@@ -9,7 +9,7 @@ publishedDate: 2019-12-20
 ---
 <p>In this blog we're going to look at how you can optimize your images for your visitor's device, primarily with the <code>srcset</code> and <code>sizes</code> attributes in the <code>img</code> tag.</p>
 
-<p>Why does this matter?</p>
+<p><strong>Why does this matter?</strong></p>
 
 <p>Although many reading this blog may have unlimited high speed data connections on your mobile device, there are still a number of people around the world that do not. If that's not your audience, don't tune out just yet. Maybe your user is someone living in a city with underground transit without internet service, that only ever surfaces for brief moments to reconnect to their service towers to download content. However, even if your user does have high speed data service underground, wouldn't you want your page to load faster than your competitor's so you have more eyes on your content? This information is for you.</p>
 
@@ -30,7 +30,7 @@ srcset="https://www.YourSite.com/wp-content/uploads/2019/11/FeaturedImage.jpg 15
 sizes="(max-width: 150px) 100vw, 150px" >
 ```
 
-<h2>What is the srcset attribute</h2>
+<h2>What is the <code>srcset</code> attribute</h2>
 
 <p>Considering that a 150 px square image is likely under 100kb in filesize, it's not that big of a deal. But what about 4 times or 20 times that size (and yes, I've seen clients upload really large images), a high resolution image that you want crisp and clear, not pixelated and distorted? This is where you want to make sure you have multiples of the same image at different sizes handy, and defined in the srcset attribute. Each value is separated by a comma and contains the path to the image and the native width of the image in px units, I like to think of this as the original width of the image without code being applied to modify its size.</p>
 
