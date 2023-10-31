@@ -1,15 +1,12 @@
 ---
 layout: posts.njk
 title: Optimizing images for different screens
-metaDescription: Get your site content to visitors quickly and efficiently, by correctly using the srcset and sizes attributes in the image tag. Used incorrectly, can cost your users unnecessarily large data usage and a poor user experience.
+metaDescription: Improve UX by serving the right image size for their experience
+tldr: Get your site content to visitors quickly and efficiently, by correctly using the srcset and sizes attributes in the image tag. Used incorrectly, can cost your users unnecessarily large data usage and a poor user experience.
 tag: ["web-optimization", "html5", "career", "website-developer", "coding"]
 permalink: "blog/{{ title | slugify}}/index.html"
 publishedDate: 2019-12-20
 ---
-
-TLDR
-Get your site content to visitors quickly and efficiently, by correctly using the srcset and sizes attributes in the image tag. Used incorrectly, can cost your users unnecessarily large data usage and a poor user experience.
-
 <p>In this blog we're going to look at how you can optimize your images for your visitor's device, primarily with the <code>srcset</code> and <code>sizes</code> attributes in the <code>img</code> tag.</p>
 
 <p>Why does this matter?</p>
