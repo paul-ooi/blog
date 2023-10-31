@@ -13,6 +13,7 @@ run `npm run start`
 - [ ] design inspiration
 - [x] convert blog content from old site to json/md
 - [x] refactor resume content
+- [x] add favicon
 - [x] style resume
   - [ ] add collapse/expand all for sections
 - [x] style TLDR
