@@ -1,6 +1,6 @@
 [
   ["home","/"],
-  ["contact","/contact"],
-  ["resume","/resume"],
-  ["blog","/blog"]
+  ["contact","/contact/"],
+  ["resume","/resume/"],
+  ["blog","/blog/"]
 ]

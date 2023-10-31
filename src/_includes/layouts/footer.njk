@@ -3,7 +3,7 @@
     <ul class="footer__menu-list">
       {% for name, url in nav %}
         <li class="footer__menu-item">
-          <a class="footer__menu-link" href="{{ url }}">{{ name }}</a>
+          <a class="footer__menu-link" {% if (url === page.url) %}aria-current="page" {% endif %} {% if (page.url.split('/').pop() != url) %} href="{{ url }}" {% endif %} >{{ name }}</a>
         </li>
       {% endfor %}
     </ul>

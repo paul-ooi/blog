@@ -9,6 +9,12 @@
   &:hover, &:focus {
     text-decoration: underline;
   }
+
+  &[aria-current] {
+    text-decoration: none;
+    cursor: default;
+    font-weight: bold;
+  }
 }
 
 @mixin code-block {
