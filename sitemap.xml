@@ -1,43 +1,43 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
-        <loc>/blog/</loc>
+        <loc>https://paulooi.ca/blog/</loc>
         <lastmod>2023-10-4</lastmod>
     </url>
     <url>
-        <loc>/contact/</loc>
+        <loc>https://paulooi.ca/contact/</loc>
         <lastmod>2023-10-4</lastmod>
     </url>
     <url>
-        <loc>/</loc>
+        <loc>https://paulooi.ca/</loc>
         <lastmod>2023-10-4</lastmod>
     </url>
     <url>
-        <loc>/blog/first-post-in-a-long-while/</loc>
+        <loc>https://paulooi.ca/blog/first-post-in-a-long-while/</loc>
         <lastmod>2023-10-4</lastmod>
     </url>
     <url>
-        <loc>/blog/how-to-improve-seo-performance-easy-and-intermediate-tips/</loc>
+        <loc>https://paulooi.ca/blog/how-to-improve-seo-performance-easy-and-intermediate-tips/</loc>
         <lastmod>2023-10-4</lastmod>
     </url>
     <url>
-        <loc>/blog/inclusive-design/</loc>
+        <loc>https://paulooi.ca/blog/inclusive-design/</loc>
         <lastmod>2023-10-4</lastmod>
     </url>
     <url>
-        <loc>/blog/optimizing-images-for-different-screens/</loc>
+        <loc>https://paulooi.ca/blog/optimizing-images-for-different-screens/</loc>
         <lastmod>2023-10-4</lastmod>
     </url>
     <url>
-        <loc>/blog/play-with-music-with-javascript/</loc>
+        <loc>https://paulooi.ca/blog/play-with-music-with-javascript/</loc>
         <lastmod>2023-10-4</lastmod>
     </url>
     <url>
-        <loc>/blog/podcast-bingeing/</loc>
+        <loc>https://paulooi.ca/blog/podcast-bingeing/</loc>
         <lastmod>2023-10-4</lastmod>
     </url>
     <url>
-        <loc>/resume/</loc>
+        <loc>https://paulooi.ca/resume/</loc>
         <lastmod>2023-10-4</lastmod>
     </url>
 </urlset>
