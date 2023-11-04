@@ -21,7 +21,7 @@ module.exports = function(eleventyConfig) {
     })
 
     eleventyConfig.addCollection("posts", function(collectionApi) {
-        // FIlter to just Published posts
+        // Filter to just Published posts
         const publishedPosts = collectionApi.getFilteredByGlob("./src/posts/*.md")
                                 .filter((post) => post.data.publishedDate !== null)
                     
