@@ -11,6 +11,6 @@ eleventyExcludeFromCollections: true
     )%}
     <url>
         <loc>https://paulooi.ca{{ page.url | url }}</loc>
-        <lastmod>{{ page.date.getFullYear() }}-{{ ("0" + page.date.getMonth()).slice(-2) }}-{{ ("0" + page.date.getDate()).slice(-2) }}</lastmod>
+        <lastmod>{{ helper.sitemapDateParts(page) }}</lastmod>
     </url>{% endif %}{% endfor %}
 </urlset>
