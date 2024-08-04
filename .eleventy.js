@@ -36,7 +36,7 @@ module.exports = function(eleventyConfig) {
 
     eleventyConfig.setWatchThrottleWaitTime(1000);
     eleventyConfig.setTemplateFormats("md,njk,html,js,css,map");
-    eleventyConfig.addPassthroughCopy("src/assets/images");
+    eleventyConfig.addPassthroughCopy("src/assets");
     eleventyConfig.addPassthroughCopy("src/dist");
     eleventyConfig.addPlugin(syntaxHighlight);
     eleventyConfig.addPlugin(EleventyHtmlBasePlugin);
