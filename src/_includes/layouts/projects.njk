@@ -4,17 +4,28 @@
     {% for project in projects %}
         <li class="project__item">
           <h3 class="project__item-name">{{project.name}}</h3>
+          {% if project.company %}<p class="project__company-name">While working at: {{project.company}}</p>{% endif %}
           <ul class="project__item-technologies">
             {% for tech in project.technology %}
               <li class="project__item-tech">
-                <abr>{{tech}}</abr>
-                <span class="tech-icon"></span>
+                  <abbr {% if tech in terms %}title="{{ terms[tech] }}"{% endif %}>{{tech}}</abbr>
+                {% if tech in icons %}
+                  <span class="tech-icon">
+                    <img src="/assets/icons/{{icons[tech]}}" width="32" height="32" alt="" class="icon">
+                  </span>
+                {% endif %}
               </li>
             {% endfor %}
           </ul>
-          <div class="project__item-description"></div>
-          <a class="project__item-link project__item-link--code" href="{{ url }}">{{ name }}</a>
-          <a class="project__item-link project__item-link--view" href="{{ url }}">{{ name }}</a>
+          {% if project.description %}
+            <p class="project__item-description">{{project.description}}</p>
+          {% endif %}
+          {% if project.projectCode %}
+            <a class="project__item-link project__item-link--code" href="{{ project.projectCode }}">View the Code</a>
+          {% endif %}
+          {% if project.projectUrl %}
+            <a class="project__item-link project__item-link--view" href="{{ project.projectUrl }}">View this Project</a>
+          {% endif %}
         </li>
     {% endfor %}
   </ul>
