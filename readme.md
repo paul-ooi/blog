@@ -22,6 +22,8 @@ run `npm run start`
 - [x] refactor page metadata (different page title than h1)
 - [ ] add hero images to blog posts
 - [x] style Contact page
+- [ ] style Work page
+  - [ ] find tech icons from https://www.freepik.com/icons
 - [ ] style Blog Archive page
 - [ ] add new blog content
 - [ ] fix URL base when deployed to GH pages (https://maarten.be/blog/20220730/how-to-deploy-your-eleventy-website-to-github-pages-with-github-actions/, https://www.11ty.dev/docs/plugins/html-base/)
