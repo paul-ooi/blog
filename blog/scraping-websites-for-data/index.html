@@ -3,6 +3,7 @@
   <head><meta charset="UTF-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <link rel="icon" type="image/x-icon" href="/assets/images/favicon.ico">
 <link rel="stylesheet" href="/dist/main.css">
 <title>Scraping Websites for Data</title><!-- Google Tag Manager -->
@@ -49,7 +50,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <p>Firstly, I needed to create a Postman Collection, it's where each custom request can be stored and re-used while various variables can be changed. I setup an array of Parks with their unique URL to be used within a <a href="https://learning.postman.com/docs/collections/running-collections/intro-to-collection-runs/">Collection Runner</a>, which would allow each Park webpage to be crawled and scavenge for further data.</p>
 <p>Using <a href="https://learning.postman.com/docs/writing-scripts/pre-request-scripts/">Pre-Request Scripts</a>, we can modify the request URL, or prep any variables for your local use. Using the Tests tab, I wrote scripts to cherry pick the elements on the requested page, and save the data to an environment variable, which I then use to populate my own app's dataset.</p>
 <p>In the Postman application, they don't include jQuery, but they do have <a href="https://cheerio.js.org/" rel="noreferrer noopener">Cheerio JS</a> that you can add to your Test script, use similarly to jQuery to quickly target and traverse over the HTML Elements you're looking for.</p>
-<p>When trying this for yourself, if the targeted pages have different markup nuances, you might need to make adjustments to the Test script that pulls the data from the page. Then make futhur Requests so that you can loop and crawl through the whole website. Since the Postman Environment Variables are global within your collection of requests, you can keep adding to your dataset with each new request from the Collection Runner. Of course this is not an ideal way to scrape data, since there are many panels to contend with and code isn't versioned and saved somewhere like Git. Ideally, it'd be better to run a utility script without having to interact with a GUI but this was a good way to learn the different steps involved.</p>
+<p>When trying this for yourself, if the targeted pages have different markup nuances, you might need to make adjustments to the Test script that pulls the data from the page. Then make futhur Requests so that you can loop and crawl through the whole website. Since the Postman Environment Variables are global within your collection of requests, you can keep adding to your dataset with each new request from the Collection Runner. Of course this is not an ideal way to scrape data, since there are many panels to contend with and code isn't versioned and saved somewhere like Git. Ideally, it'd be better to run a utility script without having to interact with a GUI but this was a good way to learn the different steps involved using Postman.</p>
 </article>
 
       </main>
