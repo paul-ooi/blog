@@ -28,4 +28,5 @@ run `npm run start`
 - [ ] add new blog content
 - [ ] Add Accessibility Statement [w3c generator tool](https://www.w3.org/WAI/planning/statements/)
 - [ ] look into [ko-fi](https://ko-fi.com/about) for donations
+- [ ] add rel=canonical link to head 
 - [ ] fix URL base when deployed to GH pages (https://maarten.be/blog/20220730/how-to-deploy-your-eleventy-website-to-github-pages-with-github-actions/, https://www.11ty.dev/docs/plugins/html-base/)
