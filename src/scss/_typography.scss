@@ -12,6 +12,17 @@ body,
     &:focus {
       outline: 3px solid var(--accent-2);
     }
+    &[target='_blank']::after {
+      content:'';
+      display: inline-block;
+      background-image: url("/assets/icons/external_link.png");
+      inline-size: 0.75em;
+      block-size: 0.75em;
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-position: center center;
+      margin-inline: 0.5ch;
+    }
   }
 }
 
