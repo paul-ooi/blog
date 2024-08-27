@@ -4,6 +4,54 @@ pageName: work
 title : Work
 date: Last Modified
 ---
-{% include 'layouts/hero.njk' %}
-
-{% include 'layouts/projects.njk' %}
+<section class="section section__projects">
+  <h1 class="section__heading">{{title}}</h1>
+  <ul class="projects__list">
+    {% for project in projects %}
+        <li class="project__item">
+          <h3 class="project__item-name">{{project.name}}</h3>
+          {% if project.period %}<small class="project__career-period">@ {{project.period}}</small>{% endif %}
+          <ul class="project__item-technologies">
+            {% for tech in project.technology %}
+              <li class="project__item-tech">
+                  <abbr {% if tech in terms %}title="{{ terms[tech] }}"{% endif %}>{{tech}}</abbr>
+                {% if tech in icons %}
+                  <span class="tech-icon">
+                    <img src="/assets/icons/{{icons[tech]}}" width="32" height="32" alt="" class="icon">
+                  </span>
+                {% endif %}
+              </li>
+            {% endfor %}
+          </ul>
+          {% if project.projectCode or project.projectUrl %}
+            <div class="project__item-links">
+              {% if project.projectCode %}
+                <a class="project__item-link project__item-link--code" href="{{ project.projectCode }}" target="_blank">View the Code</a>
+              {% endif %}
+              {% if project.projectUrl %}
+                <a class="project__item-link project__item-link--view" href="{{ project.projectUrl }}" target="_blank">View this Project</a>
+              {% endif %}
+            </div>
+          {% endif %}
+          {% if project.example or project.description %}
+            <details class="project__item-link-details">
+              <summary class="project__item-link-summary">Project Details</summary>
+              {% if project.description %}
+                <p class="project__item-description">{{project.description}}</p>
+              {% endif %}
+              {% if project.example %}
+                <h3 class="project__examples-heading">Example Links</h3>
+                <ul class="project__item-link-list">
+                  {% for urlTitle, exampleUrl in project.example %}
+                    <li class="project__item-link-item">
+                      <a class="project__item-link" target="_blank" href="{{ exampleUrl }}" rel="nofollow noreferrer">{{ urlTitle }}</a>
+                    </li>
+                  {% endfor %}
+                </ul>
+              {% endif %}
+            </details>
+          {% endif %}
+        </li>
+    {% endfor %}
+  </ul>
+</section>

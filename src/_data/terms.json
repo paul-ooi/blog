@@ -1,7 +1,8 @@
 {
   "css": "Cascading Style Sheets",
   "html": "Hypertext Markup Language",
-  "js": "Javascript",
-  "ts": "Typescript",
+  "js": "JavaScript",
+  "ts": "TypeScript",
+  "php": "PHP: Hypertext Preprocessor",
   "sql": "Structured Query Language"
 }

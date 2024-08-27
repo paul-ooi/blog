@@ -21,3 +21,14 @@
   font-family: monaco, ui-monospace, monospace;
   line-height: 1.25;
 }
+
+@mixin visually-hidden  {
+  clip: rect(1px, 1px, 1px, 1px);
+  clip-path: inset(50%);
+  block-size: 1px;
+  inline-size: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+}

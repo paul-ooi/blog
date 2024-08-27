@@ -1,45 +1,50 @@
 [
   {
     "name": "Various High Traffic Websites",
-    "company" : "System1",
-    "technology" : ["Wordpress", "scss", "ts", "html", "mysql"],
-    "example" : [
-      "Mapquest Developer Marketing site (https://developer.mapquest.com)",
-      "RoadWarrior Marketing site (https://roadwarrior.app)"
-    ]
+    "period" : "System1",
+    "technology" : ["wordpress", "php", "scss", "ts", "html", "mysql"],
+    "description": "I led and built highly performant sites using best practices. Highly customized backend with modular front-end components.",
+    "example" : {
+      "Mapquest Developer Marketing site": "https://developer.mapquest.com",
+      "RoadWarrior Marketing site": "https://roadwarrior.app"
+    }
   },
   {
     "name": "Course Introduction to HTML & CSS",
-    "description": "I was given an opportunity to share my knowledge to Design Foundation students, and give my background in design, I was able to bridge the gap between design and code for these students.",
-    "company" : "Humber College",
+    "description": "I was given an opportunity to share my knowledge to Design Foundation students, and give my background in design, I was able to bridge the gap between design(er) and code(er) for these students.",
+    "period" : "Humber College",
     "technology" : ["html", "css"],
     "projectUrl" : "https://paul-ooi.github.io/dgas-webdesign"
   },
   {
     "name": "Various Bespoke Websites",
-    "company" : "Simplistics",
-    "technology" : ["Wordpress", "scss", "js", "html", "mysql"],
-    "example" : [
-      "Molinaro Group (https://www.molinarogroup.com)",
-      "Intergovernmental Forum (https://www.igfmining.org/)",
-      "Sassafraz (https://www.sassafraz.ca/)",
-      "Virani Law (https://viranilaw.ca/)"
-    ]
+    "period" : "Simplistics",
+    "technology" : ["wordpress", "php", "scss", "js", "html", "mysql"],
+    "description": "I led and built customized websites with tailored CMS experience for small to medium sized businesses on tight turn-around timelines.",
+    "example" : {
+      "Molinaro Group": "https://www.molinarogroup.com",
+      "Intergovernmental Forum" : "https://www.igfmining.org/",
+      "Sassafraz" :"https://www.sassafraz.ca/",
+      "Virani Law" : "https://viranilaw.ca/"
+    }
   },
   {
     "name" : "CSS Build a House",
+    "period" : "School",
     "technology" : ["css", "html"],
     "projectCode" : "https://github.com/paul-ooi/buildahouse",
     "projectUrl" : "https://buildahouse.paulooi.ca/"
   },
   {
     "name" : "Seasoning Shack",
+    "period" : "School",
     "technology" : ["css", "html", "js"],
     "projectCode": "https://github.com/paul-ooi/SeasoningShack",
     "projectUrl" : "https://seasoningshack.paulooi.ca/"
   },
   {
     "name" : "Happy Trails",
+    "period" : "School",
     "technology" : ["css", "html", "sql"],
     "projectCode": "https://github.com/paul-ooi/happy-trails"
   }
