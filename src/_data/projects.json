@@ -1,51 +1,44 @@
 [
   {
-    "name": "Various High Traffic Websites",
-    "period" : "System1",
-    "technology" : ["wordpress", "php", "scss", "ts", "html", "mysql"],
-    "description": "I led and built highly performant sites using best practices. Highly customized backend with modular front-end components.",
-    "example" : {
-      "Mapquest Developer Marketing site": "https://developer.mapquest.com",
-      "RoadWarrior Marketing site": "https://roadwarrior.app"
-    }
+    "name": "High Traffic Websites",
+    "description": "Led and built highly performant sites with customized backends and modular front-end components at System1.",
+    "url": "https://developer.mapquest.com",
+    "tags": ["WordPress", "PHP", "SCSS", "TypeScript", "MySQL"]
   },
   {
-    "name": "Course Introduction to HTML & CSS",
-    "description": "I was given an opportunity to share my knowledge to Design Foundation students, and give my background in design, I was able to bridge the gap between design(er) and code(er) for these students.",
-    "period" : "Humber College",
-    "technology" : ["html", "css"],
-    "projectUrl" : "https://paul-ooi.github.io/dgas-webdesign"
+    "name": "Bespoke Client Websites",
+    "description": "Built customized WordPress sites with tailored CMS experiences for small to medium businesses at Simplistics.",
+    "url": ["https://www.sassafraz.ca", "https://www.salestalentagency.com"],
+    "tags": ["WordPress", "PHP", "SCSS", "JavaScript", "MySQL"]
   },
   {
-    "name": "Various Bespoke Websites",
-    "period" : "Simplistics",
-    "technology" : ["wordpress", "php", "scss", "js", "html", "mysql"],
-    "description": "I led and built customized websites with tailored CMS experience for small to medium sized businesses on tight turn-around timelines.",
-    "example" : {
-      "Molinaro Group": "https://www.molinarogroup.com",
-      "Intergovernmental Forum" : "https://www.igfmining.org/",
-      "Sassafraz" :"https://www.sassafraz.ca/",
-      "Virani Law" : "https://viranilaw.ca/"
-    }
+    "name": "Introduction to HTML & CSS",
+    "description": "Designed and taught a web development course for Design Foundation students at Humber College, bridging the gap between design and code.",
+    "url": "https://paul-ooi.github.io/dgas-webdesign",
+    "tags": ["HTML", "CSS", "Teaching"]
   },
   {
-    "name" : "CSS Build a House",
-    "period" : "School",
-    "technology" : ["css", "html"],
-    "projectCode" : "https://github.com/paul-ooi/buildahouse",
-    "projectUrl" : "https://buildahouse.paulooi.ca/"
+    "name": "Happy Trails",
+    "description": "Database-driven web app combining Google Maps, Open Weather Map, and Wikipedia APIs for location and weather information.",
+    "url": "https://github.com/paul-ooi/happy-trails",
+    "tags": ["PHP", "JavaScript", "MySQL", "APIs"]
   },
   {
-    "name" : "Seasoning Shack",
-    "period" : "School",
-    "technology" : ["css", "html", "js"],
-    "projectCode": "https://github.com/paul-ooi/SeasoningShack",
-    "projectUrl" : "https://seasoningshack.paulooi.ca/"
+    "name": "Space Colonies",
+    "description": "Two-player JavaScript browser game. Developed the HUD display, splash page, and planet interaction system.",
+    "url": "https://github.com/paul-ooi",
+    "tags": ["JavaScript", "HTML5 Canvas", "Game Dev"]
   },
   {
-    "name" : "Happy Trails",
-    "period" : "School",
-    "technology" : ["css", "html", "sql"],
-    "projectCode": "https://github.com/paul-ooi/happy-trails"
+    "name": "Seasoning Shack",
+    "description": "Restaurant website with promo slider, live store hour feedback, accordion gallery, and booking form — all vanilla JavaScript.",
+    "url": "https://seasoningshack.paulooi.ca/",
+    "tags": ["JavaScript", "CSS", "HTML"]
+  },
+  {
+    "name": "CSS Build a House",
+    "description": "Interactive CSS animation experience — shapes made with CSS manipulated through HTML forms and JavaScript.",
+    "url": "https://buildahouse.paulooi.ca/",
+    "tags": ["CSS Animation", "HTML", "JavaScript"]
   }
 ]

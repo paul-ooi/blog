@@ -1,0 +1,9 @@
+{
+  "items": [
+    { "text": "Home",       "url": "/",            "id": "home" },
+    { "text": "Projects",   "url": "/projects/",   "id": "projects" },
+    { "text": "Blog",       "url": "/blog/",       "id": "blog" },
+    { "text": "Experience", "url": "/experience/",  "id": "experience" },
+    { "text": "Colophon",   "url": "/colophon/",   "id": "colophon" }
+  ]
+}

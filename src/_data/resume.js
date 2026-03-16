@@ -134,7 +134,8 @@ const jobs = [
       'Advocate and lead Web Accessibility improvements across all digital properties',
       'Build modern accessible web components for internal and external users',
       'Setup automated testing suite',
-    ]
+    ],
+    skills: ['TypeScript', 'WordPress', 'PHP', 'SCSS', 'Playwright', 'Kubernetes', 'AWS']
   },
   {
     name: 'HTML & CSS Instructor',
@@ -144,18 +145,20 @@ const jobs = [
       'Prepare and present <a href="https://paul-ooi.github.io/dgas-webdesign/">Web Development and Design concepts</a> (HTML and CSS, server Hosting, Web Accessibility)',
       'Engage students with various learning styles',
       'Demonstrate industry best practices in web development building multi-page websites',
-    ]
+    ],
+    skills: ['HTML', 'CSS', 'JavaScript']
   },
   {
     name: 'Full Stack Web Developer',
     date: '2018 - 2020',
     organization: 'Simplistics Web Design Inc., (Toronto, Ontario)',
     details: [
-      'Web Accessibility advocate; auditing\testing and fixing sites',
-      'Build highly customized WordPress themes and plugins with PHP, HTML, SCSS, JS, Gulp, Node JS, Yii framework',
+      'Web Accessibility advocate; auditing, testing and fixing sites',
+      'Build highly customized WordPress themes and plugins',
       'Search engine optimization site assessment and remediation',
-      'Setup, analyze and report with Google analytics, Search Console, Google Data Studio',
-    ]
+      'Setup, analyze and report with Google Analytics, Search Console, Google Data Studio',
+    ],
+    skills: ['WordPress', 'PHP', 'SCSS', 'JavaScript', 'MySQL', 'Gulp', 'Node.js']
   },
   {
     name: 'Web Development Peer Tutor',
@@ -163,9 +166,10 @@ const jobs = [
     organization: 'Humber College, (Toronto, Ontario)',
     details: [
       'Presented web concepts in simple, easy to understand ways to a variety of student learners',
-      'Critiqued and gave feedback on front-end (HTML, CSS, JavaScript) and database (Oracle SQL) code',
-      'Tailored instructional strategies according to the learning styles of student learners using front-end code and Adobe CC products',
-    ]
+      'Critiqued and gave feedback on front-end and database code',
+      'Tailored instructional strategies according to the learning styles of student learners',
+    ],
+    skills: ['HTML', 'CSS', 'JavaScript', 'SQL']
   },
   {
     name: 'Graphic Designer',
@@ -177,7 +181,8 @@ const jobs = [
       'Resized, sliced and combined images for web and print with Adobe',
       'Prepared posters, product labels, POP, and advertisements for print',
       'Supervised and trained new designers in software and procedures',
-    ]
+    ],
+    skills: ['Adobe Photoshop', 'Adobe Illustrator', 'Adobe InDesign']
   },
   {
     name: 'Kitchen Designer',
