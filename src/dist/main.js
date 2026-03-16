@@ -1,32 +1,6 @@
 /******/ (() => { // webpackBootstrap
 /******/ 	var __webpack_modules__ = ({
 
-/***/ "./js/_menu.js":
-/*!*********************!*\
-  !*** ./js/_menu.js ***!
-  \*********************/
-/***/ ((module) => {
-
-var navToggle = function navToggle() {
-  var btn = document.querySelector('.header__menu-button');
-  var menu = document.querySelector('nav.header__menu');
-  if (btn && menu) {
-    btn.addEventListener('click', function () {
-      var state = btn.getAttribute('aria-expanded');
-      var newState = !(state === 'true');
-      btn.setAttribute('aria-expanded', newState);
-      document.body.classList.toggle('show-overlay');
-      document.querySelector('.footer').toggleAttribute('inert');
-      document.getElementById('main').toggleAttribute('inert');
-    });
-  }
-};
-module.exports = {
-  navToggle: navToggle
-};
-
-/***/ }),
-
 /***/ "../node_modules/mini-css-extract-plugin/dist/loader.js??ruleSet[1].rules[1].use[1]!../node_modules/css-loader/dist/cjs.js!../node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[1].use[3]!./scss/main.scss":
 /*!**********************************************************************************************************************************************************************************************************************!*\
   !*** ../node_modules/mini-css-extract-plugin/dist/loader.js??ruleSet[1].rules[1].use[1]!../node_modules/css-loader/dist/cjs.js!../node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[1].use[3]!./scss/main.scss ***!
@@ -451,13 +425,7 @@ var __webpack_exports__ = {};
   \********************/
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _scss_main_scss__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./../scss/main.scss */ "./scss/main.scss");
-/* harmony import */ var _menu_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./_menu.js */ "./js/_menu.js");
-/* harmony import */ var _menu_js__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_menu_js__WEBPACK_IMPORTED_MODULE_1__);
 
-
-document.addEventListener('DOMContentLoaded', function () {
-  (0,_menu_js__WEBPACK_IMPORTED_MODULE_1__.navToggle)();
-});
 })();
 
 /******/ })()
