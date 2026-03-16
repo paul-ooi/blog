@@ -1,20 +1,22 @@
 ---
-layout : base.njk
+layout: sidebar-layout.njk
 pageName: blog
-title : My Blog
-subHeading : Expressing my thoughts and discoveries througout web development.
-metaTitle: My blog exploring Web Development | Paul Ooi Development
-metaDescription: My discoveries and solutions throughout web development
-date: Last Modified
+title: Blog
+description: Writing about full stack development, agentic coding, and web accessibility.
+permalink: /blog/
 ---
+{% from "components/blog-card.njk" import blogCard %}
 
-<div class="content">
-  {% include 'layouts/hero.njk' %}
-  <ul>
-      {%- for post in collections.posts -%}
-        <li class="post-list">
-          {% include 'layouts/card.njk' %}
-        </li>
-      {%- endfor -%}
-  </ul>
+<header class="content-section content-section--header">
+  <div class="section-eyebrow"><span class="eyebrow-dot" aria-hidden="true"></span> Blog</div>
+  <h1>Writing &amp; thinking out loud</h1>
+  <p class="section-intro">Notes on full stack development, agentic coding workflows, and making the web more accessible.</p>
+</header>
+
+<div class="content-section">
+  <ol class="blog-list">
+    {%- for post in collections.posts %}
+    <li>{{ blogCard(post) }}</li>
+    {%- endfor %}
+  </ol>
 </div>

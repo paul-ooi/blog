@@ -1,18 +1,41 @@
 ---
-layout : base.njk
-pageName: contact
-title : Contact me
-metaTitle: Get in touch | Paul Ooi Development
-date: Last Modified
+layout: sidebar-layout.njk
+pageName: colophon
+title: Colophon
+description: How this site is built — technology choices, design principles, and accessibility commitments.
+permalink: /colophon/
 ---
 
-<div class="content">
-  <section class="resume-section resume-section__location" aria-label="Last known location">
-    <h2><abbr title="In Real Life">IRL</abbr></h2>
-    <div class="location"><span class="location-marker"><img class="location-marker__icon" src="/assets/images/location-marker.svg" aria-hidden='true'></span>Ontario, Canada</div>
-  </section>
-  <section class="resume-section resume-section__contact" aria-describedby="network">
-    <h2 id="network" class="">Online Networks</h2>
-    {% include 'layouts/resume/resume-network.njk' %}
-  </section>
+<header class="content-section content-section--header">
+  <div class="section-eyebrow"><span class="eyebrow-dot" aria-hidden="true"></span> Colophon</div>
+  <h1>How this site is made</h1>
+  <p class="section-intro">Every detail is intentional. This site is an expression of the values I bring to my work.</p>
+</header>
+
+<div class="content-section">
+  <div class="colophon-grid">
+    <section aria-labelledby="col-type">
+      <h2 id="col-type">Typography</h2>
+      <p><strong>Fraunces</strong> for headings — a variable, wonky serif with character. <strong>General Sans</strong> for body text. <strong>JetBrains Mono</strong> for code.</p>
+    </section>
+    <section aria-labelledby="col-stack">
+      <h2 id="col-stack">Built With</h2>
+      <dl class="definition-list">
+        <dt>SSG</dt><dd><a href="https://www.11ty.dev/" rel="noopener noreferrer">Eleventy</a> with Nunjucks</dd>
+        <dt>Styling</dt><dd>SCSS + CSS custom properties + <code>light-dark()</code></dd>
+        <dt>Build</dt><dd>Webpack</dd>
+        <dt>Hosting</dt><dd>GitHub Pages via GitHub Actions</dd>
+        <dt>Source</dt><dd><a href="https://github.com/paul-ooi/blog" rel="noopener noreferrer">Open on GitHub</a></dd>
+      </dl>
+    </section>
+    <section aria-labelledby="col-design">
+      <h2 id="col-design">Design Principles</h2>
+      <p>No scroll-jacking. No hidden content. No layout shifts. Performance is a feature. Every page uses semantic HTML landmarks and a logical heading hierarchy.</p>
+    </section>
+    <section aria-labelledby="col-a11y">
+      <h2 id="col-a11y">Accessibility</h2>
+      <p>This site targets <strong>WCAG 2.2 Level AA</strong>. Features include: skip nav, landmark roles, visible focus indicators (3px ring), color contrast exceeding 4.5:1, <code>prefers-reduced-motion</code> support, and <code>forced-colors</code> mode support.</p>
+      <p>Theme toggle uses native radio inputs in a fieldset — full keyboard support with no ARIA needed.</p>
+    </section>
+  </div>
 </div>
