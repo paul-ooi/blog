@@ -1,8 +1,9 @@
 ---
-layout: posts.njk
+layout: post.njk
+pageName: blog
 title: Scraping Websites for Data
-metaDescription: There are websites out there that have the data you want, but not in the format you need. Try using Postman to cherry pick the data you want to save, and leave the rest.
-tag: ["coding", "website-developer"]
+description: There are websites out there that have the data you want, but not in the format you need. Try using Postman to cherry pick the data you want to save, and leave the rest.
+tags: [posts, coding]
 permalink: "blog/{{ title | slugify}}/index.html"
 publishedDate: 2021-05-01
 ---

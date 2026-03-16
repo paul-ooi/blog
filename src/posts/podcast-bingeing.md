@@ -1,8 +1,8 @@
 ---
-layout: posts.njk
+layout: post.njk
+pageName: blog
 title: Podcast bingeing
-metaDescription:
-tag: ["career", "website-developer", "web-design"]
+tags: [posts, career, web-design]
 permalink: "blog/{{ title | slugify}}/index.html"
 publishedDate: 2020-06-18
 ---

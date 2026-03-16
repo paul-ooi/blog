@@ -1,8 +1,8 @@
 ---
-layout: posts.njk
+layout: post.njk
+pageName: blog
 title: Play with Music with JavaScript
-metaDescription: 
-tag: ["coding"]
+tags: [posts, coding]
 permalink: "blog/{{ title | slugify}}/index.html"
 publishedDate: 2020-06-09
 ---

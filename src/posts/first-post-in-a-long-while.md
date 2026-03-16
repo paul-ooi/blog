@@ -1,8 +1,9 @@
 ---
-layout: posts.njk
+layout: post.njk
+pageName: blog
 title: First post in a long while
-metaDescription: Welcome to my blog, where you can expect to read about building accessible websites, SEO analytics and reporting, web development frameworks and more.
-tag: ["career"]
+description: Welcome to my blog, where you can expect to read about building accessible websites, SEO analytics and reporting, web development frameworks and more.
+tags: [posts, career]
 permalink: "blog/{{ title | slugify}}/index.html"
 publishedDate: 2019-11-08
 ---

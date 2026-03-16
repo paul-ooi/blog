@@ -1,9 +1,10 @@
 ---
-layout: posts.njk
+layout: post.njk
+pageName: blog
 title: How to improve SEO performance (Easy and Intermediate tips)
-metaDescription: Always set your meta title and meta description for your blog posts and pages. Easy setup of default templates with Yoast SEO plugin settings. WooCommerce products can also get an SEO boost with data structure markup, using the Yoast plugin for Woocommerce or at least setup a template with the product short description with Yoast SEO Free.
+description: Always set your meta title and meta description for your blog posts and pages. Easy setup of default templates with Yoast SEO plugin settings.
 tldr: Always set your meta title and meta description for your blog posts and pages. Easy setup of default templates with Yoast SEO plugin settings. WooCommerce products can also get an SEO boost with data structure markup, using the Yoast plugin for Woocommerce or at least setup a template with the product short description with Yoast SEO Free.
-tag: ["SEO", "woocommerce", "yoast"]
+tags: [posts, SEO, woocommerce, yoast]
 permalink: "blog/{{ title | slugify}}/index.html"
 publishedDate: 2020-02-16
 ---

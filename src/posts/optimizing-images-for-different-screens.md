@@ -1,9 +1,10 @@
 ---
-layout: posts.njk
+layout: post.njk
+pageName: blog
 title: Optimizing images for different screens
-metaDescription: Improve UX by serving the right image size for their experience
+description: Improve UX by serving the right image size for their experience.
 tldr: Get your site content to visitors quickly and efficiently, by correctly using the srcset and sizes attributes in the image tag. Used incorrectly, can cost your users unnecessarily large data usage and a poor user experience.
-tag: ["web-optimization", "html5", "career", "website-developer", "coding"]
+tags: [posts, web-optimization, html5, coding]
 permalink: "blog/{{ title | slugify}}/index.html"
 publishedDate: 2019-12-20
 ---

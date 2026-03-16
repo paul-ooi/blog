@@ -1,8 +1,8 @@
 ---
-layout: posts.njk
+layout: post.njk
+pageName: blog
 title: Inclusive Design
-metaDescription:
-tag: ["a11y", "accessibility", "career", "website-developer"]
+tags: [posts, a11y, accessibility, career]
 permalink: "blog/{{ title | slugify}}/index.html"
 publishedDate: 2019-11-29
 ---
