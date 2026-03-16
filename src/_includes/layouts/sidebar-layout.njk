@@ -1,0 +1,32 @@
+{#
+  SIDEBAR LAYOUT — Two-column: sticky sidebar + scrolling content.
+
+  Used by: Home, Projects, Blog (listing), Experience, Colophon
+
+  The sidebar stays fixed on the left. Content scrolls on the right.
+  On screens < 900px, collapses to a stacked header (CSS only, no JS).
+
+  .site-wrapper is a CSS grid: sidebar | main-content.
+  <main> is inside .main-content as a direct grid child.
+
+  USAGE IN FRONTMATTER:
+  ---
+  layout: sidebar-layout.njk
+  pageName: projects
+  ---
+#}
+{% extends "layouts/base.njk" %}
+
+{% block body_content %}
+<div class="site-wrapper">
+  {% include "partials/sidebar.njk" %}
+
+  <div class="main-content">
+    <main id="main" tabindex="-1">
+      {{ content | safe }}
+    </main>
+
+    {% include "partials/footer.njk" %}
+  </div>
+</div>
+{% endblock %}

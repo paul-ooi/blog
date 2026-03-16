@@ -1,0 +1,34 @@
+{#
+  THEME TOGGLE — Native radio fieldset, 3-state: auto / light / dark.
+
+  Uses <fieldset> + <input type="radio"> for correct semantics.
+  Arrow keys navigate between options (browser-native behavior).
+  No ARIA needed — radio inputs provide "choose one of N" for free.
+
+  Pass `compact = true` for the topbar variant (icon-only).
+
+  USAGE:
+    {% set compact = false %}
+    {% include "partials/theme-toggle.njk" %}
+#}
+<fieldset class="theme-toggle{% if compact %} theme-toggle--compact{% endif %}">
+  <legend>Color theme</legend>
+
+  <input class="theme-toggle__input" type="radio" name="theme" value="auto" id="theme-auto{{ '-compact' if compact }}" checked>
+  <label class="theme-toggle__label" for="theme-auto{{ '-compact' if compact }}">
+    <svg aria-hidden="true" viewBox="0 0 24 24"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+    <span class="theme-toggle__text">Auto</span>
+  </label>
+
+  <input class="theme-toggle__input" type="radio" name="theme" value="light" id="theme-light{{ '-compact' if compact }}">
+  <label class="theme-toggle__label" for="theme-light{{ '-compact' if compact }}">
+    <svg aria-hidden="true" viewBox="0 0 24 24"><circle cx="12" cy="12" r="5"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg>
+    <span class="theme-toggle__text">Light</span>
+  </label>
+
+  <input class="theme-toggle__input" type="radio" name="theme" value="dark" id="theme-dark{{ '-compact' if compact }}">
+  <label class="theme-toggle__label" for="theme-dark{{ '-compact' if compact }}">
+    <svg aria-hidden="true" viewBox="0 0 24 24"><path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"/></svg>
+    <span class="theme-toggle__text">Dark</span>
+  </label>
+</fieldset>

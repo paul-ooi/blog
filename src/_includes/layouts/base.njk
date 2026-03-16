@@ -1,22 +1,37 @@
+{#
+  BASE LAYOUT — The HTML shell every page inherits from.
+
+  Owns:
+  - <html> with data-page for page-color system
+  - <head> via head.njk + tracking.njk subcomponents
+  - Skip link (a11y)
+  - Theme JS module (loaded once, cached by browser)
+
+  Child layouts fill the `body_content` block with their structure.
+  Each child layout MUST include exactly one <main id="main"> element.
+
+  USAGE:
+  Not used directly by pages — extend sidebar-layout or topbar-layout.
+#}
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    {%- include 'layouts/head.njk' -%}
-    {%- block head -%}{%- endblock -%}
-  </head>
-  <body class="{{ layout | replace(".njk", "") }} {{ pageName }}">
-    <!-- Google Tag Manager (noscript) -->
-    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-K3TXSPGQ"
-    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-    <!-- End Google Tag Manager (noscript) -->
-      <nav class="skip-links" aria-label="Skip Links">
-        <a href="#main" class="skip-to-main">Skip To Main Content</a>
-      </nav>
-      {% include 'layouts/header.njk' %}
-      <main class="main" id="main">
-        {{ content | safe }}
-      </main>
-      {% include 'layouts/footer.njk' %}
-      <script src="/dist/main.js" ></script>
-  </body>
+<html lang="en" data-page="{{ pageName | default('home') }}">
+<head>
+  {%- include 'layouts/head.njk' -%}
+  {%- include 'layouts/tracking.njk' -%}
+  {% block head %}{% endblock %}
+</head>
+<body>
+  {# Google Tag Manager (noscript) #}
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-K3TXSPGQ"
+  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+
+  <a href="#main" class="skip-link">Skip to main content</a>
+
+  {% block body_content %}{% endblock %}
+
+  {# Webpack bundle (SCSS only now) #}
+  <script src="/dist/main.js"></script>
+  {# Theme toggle — ES module for browser caching #}
+  <script type="module" src="/js/theme-toggle.js"></script>
+</body>
 </html>

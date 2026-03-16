@@ -1,0 +1,91 @@
+{#
+  POST LAYOUT — Individual blog post with semantic article structure.
+
+  Extends topbar-layout so posts get the compact header and full-width prose.
+
+  Features:
+  - schema.org BlogPosting microdata
+  - Optional TL;DR summary (set `tldr` in frontmatter)
+  - Tag list linking to tag archive pages
+  - Previous/next post navigation
+  - Back-to-blog breadcrumb link
+
+  FRONTMATTER OPTIONS:
+  ---
+  layout: post.njk
+  title: "My Post Title"
+  date: 2026-02-15
+  tags: [posts, a11y, workflow]
+  tldr: "Optional one-sentence summary"
+  updated: 2026-02-20  (optional)
+  ---
+#}
+{% extends "layouts/topbar-layout.njk" %}
+
+{% block content %}
+<article class="post" itemscope itemtype="https://schema.org/BlogPosting">
+  <header class="post-header">
+    <div class="post-header__inner">
+      {# Breadcrumb back to blog listing #}
+      <a href="/blog/" class="post-back">← Back to Blog</a>
+
+      <h1 itemprop="headline">{{ title }}</h1>
+
+      <div class="post-meta">
+        <time datetime="{{ (date or publishedDate) | dateIso }}" itemprop="datePublished">
+          {{ (date or publishedDate) | dateReadable }}
+        </time>
+        {% if updated %}
+        <span class="post-meta__sep" aria-hidden="true">·</span>
+        <time datetime="{{ updated | dateIso }}">
+          Updated {{ updated | dateReadable }}
+        </time>
+        {% endif %}
+      </div>
+
+      {# Tag pills — filter out the "posts" collection tag #}
+      {% if tags | length %}
+      <ul class="pill-list" aria-label="Post tags">
+        {% for tag in tags %}
+        {% if tag != "posts" %}
+        <li><span class="pill">{{ tag }}</span></li>
+        {% endif %}
+        {% endfor %}
+      </ul>
+      {% endif %}
+    </div>
+  </header>
+
+  <div class="post-body" itemprop="articleBody">
+    {# Optional TL;DR — a summary of the post, not tangential content, so not <aside> #}
+    {% if tldr %}
+    <div class="tldr">
+      <p><strong>TL;DR:</strong> {{ tldr }}</p>
+    </div>
+    {% endif %}
+
+    {# Markdown content renders here #}
+    {{ content | safe }}
+  </div>
+
+  {# Previous / Next post links #}
+  <footer class="post-footer">
+    <nav aria-label="Post navigation" class="post-nav">
+      {% set previousPost = collections.posts | getPreviousCollectionItem(page) %}
+      {% set nextPost = collections.posts | getNextCollectionItem(page) %}
+      {% if previousPost %}
+      <a href="{{ previousPost.url }}" rel="prev" class="post-nav-link">
+        <span class="post-nav__dir">← Previous</span>
+        <span class="post-nav__title">{{ previousPost.data.title }}</span>
+      </a>
+      {% endif %}
+      {% if nextPost %}
+      <a href="{{ nextPost.url }}" rel="next" class="post-nav-link post-nav-link--next">
+        <span class="post-nav__dir">Next →</span>
+        <span class="post-nav__title">{{ nextPost.data.title }}</span>
+      </a>
+      {% endif %}
+    </nav>
+  </footer>
+</article>
+{% endblock %}

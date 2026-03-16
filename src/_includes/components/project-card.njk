@@ -1,0 +1,36 @@
+{#
+  PROJECT CARD — Reusable card for project listings.
+
+  Usage:
+    {% from "components/project-card.njk" import projectCard %}
+    {{ projectCard(project, icons) }}
+
+  Expects a project object (from _data/projects.json) with:
+    project.name, project.description, project.url, project.tags[]
+  Optional icons object (from _data/icons.json) mapping tag names to icon filenames.
+
+  Icons: When a tag matches a key in icons.json, the pill shows an icon
+  with the tag name as a native tooltip via <abbr title>. Tags without
+  icons display as plain text pills. Brand PNGs live in /assets/icons/.
+#}
+{% macro projectCard(project, icons) %}
+<article class="project-item">
+  <h3><a href="{{ project.url }}" rel="noopener noreferrer">{{ project.name }}</a></h3>
+  <p>{{ project.description }}</p>
+  {% if project.tags | length %}
+  <ul class="pill-list" aria-label="Technologies used in {{ project.name }}">
+    {% for tag in project.tags %}
+    <li>
+      {%- if icons[tag] %}
+      <abbr class="pill pill--icon-only" title="{{ tag }}">
+        <img class="pill__icon" src="/assets/icons/{{ icons[tag] }}" alt="{{ tag }}" width="16" height="16">
+      </abbr>
+      {%- else %}
+      <span class="pill">{{ tag }}</span>
+      {%- endif %}
+    </li>
+    {% endfor %}
+  </ul>
+  {% endif %}
+</article>
+{% endmacro %}

@@ -1,0 +1,31 @@
+{#
+  BLOG CARD — Reusable card for blog post listings.
+
+  Usage:
+    {% from "components/blog-card.njk" import blogCard %}
+    {{ blogCard(post) }}
+
+  Expects an Eleventy collection item with:
+    post.date or post.data.publishedDate, post.url, post.data.title,
+    post.data.excerpt, post.data.tags
+#}
+{% macro blogCard(post) %}
+<article class="blog-item">
+  <time class="blog-item__date" datetime="{{ (post.date or post.data.publishedDate) | dateIso }}">
+    {{ (post.date or post.data.publishedDate) | dateReadable }}
+  </time>
+  <h3><a href="{{ post.url }}">{{ post.data.title }}</a></h3>
+  {% if post.data.excerpt %}
+  <p>{{ post.data.excerpt }}</p>
+  {% endif %}
+  {% if post.data.tags | length %}
+  <ul class="pill-list" aria-label="Tags for {{ post.data.title }}">
+    {% for tag in post.data.tags %}
+    {% if tag != "posts" %}
+    <li><span class="pill">{{ tag }}</span></li>
+    {% endif %}
+    {% endfor %}
+  </ul>
+  {% endif %}
+</article>
+{% endmacro %}

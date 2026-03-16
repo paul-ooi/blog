@@ -1,0 +1,33 @@
+{#
+  TOPBAR LAYOUT — Compact header for content-focused pages.
+
+  Used by: Blog posts (via post.njk extends), project detail pages (via directory data)
+
+  Single-row top bar: Logo + nav + theme toggle.
+  Gives prose the full viewport width for comfortable reading.
+
+  USAGE IN FRONTMATTER:
+  ---
+  layout: topbar-layout.njk
+  ---
+#}
+{% extends "layouts/base.njk" %}
+
+{% block body_content %}
+  {% include "partials/topbar.njk" %}
+
+  <main id="main" tabindex="-1">
+    {% block content %}{{ content | safe }}{% endblock %}
+  </main>
+
+  <footer class="site-footer site-footer--centered" role="contentinfo">
+    <p>&copy; {% currentYear %} Paul Ooi. Built with care, tested with purpose.</p>
+    <p class="site-footer__origin">
+      Made in
+      <svg class="maple-leaf" viewBox="0 0 24 24" aria-hidden="true" width="14" height="14"><path d="M12 2L9.5 7.5 4 6.5l3 4.5-3 4.5 5.5-1L12 22l2.5-7.5L20 15.5l-3-4.5 3-4.5-5.5 1z" fill="#e05d44"/></svg>
+      Canada
+      <span class="site-footer__sep" aria-hidden="true">&middot;</span>
+      <a href="/privacy/">Privacy</a>
+    </p>
+  </footer>
+{% endblock %}
