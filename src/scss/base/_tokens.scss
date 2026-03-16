@@ -1,0 +1,114 @@
+// ═══════════════════════════════════════════════
+// DESIGN TOKENS
+//
+// Single source of truth for the entire design system.
+// Uses CSS light-dark() function so the browser handles
+// theme resolution natively via color-scheme.
+//
+// Theme strategy:
+//   color-scheme: light dark  → auto (follows OS preference)
+//   color-scheme: light       → forced light
+//   color-scheme: dark        → forced dark
+//
+// The light-dark() function picks the appropriate value
+// based on the resolved color-scheme.
+// ═══════════════════════════════════════════════
+
+:root {
+  // ── Auto theme by default — follows prefers-color-scheme ──
+  color-scheme: light dark;
+
+  // ── Typography ──
+  --font-display: 'Fraunces', Georgia, serif;
+  --font-body: 'General Sans', system-ui, sans-serif;
+  --font-mono: 'JetBrains Mono', 'Consolas', monospace;
+
+  // ── Layout ──
+  --max-width: 1280px;
+  --sidebar-width: 380px;
+  --gutter: clamp(1.25rem, 4vw, 2.5rem);
+  --max-width-prose: 68ch;
+
+  // ── Radii ──
+  --radius-sm: 6px;
+  --radius-md: 10px;
+  --radius-lg: 16px;
+
+  // ── Easing ──
+  --ease: cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  --bounce: cubic-bezier(0.34, 1.56, 0.64, 1);
+  --transition: 0.2s var(--ease);
+
+  // ═══════════════════════════════════════════════
+  // PAGE-OWNED ACCENT COLORS
+  //
+  // Each page "owns" a color that cascades through:
+  // - Nav indicator bar
+  // - Section eyebrow dots
+  // - Focus ring outline
+  // - Logo scribble stroke
+  // - Active link underlines
+  // - Tech pill backgrounds
+  //
+  // Brighter variants for dark scheme ensure contrast.
+  // ═══════════════════════════════════════════════
+  --clr-home: light-dark(#e05d44, #ff7b6b);
+  --clr-projects: light-dark(#2a9d8f, #4dd8c8);
+  --clr-blog: light-dark(#d4843e, #f0a868);
+  --clr-experience: light-dark(#6c63ff, #9b94ff);
+  --clr-colophon: light-dark(#b07cc6, #c9a0db);
+
+  // ── Surface & text ──
+  --bg-primary: light-dark(#faf8f5, #141420);
+  --bg-secondary: light-dark(#ffffff, #1c1c30);
+  --bg-sidebar: light-dark(#faf8f5, #141420);
+  --bg-code: light-dark(#2d2d2d, #0d0d18);
+  --text-primary: light-dark(#1a1a2e, #eeeef0);
+  --text-secondary: light-dark(#555566, #a8a8b8);
+  --text-tertiary: light-dark(#8a8a9a, #6e6e82);
+  --border: light-dark(#e8e4dd, #2a2a40);
+  --border-hover: light-dark(#ccc6bb, #3d3d58);
+  --code-fg: #e8e8e2;
+
+  // ── Shadows ──
+  --shadow-sm: light-dark(
+    0 1px 3px rgba(0 0 0 / 0.04),
+    0 1px 3px rgba(0 0 0 / 0.2)
+  );
+  --shadow-md: light-dark(
+    0 4px 16px rgba(0 0 0 / 0.06),
+    0 4px 16px rgba(0 0 0 / 0.3)
+  );
+
+  // ── Toggle ──
+  --toggle-bg: light-dark(#e8e4dd, #2a2a40);
+  --toggle-fg: light-dark(#d4843e, #f0d77a);
+
+  // ── Pattern / decorative opacity ──
+  --pattern-opacity: light-dark(0.06, 0.04);
+
+  // ── Link underlines ──
+  --link-underline-idle: color-mix(in srgb, var(--clr-active) 25%, transparent);
+  --link-underline-hover: var(--clr-active);
+
+  // ── Per-page soft backgrounds (pills, badges) ──
+  --clr-home-soft: light-dark(#fef0ed, #2a1a1a);
+  --clr-projects-soft: light-dark(#e8f6f4, #152828);
+  --clr-blog-soft: light-dark(#fdf3ea, #2a2215);
+  --clr-experience-soft: light-dark(#f0efff, #1a1a30);
+  --clr-colophon-soft: light-dark(#f5eef8, #221a28);
+}
+
+// ── Forced theme overrides ──
+// When user explicitly picks light or dark via toggle
+[data-theme="light"] { color-scheme: light; }
+[data-theme="dark"]  { color-scheme: dark; }
+// Auto: remove data-theme or set to "auto" → inherits root color-scheme: light dark
+
+// ── Map data-page to --clr-active ──
+// This single variable drives all page-contextual color
+[data-page="home"]       { --clr-active: var(--clr-home); }
+[data-page="projects"]   { --clr-active: var(--clr-projects); }
+[data-page="blog"]       { --clr-active: var(--clr-blog); }
+[data-page="experience"] { --clr-active: var(--clr-experience); }
+[data-page="colophon"]   { --clr-active: var(--clr-colophon); }

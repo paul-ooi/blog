@@ -1,16 +1,43 @@
-@import 'variables';
-@import 'mixins';
-@import 'base';
-@import 'layouts';
-@import 'typography';
+// ═══════════════════════════════════════════════
+// MAIN STYLESHEET
+//
+// Import order matters: tokens first (variables),
+// then reset, then typography, then layouts, then
+// components, then utilities (overrides) last.
+// ═══════════════════════════════════════════════
 
-@import 'syntax-highlights';
-@import './../../node_modules/@primer/octicons/build/build.css';
+// 1. Design tokens (CSS custom properties)
+@use 'base/tokens';
 
-@import 'menu';
-@import 'header';
-@import 'footer';
-@import 'posts';
-@import 'resume';
-@import 'contact';
-@import 'projects';
+// 2. Reset, base styles, focus/skip-link
+@use 'base/reset';
+
+// 3. Typography scale, section labels
+@use 'base/typography';
+
+// 4. Animated underline links (global)
+@use 'base/links';
+
+// 5. Layouts
+@use 'layouts/sidebar';
+@use 'layouts/topbar';
+@use 'layouts/page';
+@use 'layouts/hero';
+
+// 6. Components
+@use 'components/logo-scribble';
+@use 'components/nav-icons';
+@use 'components/theme-toggle';
+@use 'components/buttons';
+@use 'components/badges';
+@use 'components/pills';
+@use 'components/pillar-cards';
+@use 'components/project-cards';
+@use 'components/blog-cards';
+@use 'components/experience';
+@use 'components/colophon';
+@use 'components/post';
+@use 'components/code';
+
+// 7. Utilities (a11y, reduced motion, forced colors)
+@use 'base/utilities';

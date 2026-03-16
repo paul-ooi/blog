@@ -1,0 +1,30 @@
+// ═══ TOPBAR LAYOUT ═══
+// Compact single-row header for blog post pages.
+
+.top-bar {
+  position: sticky; top: 0; z-index: 100;
+  background: var(--bg-primary);
+  border-block-end: 1px solid var(--border);
+  padding: 0.85rem var(--gutter);
+  transition: background var(--transition), border-color var(--transition);
+}
+.top-bar__inner {
+  max-inline-size: 960px; margin-inline: auto;
+  display: flex; align-items: center;
+  justify-content: space-between; gap: 1rem; flex-wrap: wrap;
+}
+.top-bar__left { display: flex; align-items: center; gap: 1.75rem; }
+.top-bar__right { display: flex; align-items: center; gap: 0.75rem; }
+
+.site-logo--compact .site-logo__text { font-size: 1.25rem; }
+.site-logo__scribble--compact { width: 80px; }
+
+.top-nav ul { list-style: none; display: flex; gap: 0.2rem; flex-wrap: wrap; }
+.top-nav a {
+  display: inline-block; padding: 0.3rem 0.65rem;
+  font-size: 0.875rem; font-weight: 500;
+  color: var(--text-secondary); border-radius: 100px;
+  transition: all var(--transition);
+  &:hover { color: var(--text-primary); }
+  &[aria-current="page"] { background: var(--clr-active); color: #fff; }
+}

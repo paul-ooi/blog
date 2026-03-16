@@ -1,0 +1,36 @@
+// ═══ COLOPHON ═══
+
+.colophon-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+
+  @media (min-width: 768px) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  // Each colophon section gets its own heading color
+  section:nth-child(1) h2 { color: var(--clr-home); }
+  section:nth-child(2) h2 { color: var(--clr-projects); }
+  section:nth-child(3) h2 { color: var(--clr-experience); }
+  section:nth-child(4) h2 { color: var(--clr-colophon); }
+
+  h2 {
+    font-family: var(--font-mono); font-size: 0.8rem;
+    text-transform: uppercase; letter-spacing: 0.1em;
+    margin-block-end: 0.65rem;
+  }
+
+  p, li { color: var(--text-secondary); font-size: 0.875rem; line-height: 1.7; }
+  ul { list-style: none; }
+  li {
+    padding-inline-start: 1.2rem; position: relative; margin-block-end: 0.2rem;
+    &::before { content: '→'; position: absolute; left: 0; font-weight: 600; color: var(--clr-active); }
+  }
+
+  code {
+    font-family: var(--font-mono); font-size: 0.875em;
+    background: var(--clr-colophon-soft);
+    padding: 0.15em 0.35em; border-radius: 3px;
+  }
+}

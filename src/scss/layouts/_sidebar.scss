@@ -1,0 +1,143 @@
+// ═══ SIDEBAR LAYOUT ═══
+// Sticky left column on desktop, stacked header on mobile.
+
+.site-wrapper {
+  max-inline-size: var(--max-width);
+  margin-inline: auto;
+  display: grid;
+  grid-template-columns: var(--sidebar-width) 1fr;
+  min-height: 100vh;
+}
+
+.sidebar {
+  position: sticky;
+  top: 0;
+  height: 100vh;
+  padding: 2.5rem var(--gutter) 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  border-inline-end: 1px solid var(--border);
+  background: var(--bg-sidebar);
+  transition: background var(--transition), border-color var(--transition);
+  overflow-y: auto;
+}
+
+.site-title {
+  font-size: 0.9375rem;
+  font-weight: 500;
+  color: var(--text-secondary);
+  margin-block-end: 0.65rem;
+}
+
+.site-tagline {
+  font-size: 0.875rem;
+  color: var(--text-tertiary);
+  line-height: 1.6;
+  max-inline-size: 320px;
+  margin-block-end: 2.5rem;
+}
+
+// ── Sidebar nav ──
+.sidebar-nav ul { list-style: none; }
+.sidebar-nav li { margin-block-end: 0.2rem; }
+
+.sidebar-nav a {
+  display: flex;
+  align-items: center;
+  gap: 0.7rem;
+  padding: 0.55rem 0.75rem;
+  color: var(--text-secondary);
+  font-weight: 500;
+  font-size: 0.9375rem;
+  border-radius: var(--radius-sm);
+  transition: all var(--transition);
+
+  &:hover { color: var(--text-primary); }
+  &[aria-current="page"] { color: var(--text-primary); font-weight: 600; }
+}
+
+// ── Nav color indicator bar ──
+// Each page has its own color. Bar grows from 0 to 24px on hover/active.
+.nav-indicator {
+  width: 0;
+  height: 2px;
+  border-radius: 2px;
+  margin-inline-start: auto;
+  flex-shrink: 0;
+  transition: width var(--transition);
+}
+
+[data-nav="home"] .nav-indicator       { background: var(--clr-home); }
+[data-nav="projects"] .nav-indicator   { background: var(--clr-projects); }
+[data-nav="blog"] .nav-indicator       { background: var(--clr-blog); }
+[data-nav="experience"] .nav-indicator { background: var(--clr-experience); }
+[data-nav="colophon"] .nav-indicator   { background: var(--clr-colophon); }
+
+.sidebar-nav a:hover .nav-indicator,
+.sidebar-nav a[aria-current="page"] .nav-indicator {
+  width: 24px;
+}
+
+// ── Social links ──
+.sidebar-social {
+  display: flex;
+  gap: 0.35rem;
+  margin-block-end: 1.25rem;
+}
+
+.social-link {
+  width: 38px;
+  height: 38px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: var(--radius-sm);
+  color: var(--text-tertiary);
+  transition: all var(--transition);
+  border: 1px solid transparent;
+
+  &:hover {
+    color: var(--clr-active);
+    border-color: var(--border);
+    transform: translateY(-2px);
+  }
+
+  svg { width: 18px; height: 18px; }
+}
+
+// ── Responsive: sidebar → stacked header ──
+@media (max-width: 900px) {
+  .site-wrapper { grid-template-columns: 1fr; }
+
+  .sidebar {
+    position: relative;
+    height: auto;
+    border-inline-end: none;
+    border-block-end: 1px solid var(--border);
+    padding: 1.75rem var(--gutter) 1.25rem;
+  }
+
+  .sidebar-top { margin-block-end: 0; }
+  .site-tagline { display: none; }
+
+  .sidebar-nav ul {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.25rem;
+  }
+
+  .sidebar-nav .nav-indicator,
+  .sidebar-nav .nav-icon { display: none; }
+
+  .sidebar-nav a {
+    padding: 0.35rem 0.7rem;
+    font-size: 0.8125rem;
+    border-radius: 100px;
+
+    &[aria-current="page"] {
+      background: var(--clr-active);
+      color: #fff;
+    }
+  }
+}

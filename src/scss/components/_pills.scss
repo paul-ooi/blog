@@ -1,0 +1,49 @@
+// ═══ TECH PILLS ═══
+// Used for technology tags on projects, skills on experience, tags on blog posts.
+// Pill background/color inherits from parent context (project=teal, blog=amber, etc.)
+
+.pill-list {
+  display: flex; flex-wrap: wrap; gap: 0.3rem; list-style: none;
+}
+
+.pill {
+  display: inline-flex; align-items: center; gap: 0.25rem;
+  font-family: var(--font-mono); font-size: 0.6875rem; font-weight: 500;
+  padding: 0.2rem 0.6rem; border-radius: 100px;
+  transition: background var(--transition), color var(--transition);
+
+  &__icon {
+    width: 14px; height: 14px;
+    flex-shrink: 0;
+  }
+
+  // Icon-only pill — shows icon, reveals text on hover via native title tooltip
+  // Uses <abbr> for semantic abbreviation + built-in tooltip behavior
+  &--icon-only {
+    padding: 0.25rem 0.45rem;
+    text-decoration: none;
+    cursor: default;
+    border: 1px solid transparent;
+    transition: border-color var(--transition), background var(--transition);
+
+    .pill__icon {
+      width: 20px; height: 20px;
+    }
+
+    &:hover {
+      border-color: currentColor;
+    }
+  }
+
+  // Linkable pill variant
+  &--link {
+    text-decoration: none;
+    &:hover { text-decoration: underline; }
+  }
+}
+
+// Context-aware pill colors
+.project-item .pill  { background: var(--clr-projects-soft); color: var(--clr-projects); }
+.experience-item .pill { background: var(--clr-experience-soft); color: var(--clr-experience); }
+.blog-item .pill      { background: var(--clr-blog-soft); color: var(--clr-blog); }
+.post-header .pill    { background: var(--clr-blog-soft); color: var(--clr-blog); }

@@ -1,0 +1,42 @@
+// ═══ EXPERIENCE LIST ═══
+// Two-column grid: date on left, details on right (Brittany Chiang pattern)
+
+.experience-item {
+  display: grid; grid-template-columns: 110px 1fr;
+  gap: 1.5rem; padding: 1.5rem;
+  border-radius: var(--radius-lg); margin-block-end: 0.35rem;
+  border: 1px solid transparent; transition: all var(--transition);
+
+  &:hover { background: var(--bg-secondary); border-color: var(--border); }
+
+  h3 a {
+    color: var(--text-primary); background-image: none;
+    transition: color var(--transition);
+  }
+  &:hover h3 a { color: var(--clr-experience); }
+
+  > div > p { color: var(--text-secondary); font-size: 0.9rem; margin-block-end: 0.65rem; }
+
+  @media (max-width: 900px) { grid-template-columns: 1fr; gap: 0.15rem; }
+}
+
+.experience-date {
+  font-family: var(--font-mono); font-size: 0.7rem;
+  color: var(--text-tertiary); padding-block-start: 0.3rem;
+  text-transform: uppercase; letter-spacing: 0.04em;
+}
+
+.experience-role {
+  font-size: 0.8125rem; color: var(--clr-experience);
+  font-weight: 500; margin-block-end: 0.4rem;
+}
+
+.experience-details {
+  font-size: 0.8125rem; color: var(--text-secondary);
+  padding-inline-start: 1.25rem; margin-block-end: 0.65rem;
+
+  li {
+    margin-block-end: 0.25rem;
+    &::marker { color: var(--clr-experience); }
+  }
+}

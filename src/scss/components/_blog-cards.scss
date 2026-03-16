@@ -1,0 +1,26 @@
+// ═══ BLOG CARDS ═══
+
+.blog-item {
+  padding: 1.5rem; border: 1px solid var(--border);
+  border-radius: var(--radius-lg); margin-block-end: 0.85rem;
+  background: var(--bg-secondary); transition: all var(--transition);
+
+  &:hover {
+    border-color: var(--clr-blog);
+    box-shadow: var(--shadow-md);
+    transform: translateY(-2px);
+  }
+
+  &__date {
+    font-family: var(--font-mono); font-size: 0.7rem;
+    color: var(--text-tertiary); margin-block-end: 0.3rem;
+  }
+
+  h3 a {
+    color: var(--text-primary); background-image: none;
+    transition: color var(--transition);
+  }
+  &:hover h3 a { color: var(--clr-blog); }
+
+  > p { color: var(--text-secondary); font-size: 0.9rem; margin: 0.3rem 0 0.65rem; }
+}

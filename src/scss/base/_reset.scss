@@ -1,0 +1,33 @@
+// ═══ RESET & BASE ═══
+// Minimal modern reset. Respects user font-size settings.
+
+*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+html { font-size: 100%; scroll-behavior: smooth; }
+body {
+  font-family: var(--font-body);
+  background: var(--bg-primary);
+  color: var(--text-primary);
+  line-height: 1.7;
+  font-size: 1rem;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  transition: background var(--transition), color var(--transition);
+}
+img, svg { display: block; max-width: 100%; }
+
+// Focus ring — uses active page color for contextual a11y
+:focus-visible {
+  outline: 3px solid var(--clr-active);
+  outline-offset: 3px;
+  border-radius: 2px;
+}
+
+// Skip link — hidden until focused, first element in DOM
+.skip-link {
+  position: absolute; top: -100%; left: 1rem;
+  background: var(--clr-active); color: #fff;
+  padding: 0.75rem 1.25rem;
+  border-radius: 0 0 var(--radius-sm) var(--radius-sm);
+  font-weight: 600; z-index: 1000; text-decoration: none;
+  &:focus { top: 0; }
+}

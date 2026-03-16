@@ -1,0 +1,37 @@
+// ═══ ANIMATED UNDERLINE LINKS ═══
+//
+// Every <a> gets a colored underline via background-image gradient.
+// Idle state: faded (25-30% of page color). Hover: full opacity.
+// This approach avoids layout shift — the underline is always present,
+// it just becomes visible on hover.
+//
+// Elements that should NOT get underlines (nav, buttons, logos)
+// are excluded with the .no-underline override.
+
+a {
+  color: var(--clr-active);
+  text-decoration: none;
+  background-image: linear-gradient(var(--link-underline-idle), var(--link-underline-idle));
+  background-size: 100% 2px;
+  background-position: 0 100%;
+  background-repeat: no-repeat;
+  transition:
+    background-size 0.3s var(--ease),
+    background-image 0.3s var(--ease),
+    color var(--transition);
+}
+a:hover {
+  background-image: linear-gradient(var(--link-underline-hover), var(--link-underline-hover));
+}
+
+// Opt-out class for elements that shouldn't have underlines
+.no-underline,
+.site-logo,
+.social-link,
+.btn,
+.sidebar-nav a,
+.top-nav a,
+.post-back,
+.post-nav-link {
+  background-image: none !important;
+}

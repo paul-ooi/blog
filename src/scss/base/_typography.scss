@@ -1,0 +1,48 @@
+// ═══ TYPOGRAPHY ═══
+
+h1, h2, h3, h4 { text-wrap: balance; }
+
+h1 {
+  font-family: var(--font-display);
+  font-size: clamp(2.25rem, 4.5vw, 3.25rem);
+  line-height: 1.15; letter-spacing: -0.02em;
+  em { font-style: italic; color: var(--clr-active); }
+}
+h2 {
+  font-family: var(--font-display);
+  font-size: clamp(1.65rem, 2.8vw, 2.15rem);
+  line-height: 1.2; letter-spacing: -0.015em;
+  margin-block-end: 0.75rem;
+}
+h3 {
+  font-family: var(--font-body);
+  font-size: 1.0625rem; font-weight: 600;
+  margin-block-end: 0.3rem;
+}
+
+// Section eyebrow: monospace label above section headings
+.section-eyebrow {
+  font-family: var(--font-mono);
+  font-size: 0.75rem; font-weight: 500;
+  text-transform: uppercase; letter-spacing: 0.14em;
+  color: var(--clr-active);
+  margin-block-end: 0.75rem;
+  display: flex; align-items: center; gap: 0.5rem;
+}
+.eyebrow-dot {
+  width: 7px; height: 7px; border-radius: 50%;
+  background: var(--clr-active);
+}
+
+.section-intro {
+  color: var(--text-secondary); font-size: 0.9375rem;
+  max-inline-size: 540px; margin-block-end: 2.5rem;
+}
+.section-more { margin-block-start: 1.5rem; }
+
+// Definition list (colophon tech stack)
+.definition-list {
+  dt { font-weight: 600; font-size: 0.9375rem; margin-block-start: 0.75rem; }
+  dt:first-of-type { margin-block-start: 0; }
+  dd { color: var(--text-secondary); font-size: 0.9375rem; margin-inline-start: 0; }
+}

@@ -1,0 +1,29 @@
+// ═══ UTILITIES & A11Y OVERRIDES ═══
+
+// Screen-reader only (visually hidden)
+.sr-only {
+  clip: rect(0 0 0 0); clip-path: inset(50%);
+  height: 1px; width: 1px; overflow: hidden;
+  position: absolute; white-space: nowrap;
+}
+
+// Reduced motion: collapse ALL animations and transitions
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+// Windows High Contrast / forced-colors mode
+// Elements that rely on background color for meaning need explicit borders
+@media (forced-colors: active) {
+  .hero-badge, .pillar-card, .project-item, .blog-item,
+  .pill, .btn, .social-link, .theme-toggle__label, .post-nav-link {
+    border: 1px solid currentColor;
+  }
+  .pillar-card__bar, .eyebrow-dot, .nav-indicator,
+  .pillar-card__triangle { forced-color-adjust: none; }
+}

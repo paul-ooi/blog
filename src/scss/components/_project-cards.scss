@@ -1,0 +1,24 @@
+// ═══ PROJECT CARDS ═══
+
+.project-item {
+  padding: 1.5rem; border: 1px solid var(--border);
+  border-radius: var(--radius-lg); margin-block-end: 0.85rem;
+  background: var(--bg-secondary); transition: all var(--transition);
+
+  &:hover {
+    border-color: var(--clr-projects);
+    box-shadow: var(--shadow-md);
+    transform: translateY(-2px);
+  }
+
+  h3 a {
+    color: var(--text-primary); background-image: none;
+    transition: color var(--transition);
+    // Arrow appears on card hover
+    &::after { content: ' ↗'; font-size: 0.85em; opacity: 0; transition: opacity var(--transition); }
+  }
+  &:hover h3 a { color: var(--clr-projects); }
+  &:hover h3 a::after { opacity: 1; }
+
+  p { color: var(--text-secondary); font-size: 0.9rem; margin: 0.4rem 0 0.75rem; }
+}

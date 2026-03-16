@@ -1,0 +1,44 @@
+// ═══ PAGE LAYOUT ═══
+
+.main-content { padding: 0; }
+
+.content-section {
+  padding: 4rem var(--gutter);
+  border-block-end: 1px solid var(--border);
+  transition: border-color var(--transition);
+  &:last-of-type { border-block-end: none; }
+  &--header { padding-block-end: 2.5rem; }
+}
+
+.pillars-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 1.25rem;
+}
+
+.project-list, .experience-list, .blog-list { list-style: none; }
+
+.site-footer {
+  padding: 2rem var(--gutter); font-size: 0.8rem; color: var(--text-tertiary);
+  a { color: var(--text-secondary); }
+  &--centered {
+    max-inline-size: 960px; margin-inline: auto;
+    border-block-start: 1px solid var(--border);
+  }
+  &__origin {
+    display: inline-flex; align-items: center; gap: 0.25rem;
+    flex-wrap: wrap;
+    margin-block-start: 0.25rem;
+  }
+  &__sep { color: var(--text-tertiary); }
+}
+
+.maple-leaf {
+  display: inline-block;
+  vertical-align: middle;
+  flex-shrink: 0;
+}
+
+@media (max-width: 900px) {
+  .content-section { padding: 3rem var(--gutter); }
+}

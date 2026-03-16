@@ -1,0 +1,23 @@
+// ═══ CODE & SYNTAX ═══
+
+code { font-family: var(--font-mono); font-size: 0.875em; }
+
+// Inline code
+.post-body code, .colophon-grid code {
+  background: var(--clr-blog-soft);
+  padding: 0.15em 0.35em; border-radius: 3px;
+}
+
+// Code blocks
+pre {
+  background: var(--bg-code); border-radius: var(--radius-md);
+  padding: 1.5rem; overflow-x: auto;
+  code { background: none; padding: 0; font-size: 0.8125rem; line-height: 1.7; color: var(--code-fg); }
+}
+
+// Hero code syntax tokens (Monokai-inspired)
+.t-comment { color: #6a6a7a; }
+.t-keyword { color: #ff7b6b; }
+.t-string  { color: #4dd8c8; }
+.t-fn      { color: #9b94ff; }
+.t-prop    { color: #f0d77a; }

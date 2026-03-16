@@ -1,0 +1,74 @@
+// ═══ NAV ICONS + HOVER ANIMATIONS ═══
+//
+// Each nav page has a unique SVG icon with a unique hover animation.
+// Icons take the active page color on hover and when aria-current="page".
+// All animations respect prefers-reduced-motion (see utilities).
+
+.nav-icon {
+  width: 20px; height: 20px; flex-shrink: 0;
+  display: flex; align-items: center; justify-content: center;
+
+  svg {
+    width: 18px; height: 18px;
+    fill: none; stroke: currentColor;
+    stroke-width: 1.75; stroke-linecap: round; stroke-linejoin: round;
+    transition: color var(--transition);
+  }
+}
+
+// Active/hover: icon takes page color
+.sidebar-nav a[aria-current="page"] .nav-icon,
+.sidebar-nav a:hover .nav-icon {
+  color: var(--clr-active);
+}
+
+// ── Home: bounce settle (spring easing overshoots) ──
+[data-nav="home"] .nav-icon svg {
+  transition: transform 0.35s var(--bounce), color var(--transition);
+}
+[data-nav="home"]:hover .nav-icon svg {
+  transform: translateY(-2px);
+}
+
+// ── Projects: blocks rotate + scale (snapping into place) ──
+[data-nav="projects"] .nav-icon svg {
+  transition: transform 0.4s var(--ease), color var(--transition);
+}
+[data-nav="projects"]:hover .nav-icon svg {
+  transform: rotate(15deg) scale(1.1);
+}
+
+// ── Blog: paper flutter (pages in a breeze) ──
+[data-nav="blog"]:hover .nav-icon svg {
+  animation: paper-flutter 0.5s var(--ease);
+}
+@keyframes paper-flutter {
+  0%, 100% { transform: rotate(0deg); }
+  20% { transform: rotate(-6deg) translateY(-1px); }
+  40% { transform: rotate(4deg); }
+  60% { transform: rotate(-3deg); }
+  80% { transform: rotate(1deg); }
+}
+
+// ── Experience: signpost sway (pendulum in wind) ──
+[data-nav="experience"]:hover .nav-icon svg {
+  animation: signpost-sway 0.6s var(--ease);
+}
+@keyframes signpost-sway {
+  0%, 100% { transform: rotate(0deg); transform-origin: bottom center; }
+  20% { transform: rotate(-4deg); }
+  40% { transform: rotate(5deg); }
+  60% { transform: rotate(-3deg); }
+  80% { transform: rotate(2deg); }
+}
+
+// ── Colophon: mortar grind (circular rocking) ──
+[data-nav="colophon"]:hover .nav-icon svg {
+  animation: mortar-grind 0.6s var(--ease);
+}
+@keyframes mortar-grind {
+  0%, 100% { transform: rotate(0deg); }
+  25% { transform: rotate(-8deg) translateX(-1px); }
+  50% { transform: rotate(0deg) translateY(-1px); }
+  75% { transform: rotate(8deg) translateX(1px); }
+}
