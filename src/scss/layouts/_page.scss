@@ -29,6 +29,7 @@
     display: inline-flex; align-items: center; gap: 0.25rem;
     flex-wrap: wrap;
     margin-block-start: 0.25rem;
+    .icon-maple-leaf { width: 1em; height: 1em; color: #f00; }
   }
   &__sep { color: var(--text-tertiary); }
 }
