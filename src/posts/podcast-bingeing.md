@@ -5,6 +5,8 @@ title: Podcast bingeing
 tags: [posts, career, web-design]
 permalink: "blog/{{ title | slugify}}/index.html"
 publishedDate: 2020-06-18
+image: /posts/images/2020-05-retro-radio-microphone-against-purple-background.jpg
+imageAlt: Retro radio microphone against a purple background
 tldr: "A running list of podcasts covering web development, design, accessibility, SEO, and freelancing — great for learning during a commute."
 ---
 On my commute to and from work, I listen to number of podcasts spanning from web development, design, accessibility, and SEO best practices. Even with the COVID-19 pandemic ongoing around the world, that hasn't stopped them from outputting quality content. 

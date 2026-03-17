@@ -5,6 +5,8 @@ title: Play with Music with JavaScript
 tags: [posts, coding]
 permalink: "blog/{{ title | slugify}}/index.html"
 publishedDate: 2020-06-09
+image: /posts/images/2020-06-musical-synthesizer-keyboard.jpg
+imageAlt: Close-up of a musical synthesizer keyboard
 tldr: "The browser's Web Audio API lets you generate musical tones in pure JavaScript — a simple playTone() function handling frequency, duration, and delay is all you need to play a full scale."
 ---
 Just for fun I am going through a series of <a rel="noreferrer noopener" href="https://www.youtube.com/watch?v=lhNdUVh3qCc" target="_blank">JavaScript games</a> and creating my own versions. For my own twist, I thought it'd be fun to add some sounds to the game, and wondered if there's a way to do it with code. Sure enough, there is. There's a Web Audio API that can be used in the browser. Mozilla has an <a rel="noreferrer noopener" href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Audio_API/Simple_synth" target="_blank">example synth</a> with code to get started. 

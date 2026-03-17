@@ -10,7 +10,12 @@
     post.data.excerpt, post.data.tags
 #}
 {% macro blogCard(post) %}
-<article class="blog-item">
+<article class="blog-item{% if post.data.image %} blog-item--has-image{% endif %}">
+  {% if post.data.image %}
+  <div class="blog-item__thumb" aria-hidden="true">
+    <img src="{{ post.data.image }}" alt="">
+  </div>
+  {% endif %}
   <time class="blog-item__date" datetime="{{ (post.date or post.data.publishedDate) | dateIso }}">
     {{ (post.data.publishedDate) | dateReadable }}
   </time>

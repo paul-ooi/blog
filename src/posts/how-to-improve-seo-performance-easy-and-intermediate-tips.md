@@ -7,6 +7,8 @@ tldr: Always set your meta title and meta description for your blog posts and pa
 tags: [posts, SEO, woocommerce, yoast]
 permalink: "blog/{{ title | slugify}}/index.html"
 publishedDate: 2020-02-16
+image: /posts/images/2020-05-patrick-fore-vlrJNG2cg78-unsplash.jpg
+imageAlt: Child picking a pumpkin in a pumpkin patch
 ---
 
 <p>When it comes to getting a better ranking SEO score (appearing higher on search result pages), you may have come across the question of writing content for robot crawlers versus your visitors. Well, you need to make it easier for both, because the robot crawlers need to understand your page and place your content in their database to be available when a user searches for your content. Plus you need to be able to make that content of top quality value to them when they actually come to your page. The more value it has, the longer they will spend consuming your content and this is information that gets relayed back to search engines to tell them that you have verified quality content and deserve a higher position on <abbr title="Search Engine Results Page">SERP</abbr> (Search Engine Results Page) results</p>

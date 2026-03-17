@@ -5,6 +5,8 @@ title: Inclusive Design
 tags: [posts, a11y, accessibility, career]
 permalink: "blog/{{ title | slugify}}/index.html"
 publishedDate: 2019-11-29
+image: /posts/images/2019-11-sigmund-4MoIpDcSlr4-unsplash.jpg
+imageAlt: Person using a braille keyboard
 tldr: "Attending #A11yConfTO 2019 reinforced that accessibility lawsuits are real, mouse-free navigation must always be assumed, and inclusive design needs to start at the earliest stage of the product lifecycle."
 ---
 ## My first accessibility conference

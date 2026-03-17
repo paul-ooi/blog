@@ -56,6 +56,12 @@
     </div>
   </header>
 
+  {% if image %}
+  <div class="post-hero">
+    <img src="{{ image }}" alt="{{ imageAlt or '' }}" class="post-hero__img" itemprop="image">
+  </div>
+  {% endif %}
+
   <div class="post-body" itemprop="articleBody">
     {# Optional TL;DR — a summary of the post, not tangential content, so not <aside> #}
     {% if tldr %}

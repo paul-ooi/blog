@@ -7,6 +7,8 @@ tldr: Get your site content to visitors quickly and efficiently, by correctly us
 tags: [posts, web-optimization, html5, coding]
 permalink: "blog/{{ title | slugify}}/index.html"
 publishedDate: 2019-12-20
+image: /posts/images/2019-12-ivana-cajina-hiking-unsplash.jpg
+imageAlt: Hiker on a mountain trail with a sweeping landscape view
 ---
 <p>In this blog we're going to look at how you can optimize your images for your visitor's device, primarily with the <code>srcset</code> and <code>sizes</code> attributes in the <code>img</code> tag.</p>
 

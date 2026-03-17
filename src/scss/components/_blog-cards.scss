@@ -1,9 +1,19 @@
 // ═══ BLOG CARDS ═══
 
 .blog-item {
+  overflow: hidden;
   padding: 1.5rem; border: 1px solid var(--border);
   border-radius: var(--radius-lg); margin-block-end: 0.85rem;
   background: var(--bg-secondary); transition: all var(--transition);
+
+  &__thumb {
+    margin: -1.5rem -1.5rem 1.25rem;
+    img {
+      display: block; width: 100%;
+      aspect-ratio: 3 / 1;
+      object-fit: cover; object-position: center;
+    }
+  }
 
   &:hover {
     border-color: var(--clr-blog);

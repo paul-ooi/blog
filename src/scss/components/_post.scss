@@ -24,6 +24,20 @@
 }
 .post-meta__sep { color: var(--border); }
 
+// Hero image — wide letterbox crop, image centered
+.post-hero {
+  max-inline-size: var(--max-width-prose);
+  margin-inline: auto;
+  margin-block-start: 2rem;
+  padding-inline: var(--gutter);
+}
+.post-hero__img {
+  display: block; width: 100%;
+  aspect-ratio: 3 / 1;
+  object-fit: cover; object-position: center;
+  border-radius: var(--radius-md);
+}
+
 // TL;DR aside
 .tldr {
   background: var(--clr-blog-soft);
