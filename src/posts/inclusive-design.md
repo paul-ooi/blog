@@ -5,6 +5,7 @@ title: Inclusive Design
 tags: [posts, a11y, accessibility, career]
 permalink: "blog/{{ title | slugify}}/index.html"
 publishedDate: 2019-11-29
+tldr: "Attending #A11yConfTO 2019 reinforced that accessibility lawsuits are real, mouse-free navigation must always be assumed, and inclusive design needs to start at the earliest stage of the product lifecycle."
 ---
 ## My first accessibility conference
 I attended the #A11yConfTO conference 2019, and learned that there are so many more developers and managers in the industry from my own town that are passionate about making the internet more inclusive. More than that, I learned that there are more types of disabilities that aren't being accounted for in our industry when we build and test for product usability.

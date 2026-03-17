@@ -6,6 +6,7 @@ description: There are websites out there that have the data you want, but not i
 tags: [posts, coding]
 permalink: "blog/{{ title | slugify}}/index.html"
 publishedDate: 2021-05-01
+tldr: "Postman's Collection Runner, Pre-Request Scripts, and bundled Cheerio.js let you crawl and scrape structured data from multiple web pages without writing a standalone script."
 ---
 
 I've begun to tinker around in the <a rel="noreferrer noopener" href="https://www.postman.com/">Postman application</a> a bit more and have discovered how to use it to scrape website data. The data that you want to scrape doesn't even have to all be on the same page. Make multiple requests crawling through a website and gather the data you need.

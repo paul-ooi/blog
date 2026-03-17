@@ -6,6 +6,7 @@ description: Welcome to my blog, where you can expect to read about building acc
 tags: [posts, career]
 permalink: "blog/{{ title | slugify}}/index.html"
 publishedDate: 2019-11-08
+tldr: "After a year in web development and a career change from design, I'm restarting this blog to share what I've learned about accessible websites, SEO analytics, web frameworks, and more."
 ---
 ## I'm going to start up blogging again
 
