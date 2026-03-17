@@ -10,7 +10,9 @@
 
   // Primary: filled, inverts to outlined on hover
   &--primary {
-    background: var(--clr-active); color: #fff;
+    background: var(--clr-active);
+    // light: #fff on darkened accent ≥5:1 ✓  dark: bg-primary (#141420) on vivid accent ≥7:1 ✓
+    color: light-dark(#fff, var(--bg-primary));
     border-color: var(--clr-active);
     &:hover {
       background: transparent; color: var(--clr-active);

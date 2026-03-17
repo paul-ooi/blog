@@ -52,11 +52,15 @@
   //
   // Brighter variants for dark scheme ensure contrast.
   // ═══════════════════════════════════════════════
-  --clr-home: light-dark(#e05d44, #ff7b6b);
-  --clr-projects: light-dark(#2a9d8f, #4dd8c8);
-  --clr-blog: light-dark(#d4843e, #f0a868);
-  --clr-experience: light-dark(#6c63ff, #9b94ff);
-  --clr-colophon: light-dark(#b07cc6, #c9a0db);
+  // Light-mode values are darkened via color-mix(…, black) so the resolved
+  // color passes WCAG AA (≥4.5:1) for small text on #faf8f5 AND as a
+  // .btn--primary background with white text. Dark-mode values stay vivid
+  // for legibility on the dark surface.
+  --clr-home:       light-dark(color-mix(in srgb, #e05d44 72%, black), #ff7b6b);
+  --clr-projects:   light-dark(color-mix(in srgb, #2a9d8f 65%, black), #4dd8c8);
+  --clr-blog:       light-dark(color-mix(in srgb, #d4843e 70%, black), #f0a868);
+  --clr-experience: light-dark(color-mix(in srgb, #6c63ff 80%, black), #9b94ff);
+  --clr-colophon:   light-dark(color-mix(in srgb, #b07cc6 68%, black), #c9a0db);
 
   // ── Surface & text ──
   --bg-primary: light-dark(#faf8f5, #141420);
@@ -65,7 +69,7 @@
   --bg-code: light-dark(#2d2d2d, #0d0d18);
   --text-primary: light-dark(#1a1a2e, #eeeef0);
   --text-secondary: light-dark(#555566, #a8a8b8);
-  --text-tertiary: light-dark(#8a8a9a, #6e6e82);
+  --text-tertiary: light-dark(#686878, #9292aa);
   --border: light-dark(#e8e4dd, #2a2a40);
   --border-hover: light-dark(#ccc6bb, #3d3d58);
   --code-fg: #e8e8e2;
@@ -85,7 +89,7 @@
   --toggle-fg: light-dark(#d4843e, #f0d77a);
 
   // ── Pattern / decorative opacity ──
-  --pattern-opacity: light-dark(0.06, 0.04);
+  --pattern-opacity: light-dark(0.5, 0.4);
 
   // ── Link underlines ──
   --link-underline-idle: color-mix(in srgb, var(--clr-active) 25%, transparent);
