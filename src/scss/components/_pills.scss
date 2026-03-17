@@ -42,6 +42,19 @@
   }
 }
 
+// Invert black-on-transparent icons in dark mode (CSS, SCSS, database, WordPress)
+// Brand-colored icons (JS, TS, HTML, PHP) are left untouched.
+$_dark-invert-icons: 'css_32x32.png', 'scss_32x32.png', 'database_32x32.png', 'wp_32x32.png';
+
+@mixin dark-invert-icons {
+  @each $icon in $_dark-invert-icons {
+    .pill__icon[src$="#{$icon}"] { filter: invert(1); }
+  }
+}
+
+@media (prefers-color-scheme: dark) { @include dark-invert-icons; }
+[data-theme="dark"] { @include dark-invert-icons; }
+
 // Context-aware pill colors
 .project-item .pill  { background: var(--clr-projects-soft); color: var(--clr-projects); }
 .experience-item .pill { background: var(--clr-experience-soft); color: var(--clr-experience); }

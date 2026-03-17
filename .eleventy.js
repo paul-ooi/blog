@@ -40,6 +40,11 @@ module.exports = function(eleventyConfig) {
             .replace(/--+/g, '-');
     });
 
+    // Check if value is an array
+    eleventyConfig.addFilter('isArray', function (value) {
+        return Array.isArray(value);
+    });
+
     // Unique tags from collection (excluding "posts")
     eleventyConfig.addFilter('getAllTags', function (collection) {
         const tags = new Set();
