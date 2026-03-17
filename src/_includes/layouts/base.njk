@@ -29,8 +29,8 @@
   {% block body_content %}{% endblock %}
 
   {# Webpack bundle (SCSS only now) #}
-  <script src="/dist/main.js"></script>
+  <script src="{{ '/dist/main.js' | url }}"></script>
   {# Theme toggle — ES module for browser caching #}
-  <script type="module" src="/js/theme-toggle.js"></script>
+  <script type="module" src="{{ '/js/theme-toggle.js' | url }}"></script>
 </body>
 </html>

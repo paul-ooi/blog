@@ -3,7 +3,7 @@
 <title>{% if title and title != "Paul Ooi" %}{{ title }} — {% endif %}Paul Ooi</title>
 <meta name="description" content="{{ description | default('Full stack web developer specializing in agentic coding, accessible design, and modern web development.') }}">
 <link rel="canonical" href="{{ page.url | htmlBaseUrl }}">
-<link rel="icon" type="image/x-icon" href="/assets/images/favicon.ico">
+<link rel="icon" type="image/x-icon" href="{{ '/assets/images/favicon.ico' | url }}">
 
 {% if ('sitemap' in page.url or 'resume-markdown' in page.url) %}
 <meta name="robots" content="noindex, nofollow">
@@ -15,4 +15,4 @@
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;0,9..144,700;0,9..144,800;1,9..144,400&family=General+Sans:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 
 {# Compiled SCSS output — webpack outputs to /dist/ #}
-<link rel="stylesheet" href="/dist/main.css">
+<link rel="stylesheet" href="{{ '/dist/main.css' | url }}">

@@ -36,7 +36,7 @@
     <li>
       {%- if icons[tag] %}
       <abbr class="pill pill--icon-only" title="{{ tag }}">
-        <img class="pill__icon" src="/assets/icons/{{ icons[tag] }}" alt="{{ tag }}" width="16" height="16">
+        <img class="pill__icon" src="{{ ('/assets/icons/' ~ icons[tag]) | url }}" alt="{{ tag }}" width="16" height="16">
       </abbr>
       {%- else %}
       <span class="pill">{{ tag }}</span>
