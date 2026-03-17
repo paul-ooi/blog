@@ -22,9 +22,9 @@ run `npm run start`
 - [x] refactor page metadata (different page title than h1)
 - [ ] add hero images to blog posts
 - [x] style Contact page
-- [ ] style Work page
+- [x] style Work page
   - [ ] find tech icons from https://www.freepik.com/icons
-- [ ] style Blog Archive page
+- [x] style Blog Archive page
 - [ ] add new blog content
 - [ ] Add Accessibility Statement [w3c generator tool](https://www.w3.org/WAI/planning/statements/)
 - [ ] look into [ko-fi](https://ko-fi.com/about) for donations

@@ -1,5 +1,5 @@
 // ═══ EXPERIENCE LIST ═══
-// Two-column grid: date on left, details on right (Brittany Chiang pattern)
+// Two-column grid: date on left, content on right (Brittany Chiang pattern)
 
 .experience-item {
   display: grid; grid-template-columns: 110px 1fr;
@@ -15,8 +15,6 @@
   }
   &:hover h3 a { color: var(--clr-experience); }
 
-  > div > p { color: var(--text-secondary); font-size: 0.9rem; margin-block-end: 0.65rem; }
-
   @media (max-width: 900px) { grid-template-columns: 1fr; gap: 0.15rem; }
 }
 
@@ -26,14 +24,33 @@
   text-transform: uppercase; letter-spacing: 0.04em;
 }
 
-.experience-role {
+.experience-org {
   font-size: 0.8125rem; color: var(--clr-experience);
   font-weight: 500; margin-block-end: 0.4rem;
 }
 
+// Collapsible entry — wraps <details> + footer for jobs with responsibilities
+details.experience-entry { border: none; }
+
+.experience-summary {
+  cursor: pointer;
+
+  // h3 inline so it sits on the same line as the native marker triangle
+  h3 { display: inline; }
+
+  // p drops to its own line naturally as a block after the inline h3
+  p { display: block; }
+
+  // Suppress default focus outline — site's :focus-visible ring handles it
+  &:focus { outline: none; }
+}
+
+// Always-visible skills footer — renders outside <details> so pills show when collapsed
+.experience-footer { margin-block-start: 0.65rem; }
+
 .experience-details {
   font-size: 0.8125rem; color: var(--text-secondary);
-  padding-inline-start: 1.25rem; margin-block-end: 0.65rem;
+  padding-inline-start: 1.25rem; margin-block: 0.65rem;
 
   li {
     margin-block-end: 0.25rem;
