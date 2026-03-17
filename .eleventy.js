@@ -92,6 +92,7 @@ module.exports = function(eleventyConfig) {
     eleventyConfig.setTemplateFormats("md,njk,html,js,css,map");
     eleventyConfig.addPassthroughCopy("src/assets");
     eleventyConfig.addPassthroughCopy("src/dist");
+    eleventyConfig.addPassthroughCopy("src/posts/images");
     // Serve theme-toggle.js as ES module (cached independently by browser)
     eleventyConfig.addPassthroughCopy({ "src/js/theme-toggle.js": "js/theme-toggle.js" });
     eleventyConfig.addPlugin(syntaxHighlight);
