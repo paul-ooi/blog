@@ -15,8 +15,21 @@
 #}
 {% macro projectCard(project, icons) %}
 <article class="project-item">
-  <h3><a href="{{ project.url }}" rel="noopener noreferrer">{{ project.name }}</a></h3>
+  <h3>
+    {%- if project.url | isArray -%}
+      {{ project.name }}
+    {%- else -%}
+      <a href="{{ project.url }}" rel="noopener noreferrer">{{ project.name }}</a>
+    {%- endif -%}
+  </h3>
   <p>{{ project.description }}</p>
+  {%- if project.url | isArray %}
+  <ul class="project-links">
+    {% for url in project.url %}
+    <li><a href="{{ url }}" rel="noopener noreferrer">{{ url }}</a></li>
+    {% endfor %}
+  </ul>
+  {%- endif %}
   {% if project.tags | length %}
   <ul class="pill-list" aria-label="Technologies used in {{ project.name }}">
     {% for tag in project.tags %}
