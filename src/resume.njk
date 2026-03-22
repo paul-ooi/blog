@@ -22,7 +22,7 @@ permalink: /experience/
       <div class="experience-content">
         <details open class="experience-entry">
           <summary class="experience-summary">
-            <h3>{{ job.name }}</h3>
+            <h3 id="{{ job.name | slugify }}">{{ job.name }}</h3>
             <p class="experience-org">{{ job.organization }}</p>
           </summary>
           <ul class="experience-details">
@@ -43,7 +43,7 @@ permalink: /experience/
       </div>
       {% else %}
       <div class="experience-content">
-        <h3>{{ job.name }}</h3>
+        <h3 id="{{ job.name | slugify }}">{{ job.name }}</h3>
         <p class="experience-org">{{ job.organization }}</p>
         {% if job.skills %}
         <ul class="pill-list" aria-label="Skills used at {{ job.name }}">

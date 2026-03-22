@@ -3,18 +3,24 @@
     "name": "High Traffic Websites",
     "description": "Led and built highly performant sites with customized backends and modular front-end components at System1.",
     "url": "https://developer.mapquest.com",
+    "jobId": "software-engineer",
+    "jobLabel": "System1",
     "tags": ["WordPress", "PHP", "SCSS", "TypeScript", "MySQL"]
   },
   {
     "name": "Bespoke Client Websites",
     "description": "Built customized WordPress sites with tailored CMS experiences for small to medium businesses at Simplistics.",
     "url": ["https://www.sassafraz.ca", "https://www.salestalentagency.com"],
+    "jobId": "full-stack-web-developer",
+    "jobLabel": "Simplistics",
     "tags": ["WordPress", "PHP", "SCSS", "JavaScript", "MySQL"]
   },
   {
     "name": "Introduction to HTML & CSS",
     "description": "Designed and taught a web development course for Design Foundation students at Humber College, bridging the gap between design and code.",
     "url": "https://paul-ooi.github.io/dgas-webdesign",
+    "jobId": "html-css-instructor",
+    "jobLabel": "Humber College",
     "tags": ["HTML", "CSS", "Teaching"]
   },
   {

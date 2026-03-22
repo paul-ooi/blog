@@ -22,7 +22,7 @@
       <a href="{{ project.url }}" rel="noopener noreferrer">{{ project.name }}</a>
     {%- endif -%}
   </h3>
-  <p>{{ project.description }}</p>
+  <p>{% if project.jobId %}{{ project.description | replace(project.jobLabel, '<a href="' + ('/experience/#' + project.jobId) | url + '">' + project.jobLabel + '</a>') | safe }}{% else %}{{ project.description }}{% endif %}</p>
   {%- if project.url | isArray %}
   <ul class="project-links">
     {% for url in project.url %}
