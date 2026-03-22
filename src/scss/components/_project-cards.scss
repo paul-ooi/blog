@@ -1,7 +1,7 @@
 // ═══ PROJECT CARDS ═══
 
 .project-item {
-  display: flex; flex-direction: column; gap: 0.5rem;
+  position: relative; display: flex; flex-direction: column; gap: 0.5rem;
   padding: 1.5rem; border: 1px solid var(--border);
   border-radius: var(--radius-lg); margin-block-end: 0.85rem;
   background: var(--bg-secondary); transition: all var(--transition);
@@ -15,11 +15,21 @@
   h3 a {
     color: var(--text-primary); background-image: none;
     transition: color var(--transition);
-    // Arrow appears on card hover
+    text-decoration: none;
+
+    // Expand click area to the whole card
+    &::before { content: ""; position: absolute; inset: 0; }
+
+    // Arrow appears on hover/focus
     &::after { content: ' ↗'; font-size: 0.85em; opacity: 0; transition: opacity var(--transition); }
+
+    &:hover,
+    &:focus-visible {
+      color: var(--clr-projects);
+      text-decoration: underline;
+      &::after { opacity: 1; }
+    }
   }
-  &:hover h3 a { color: var(--clr-projects); }
-  &:hover h3 a::after { opacity: 1; }
 
   p { color: var(--text-secondary); font-size: 0.9rem; margin: 0; }
 

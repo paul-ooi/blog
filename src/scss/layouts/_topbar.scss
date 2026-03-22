@@ -24,7 +24,26 @@ svg.site-logo__scribble--compact { width: 90%; }
   display: inline-block; padding: 0.3rem 0.65rem;
   font-size: 0.875rem; font-weight: 500;
   color: var(--text-secondary); border-radius: 100px;
+  text-decoration: none;
   transition: all var(--transition);
-  &:hover { color: var(--text-primary); }
-  &[aria-current="page"] { background: var(--clr-active); color: #fff; }
+
+  &:hover,
+  &:focus-visible {
+    color: var(--text-primary);
+    text-decoration: underline;
+    text-decoration-color: var(--item-clr, var(--text-primary));
+    text-decoration-thickness: 2px;
+    text-underline-offset: 3px;
+  }
+
+  &[aria-current="page"] {
+    background: var(--item-clr, var(--clr-active)); color: #fff;
+  }
 }
+
+// Per-section accent colours
+.top-nav a[href="/"]            { --item-clr: var(--clr-home); }
+.top-nav a[href="/projects/"]   { --item-clr: var(--clr-projects); }
+.top-nav a[href="/blog/"]       { --item-clr: var(--clr-blog); }
+.top-nav a[href="/experience/"] { --item-clr: var(--clr-experience); }
+.top-nav a[href="/colophon/"]   { --item-clr: var(--clr-colophon); }
