@@ -1,0 +1,69 @@
+{#
+  EXPERIENCE ITEM — Reusable timeline entry for resume sections.
+
+  Usage:
+    {% from "components/experience-item.njk" import experienceItem %}
+    {{ experienceItem(item) }}
+
+  Expects an object with:
+    item.name         — role/title/credential name
+    item.date         — date string (e.g. "2021 - Present")
+    item.organization — company, school, or institution name
+  Optional:
+    item.organizationUrl — external URL; wraps organization in <a rel="noopener noreferrer">
+    item.details[]       — bullet point strings (enables expandable <details>)
+    item.skills[]        — skill tag strings (renders pill list in footer)
+#}
+{% macro experienceItem(item) %}
+<li class="experience-item">
+  <div class="experience-date">{{ item.date }}</div>
+  {% if item.details %}
+  <div class="experience-content">
+    <details open class="experience-entry">
+      <summary class="experience-summary">
+        <h3 id="{{ item.name | slugify }}">{{ item.name }}</h3>
+        <p class="experience-org">
+          {%- if item.organizationUrl -%}
+          <a href="{{ item.organizationUrl }}" target="_blank" rel="noopener noreferrer">{{ item.organization }}</a>
+          {%- else -%}
+          {{ item.organization }}
+          {%- endif -%}
+        </p>
+      </summary>
+      <ul class="experience-details">
+        {%- for detail in item.details %}
+        <li>{{ detail | safe }}</li>
+        {%- endfor %}
+      </ul>
+    </details>
+    {% if item.skills %}
+    <footer class="experience-footer">
+      <ul class="pill-list" aria-label="Skills used at {{ item.name }}">
+        {%- for skill in item.skills %}
+        <li><span class="pill">{{ skill }}</span></li>
+        {%- endfor %}
+      </ul>
+    </footer>
+    {% endif %}
+  </div>
+  {% else %}
+  <div class="experience-content">
+    <h3 id="{{ item.name | slugify }}">{{ item.name }}</h3>
+    <p class="experience-org">
+      {%- if item.organizationUrl -%}
+      <a href="{{ item.organizationUrl }}" target="_blank" rel="noopener noreferrer">{{ item.organization }}</a>
+      {%- else -%}
+      {{ item.organization }}
+      {%- endif -%}
+    </p>
+    {% if item.skills %}
+    <ul class="pill-list" aria-label="Skills used at {{ item.name }}">
+      {%- for skill in item.skills %}
+      <li><span class="pill">{{ skill }}</span></li>
+      {%- endfor %}
+    </ul>
+    {% endif %}
+  </div>
+  {% endif %}
+</li>
+{% endmacro %}

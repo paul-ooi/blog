@@ -57,12 +57,14 @@ const education = [
   {
     name: 'Understanding Accessible Experiences',
     date: '2023',
-    organization: 'Essential Accessibility (Level Access)'
+    organization: 'Essential Accessibility (Level Access)',
+    organizationUrl: 'https://academy.levelaccess.com/c/KdOZT7KSRM-5dfsAoLBqhg'
   },
   {
     name: 'AWS Certified Cloud Practitioner',
     date: '2021',
-    organization: 'Amazon Web Services (AWS)'
+    organization: 'Amazon Web Services (AWS)',
+    organizationUrl: 'https://www.credly.com/badges/f5b5d2f8-6e7e-49ef-9dcc-9502cf639486?source=linked_in_profile'
   },
   {
     name: 'Web Development Post-Graduate Certificate',
@@ -77,7 +79,8 @@ const education = [
   {
     name: 'Freelance Website Development Certificate',
     date: '2017',
-    organization: 'Codecademy Intensive, (Online)'
+    organization: 'Codecademy Intensive, (Online)',
+    organizationUrl: 'https://www.credential.net/84tag4hd'
   },
   {
     name: 'Bachelor of Industrial Design Co-op with Honours',
@@ -130,6 +133,7 @@ const jobs = [
     name: 'Software Engineer',
     date: '2021 - Present',
     organization: 'System1 Canada ULC, (Guelph, Ontario)',
+    organizationUrl: 'https://www.system1.com/',
     details: [
       'Advocate and lead Web Accessibility improvements across all digital properties',
       'Build modern accessible web components for internal and external users',
@@ -141,6 +145,7 @@ const jobs = [
     name: 'HTML & CSS Instructor',
     date: '2020',
     organization: 'Humber College, (Toronto, Ontario)',
+    organizationUrl: 'https://www.humber.ca/',
     details: [
       'Prepare and present <a href="https://paul-ooi.github.io/dgas-webdesign/">Web Development and Design concepts</a> (HTML and CSS, server Hosting, Web Accessibility)',
       'Engage students with various learning styles',
@@ -152,6 +157,7 @@ const jobs = [
     name: 'Full Stack Web Developer',
     date: '2018 - 2020',
     organization: 'Simplistics Web Design Inc., (Toronto, Ontario)',
+    organizationUrl: 'https://simplistics.ca/',
     details: [
       'Web Accessibility advocate; auditing, testing and fixing sites',
       'Build highly customized WordPress themes and plugins',
@@ -164,6 +170,7 @@ const jobs = [
     name: 'Web Development Peer Tutor',
     date: '2017 - 2018',
     organization: 'Humber College, (Toronto, Ontario)',
+    organizationUrl: 'https://www.humber.ca/',
     details: [
       'Presented web concepts in simple, easy to understand ways to a variety of student learners',
       'Critiqued and gave feedback on front-end and database code',
@@ -175,6 +182,7 @@ const jobs = [
     name: 'Graphic Designer',
     date: '2012 - 2017',
     organization: 'Korhani Home, (Concord, Ontario)',
+    organizationUrl: 'https://korhani.com/',
     details: [
       'Prepared web collateral and managed CMS content',
       'Coordinated with outside web development team',
@@ -188,26 +196,31 @@ const jobs = [
     name: 'Kitchen Designer',
     date: '2010 - 2012',
     organization: 'Muti Kitchen & Bath (Woodbridge, Ontario)',
+    organizationUrl: 'https://www.mutikb.com/'
   },
   {
     name: 'Design Assistant',
     date: '2008 - 2009',
     organization: 'Dayspring Landscape Design (Pickering, Ontario)',
+    organizationUrl: 'https://www.gardenlivinglandscapes.com/'
   },
   {
     name: 'Graphic Designer',
     date: '2007 - 2008',
     organization: 'Humber Student Federation (Toronto, Ontario)',
+    organizationUrl: 'https://ignitestudentlife.com/'
   },
   {
     name: 'Industrial Design Intern',
     date: 'Summer 2007',
     organization: 'Shape Products (Pickering, Ontario)',
+    organizationUrl: 'https://shape-products.com/'
   },
   {
     name: 'Front Desk Lead',
     date: '2005 - 2007',
     organization: 'Humber College Residence (Toronto, Ontario)',
+    organizationUrl: 'https://humber.ca/housing/living-in-residence'
   },
 ]
 
@@ -216,6 +229,7 @@ const volunteer = [
     name: 'Youth Group Facilitator/Trustee',
     date: '2010 - 2018',
     organization: 'Fusion Toronto Community Services (Rexdale, Ontario)',
+    organizationUrl: 'https://fusiontoronto.org/',  
     details: [
       'Led games, activities, and music by playing guitar or cajón',
       'Facilitated group discussions for children grades 6 and up',

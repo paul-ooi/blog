@@ -5,6 +5,7 @@ title: Experience
 description: Professional experience, education, and skills.
 permalink: /experience/
 ---
+{% from "components/experience-item.njk" import experienceItem %}
 
 {# ── Career ── #}
 <header class="content-section content-section--header">
@@ -16,45 +17,7 @@ permalink: /experience/
   <h2 id="career-heading">Career</h2>
   <ol class="experience-list">
     {%- for job in resume.jobs %}
-    <li class="experience-item">
-      <div class="experience-date">{{ job.date }}</div>
-      {% if job.details %}
-      <div class="experience-content">
-        <details open class="experience-entry">
-          <summary class="experience-summary">
-            <h3 id="{{ job.name | slugify }}">{{ job.name }}</h3>
-            <p class="experience-org">{{ job.organization }}</p>
-          </summary>
-          <ul class="experience-details">
-            {%- for detail in job.details %}
-            <li>{{ detail | safe }}</li>
-            {%- endfor %}
-          </ul>
-        </details>
-        {% if job.skills %}
-        <footer class="experience-footer">
-          <ul class="pill-list" aria-label="Skills used at {{ job.name }}">
-            {%- for skill in job.skills %}
-            <li><span class="pill">{{ skill }}</span></li>
-            {%- endfor %}
-          </ul>
-        </footer>
-        {% endif %}
-      </div>
-      {% else %}
-      <div class="experience-content">
-        <h3 id="{{ job.name | slugify }}">{{ job.name }}</h3>
-        <p class="experience-org">{{ job.organization }}</p>
-        {% if job.skills %}
-        <ul class="pill-list" aria-label="Skills used at {{ job.name }}">
-          {%- for skill in job.skills %}
-          <li><span class="pill">{{ skill }}</span></li>
-          {%- endfor %}
-        </ul>
-        {% endif %}
-      </div>
-      {% endif %}
-    </li>
+    {{ experienceItem(job) }}
     {%- endfor %}
   </ol>
 </section>
@@ -64,13 +27,7 @@ permalink: /experience/
   <h2 id="education-heading">Education &amp; Certifications</h2>
   <ol class="experience-list">
     {%- for item in resume.education %}
-    <li class="experience-item">
-      <div class="experience-date">{{ item.date }}</div>
-      <div>
-        <h3>{{ item.name }}</h3>
-        <p class="experience-org">{{ item.organization }}</p>
-      </div>
-    </li>
+    {{ experienceItem(item) }}
     {%- endfor %}
   </ol>
 </section>
