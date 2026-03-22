@@ -56,9 +56,9 @@
   // color passes WCAG AA (≥4.5:1) for small text on #faf8f5 AND as a
   // .btn--primary background with white text. Dark-mode values stay vivid
   // for legibility on the dark surface.
-  --clr-home:       light-dark(color-mix(in srgb, #e05d44 72%, black), #ff7b6b);
+  --clr-home:       light-dark(color-mix(in srgb, #ea0404 72%, black), #ff7b6b);
   --clr-projects:   light-dark(color-mix(in srgb, #2a9d8f 65%, black), #4dd8c8);
-  --clr-blog:       light-dark(color-mix(in srgb, #d4843e 70%, black), #f0a868);
+  --clr-blog:       light-dark(color-mix(in srgb, #fd8200 80%, black), #f0a868);
   --clr-experience: light-dark(color-mix(in srgb, #6c63ff 80%, black), #9b94ff);
   --clr-colophon:   light-dark(color-mix(in srgb, #b07cc6 68%, black), #c9a0db);
 
@@ -98,7 +98,7 @@
   // ── Per-page soft backgrounds (pills, badges) ──
   --clr-home-soft: light-dark(#fef0ed, #2a1a1a);
   --clr-projects-soft: light-dark(#e8f6f4, #152828);
-  --clr-blog-soft: light-dark(#fdf3ea, #2a2215);
+  --clr-blog-soft: light-dark(#faf1e9a6, #2a2215);
   --clr-experience-soft: light-dark(#f0efff, #1a1a30);
   --clr-colophon-soft: light-dark(#f5eef8, #221a28);
 }
