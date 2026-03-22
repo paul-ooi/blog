@@ -16,11 +16,17 @@
   }
 }
 
-// Active/hover: icon takes page color
-.sidebar-nav a[aria-current="page"] .nav-icon,
-.sidebar-nav a:hover .nav-icon {
-  color: var(--clr-active);
-}
+// Active/hover: icon takes its section's unique color
+a[data-nav="home"][aria-current="page"] .nav-icon,
+a[data-nav="home"]:hover .nav-icon             { color: var(--clr-home); }
+a[data-nav="projects"][aria-current="page"] .nav-icon,
+a[data-nav="projects"]:hover .nav-icon         { color: var(--clr-projects); }
+a[data-nav="blog"][aria-current="page"] .nav-icon,
+a[data-nav="blog"]:hover .nav-icon             { color: var(--clr-blog); }
+a[data-nav="experience"][aria-current="page"] .nav-icon,
+a[data-nav="experience"]:hover .nav-icon       { color: var(--clr-experience); }
+a[data-nav="colophon"][aria-current="page"] .nav-icon,
+a[data-nav="colophon"]:hover .nav-icon         { color: var(--clr-colophon); }
 
 // ── Home: bounce settle (spring easing overshoots) ──
 [data-nav="home"] .nav-icon svg {

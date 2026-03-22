@@ -53,7 +53,13 @@
   border-radius: var(--radius-sm);
   transition: all var(--transition);
 
-  &:hover { color: var(--text-primary); }
+  &:hover,
+  &:focus-visible {
+    color: var(--text-primary);
+    text-decoration: underline;
+    text-decoration-thickness: 2px;
+    text-underline-offset: 3px;
+  }
   &[aria-current="page"] { color: var(--text-primary); font-weight: 600; }
 }
 
@@ -73,6 +79,18 @@
 [data-nav="blog"] .nav-indicator       { background: var(--clr-blog); }
 [data-nav="experience"] .nav-indicator { background: var(--clr-experience); }
 [data-nav="colophon"] .nav-indicator   { background: var(--clr-colophon); }
+
+// ── Hover/focus underline takes the section's unique color ──
+a[data-nav="home"]:hover,
+a[data-nav="home"]:focus-visible       { text-decoration-color: var(--clr-home); }
+a[data-nav="projects"]:hover,
+a[data-nav="projects"]:focus-visible   { text-decoration-color: var(--clr-projects); }
+a[data-nav="blog"]:hover,
+a[data-nav="blog"]:focus-visible       { text-decoration-color: var(--clr-blog); }
+a[data-nav="experience"]:hover,
+a[data-nav="experience"]:focus-visible { text-decoration-color: var(--clr-experience); }
+a[data-nav="colophon"]:hover,
+a[data-nav="colophon"]:focus-visible   { text-decoration-color: var(--clr-colophon); }
 
 .sidebar-nav a:hover .nav-indicator,
 .sidebar-nav a[aria-current="page"] .nav-indicator {
